@@ -1,0 +1,458 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+<body>
+	<div class="wrapper">
+
+		<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+		
+		<!-- container -->
+		<div id="container">
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		    <div class="subVisual">
+		
+		        <div class="fixedWidth">
+		            <h2 class="tts">펜타에스</h2>
+		            <div>
+		                <h2 class="sub_topbaner_title01">커뮤니티</h2>
+		                <p class="sub_topbaner_content01">미래를 중시하는 펜타에스</p>
+		            </div>
+		        </div>
+		    </div>
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		
+		    <!-- tap메뉴 -->
+		    <div class="main">
+		
+
+		        <input id="tab9" type="radio" name="tabs" checked>
+		        <label for="tab9">공지사항</label>
+		
+		        <input id="tab10" type="radio" name="tabs">
+		        <label for="tab10">인재채용</label>
+
+		        <input id="tab8" type="radio" name="tabs">
+		        <!--디폴트 메뉴-->
+		        <label for="tab8">사업문의</label>
+
+		
+		        <section id="content8">
+		            <h3 class="chart_title01">사업문의</h3>
+		            <div>
+		                <p class="company_content_img01">
+		                <p class="company_content_content01">
+		                    문의하시면 최대한 빠른 답사항을 보내주시면 최대한 신속한 답변을 해드리겠습니다.<br>
+		                    답변은 입력하신 연락처나 이메일로 보내드릴 예정이며 필수사항은 정확히 입력 부탁드립니다.
+		                </p>
+                 <p class="sub_mainInquiry02">
+							<table>
+								<caption>문의하기 목록</caption>
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:15%">
+                                        <col style="width:20%">
+										<col style="width:30%">                                       
+									</colgroup>
+							  <thead>
+                                  <tr class="sub_mainInquiry02_table_tr_top2">
+                                     <th>이름</th> 
+                                     <td class="name_input01">
+		                                <input type="text" id="NAME" class="int" maxlength="11">
+		                            </td>
+                                     <th>전화번호</th> 
+                                     <td class="name_input03">
+		                                <form name="해당 폼의 이름" action="값을 보낼 주소" method="post">
+		                                    <input type='tel' name='phone1' class="int" maxlength="4" id="TEL_01">
+		                                    <p class="name_input03_text00">-</p>
+		                                    <input type='tel' name='phone2' class="int" maxlength="4" id="TEL_02">
+		                                    <p class="name_input03_text00">-</p>
+		                                    <input type='tel' name='phone3' class="int" maxlength="4" id="TEL_03">
+		                                </form>
+		                            </td>                               
+                                </tr>
+							  </thead>
+							  <tbody>
+								  <tr class="sub_mainInquiry02_table_tr_top2">
+	                                    <th>회사명</th> 
+	                                    <td class="name_input05" colspan="3">
+			                                <input type="text" class="int" maxlength="33" id="CORP_NM">
+			                            </td> 
+	                                 </tr>						  
+	                                  <tr class="sub_mainInquiry02_table_tr_top2">
+	                                     <th>부서명</th> 
+	                                     <td class="name_input01">
+			                                <input type="text" class="int" maxlength="11" id="CORP_DEP">
+			                            </td>		                            
+	                                     <th>직급</th> 
+	                                     <td class="name_input01">
+			                                <input type="text" class="int" maxlength="11" id="CORP_POS">
+			                            </td>                               
+	                                </tr>                                                          
+                                  <tr class="sub_mainInquiry02_table_tr_top2">
+                                    <th>이메일</th> 
+                                    <td class="name_input02" colspan="3">
+		                                <input type="text" class="int" maxlength="33" id="E_MAIL_01">
+		                                <p class="sub_mainInquiry02_content01">@</p>
+		                                <input type="text" class="int" maxlength="363" id="E_MAIL_02">
+		                            </td> 
+                                 </tr>
+                                 <tr class="sub_mainInquiry02_table_tr_top3">
+                                    <th>문의내용</th> 
+                                    <td colspan="3" class="name_input04">
+                                        <div>
+                                            <textarea name="content" class="contents01" style="width:99%; height:300px; " id="CONTENT"></textarea>
+                                        </div>     
+                                    </td> 
+                                 </tr>
+                                                                 
+							  </tbody>
+		                </table>
+		                <p class="sub_mainInquiry05"><span>*&nbsp;&nbsp;</span>표시는 반드시 입력하셔야 하는 항목입니다.</p>
+		                <div class="sub_mainInquiry05_button01">
+		                    <input type="submit" value="문의하기" onclick="saveInq()">
+		                </div>
+		                </p>
+		
+		            </div>
+		            <div class="company_content_content01">
+		                <span class="company_content_content01_01">&nbsp;</span>
+		                <span class="company_content_content01_02">&nbsp;</span>
+		            </div>
+		
+		
+		        </section>
+		        <section id="content9">
+		            <h3 class="chart_title01">공지사항</h3>
+		            <p class="vision01">
+		                <span class="search_result">검색결과&nbsp;&nbsp;<b class="search_result_number">4</b>개</span>
+		            <p>
+		            <div class="search01">
+		                <div class="sear">
+	                        <input type="text" id="word" class="search_text01" maxlength="31"
+	                            name="search_keyword" value="" placeholder="검색해주세요"
+	                            onkeyup="javascript:if(event.keyCode == 13) { goSearch(); }" style="outline:none;">
+		                    <p class="img"><a onclick="goSearch()"><img src="/static_resources/homePage/img/searchimg01.png" alt=""></a></p>
+		                </div>
+		            </div>
+		            </p>
+		
+		
+		            <!-- 공지사항 검색폼 목록 폼 -->
+		            <div id="notice_mm">
+		                <span class="box00">
+		                &nbsp;
+		                   <!-- 
+		                    <select id="mm">
+		                        <option>전체</option>
+		                        <option value="01">번호</option>
+		                        <option value="02">제목</option>
+		                        <option value="03">작성자</option>
+		                        <option value="03">작성일자</option>		
+		                    </select>
+		                    -->
+		                </span>
+		            </div>
+		            <table>
+		                <caption>공지사항 목록</caption>
+		                <colgroup>
+		                    <col style="width:10%">
+		                    <col style="width:55%">
+		                    <col style="width:10%">
+		                    <col style="width:20%">
+		                </colgroup>
+		                <thead>
+		                    <tr class="notice_table_tr_top02">
+		                        <th>번호</th>
+		                        <th>제목</th>
+		                        <th>작성자</th>
+		                        <th>작성일자</th>
+		                    </tr>
+		                </thead>
+		                <tbody id="noticeList">
+		                    <tr class="notice_table_tr_top2_2">
+		                        <td>00</td>
+		                        <td><a href="/community/noticeDetail">테스트 내용</a></td>
+		                        <td>관리자</td>
+		                        <td>2021-05-10</td>
+		                    </tr>
+		                    <tr class="notice_table_tr_top2_2">
+		                        <td>00</td>
+		                        <td><a href="/community/noticeDetail">테스트 내용</a></td>
+		                        <td>관리자</td>
+		                        <td>2021-05-10</td>
+		                    <tr class="notice_table_tr_top2_2">
+		                        <td>00</td>
+		                        <td><a href="/community/noticeDetail">테스트 내용</a></td>
+		                        <td>관리자</td>
+		                        <td>2021-05-10</td>
+		                    </tr>
+		                    </tr>
+		                    <tr class="notice_table_tr_last_2">
+		                        <td>00</td>
+		                        <td><a href="/community/noticeDetail">테스트 내용</a></td>
+		                        <td>관리자</td>
+		                        <td>2021-05-10</td>
+		                    </tr>
+		                </tbody>
+		            </table>
+		            <%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+		
+		        </section>
+		
+		
+		        <section id="content10">
+		            <div class="recruitment">
+		                <h3 class="chart_title01">인재채용</h3>
+                      <p style="margin-top:-30px;"></p>		                
+		                <span class="company_content_content01_02" style="margin-left:10px;">안녕하세요.
+		                <br>
+					    (주)펜타에스에서는 함께할 인재를 상시 기다리고 있습니다.
+						<br>
+						언제든 지원해 주시기 바랍니다.
+						<br><br>
+						채용정보는 하기와 같습니다.</span>
+
+						<p style="margin-top:-50px;"></p>
+		                <p class="chart_img01">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3>모집분야 및 자격조건</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;모집분야 : Java / Spring프레임워크 기반 웹 개발자, Android / Ios Native 개발자,디자인/퍼블리싱
+		                    </dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;학력 : 대졸 이상
+		                    </dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 경력 : 신입,경력(3년이상)</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 모집인원 : 00명</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 우대사항 : 컴퓨터공학 관련 전공자,정보처리기사,SI(금융,유통분야)및 스타트업 유관업무 경험자</dd>
+		                </dl>
+		            </div>
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 근무조건</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 근무형태 : 정규직(수습:협의),계약직</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 근무지 : 서울</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 근무요일 : 주 5일</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 근무시간 : 09:00~18:00</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 근무지 : 서울</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 급여 : 회사내규에 따름(면접후 결정)</dd>		                    
+		                </dl>
+		            </div>
+		            <!--  
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 자격내용</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd>
+		                        <table style="width:90%;">
+		                            <caption>자격내용 목록</caption>
+		                            <colgroup>
+		                                <col style="width:20%">
+		                                <col style="width:70%">
+		                                <col style="width:10%">
+		
+		                            </colgroup>
+		                            <tbody>
+		                                <tr>
+		                                    <td rowspan="2" class="Qualification00">경력</td>
+		                                    <td class="Qualification01">웹 어플리케이션 개발 및 설계</td>
+		                                    <td class="Qualification02" rowspan="2">00명</td>
+		                                </tr>
+		                                <tr>
+		                                    <td class="Qualification03">
+		                                        <p>01. 요구스킬</p>
+		                                        <p>02. 어플리케이션 경험자</p>
+		                                    </td>
+		                                </tr>
+		                                <tr>
+		                                    <td rowspan="2" class="Qualification04">신입</td>
+		                                    <td class="Qualification05">웹개발</td>
+		                                    <td class="Qualification06" rowspan="2">00명</td>
+		                                </tr>
+		                                <tr>
+		                                    <td class="Qualification07">Java, JSP</td>
+		                                </tr>
+		                            </tbody>
+		                        </table>
+		                        <p class="recruitment_00">&nbsp;</p>
+		                        <div class="tabmenu">
+		                            <ul>
+		                                <li id="tab13" class="btnCon"> <input type="radio" checked name="tabmenu"
+		                                        id="tabmenu13">
+		                                    <label for="tabmenu13">경력</label>
+		                                    <div class="tabCon">
+		                                        - <b>분야</b> : 웹 어플리케이션 개발 및 설계<br>
+		                                        - <b>요구스킬</b> : 어플리케이션 경험자<br>
+		                                        - <b>채용수</b> : 00명
+		                                    </div>
+		
+		                                </li>
+		                                <li id="tab14" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu14">
+		                                    <label for="tabmenu14">신입</label>
+		                                    <div class="tabCon">
+		                                        - <b>분야</b>: 웹개발<br>
+		                                        - <b>요구스킬</b> : Java, JSP<br>
+		                                        - <b>채용수</b> : 00명
+		                                    </div>
+		
+		                                </li>
+		
+		                            </ul>
+		                        </div>
+		            </div>
+		            
+		            <p class="recruitment_01">&nbsp;</p>
+		
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 제출서류</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이력서</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 졸업증명서 또는 졸업예정증명서
+		                        (제출서류는 일체 반환되지 않습니다.)</dd>
+		
+		                </dl>
+		            </div>
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 지원서 접수</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span> &nbsp;&nbsp;&nbsp;&nbsp; 기간 : 수시채용</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp; 전형방법 : 이력서 등 작성 후
+		                        해당 메일로 보내 주시기 바랍니다.</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;접수 : 채용담당
+		                        (typa99@naver.com) 이메일 접수</dd>
+		                    <dd><span class="recruitment01_first01_content01_01"> ※ 접수 시 제목란에 입사지원_성명기재, 예)입사지원_홍길동</span></dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;통보 : 전형별
+		                        서류합격자에 한하여 개별 통보하여 드립니다 (입사지원서 기재내용이 허위로 판명될 경우 입사취소)</dd>
+		                </dl>
+		            </div>
+		           -->  
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 채용절차</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;펜타에스의 채용절차는 서류심사, 면접, 건강검진 후 채용하게 됩니다.<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;접수하신 서류는 채용에만 용되며, 타용도로는 사용되지 않습니다.</dd>
+                                <br>	
+		                    <dd> <img src="/static_resources/homePage/img/Procedure-img.jpg" alt="펜타에스 로고" style="margin-top:10px;"></dd>
+		                </dl>
+		            </div>
+	            
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 지원방법</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자기소개서 또는 이력서 작성 후 메일로 접수(메일 수신 시 반드시 회신 드립니다)</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;메일 주소 : typa99@naver.com</dd>	                
+		                </dl>
+		            </div>		            
+		            <div class="recruitment">
+		                <dl class="recruitment01">
+		                    <span class="recruitment01_img01"><img src="/static_resources/homePage/img/bullet01.png" alt=""></span>
+		                    <h3> 기타</h3>
+		                    <p class="recruitment_00"></p>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;복리후생 :4대보험, 내일배움공제, 성과급 제도, 장기근속자 포상제도</dd>
+		                    <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;지원서에 허위 기재가 잇거나, 제출한 서류가 허위일 경우 채용이 취소 됩니다.</dd>
+                           <dd><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관계 법령에 의거 제출한 서류는 반환 받을 수 없으며,채용절차 완료 후 파기됩니다.</dd>		                
+		                </dl>
+		            </div>
+		
+		    </div>
+		    </section>
+		
+		</div>
+		<!-- tap메뉴 -->
+		
+		
+		
+		</div>
+		<!--container-->
+		
+		
+		<%@include file="/WEB-INF/jsp/common/include/footer.jsp"%>
+
+	</div>
+</body>
+<script>
+$(function(){
+	var tab = window.location.search;
+	tab = "tab"+ tab.substr(5);
+	changeTab(tab);
+	
+	goSearch();
+})
+function changeTab(val){
+	$('#' + val + '').prop("checked", true)
+}
+
+function goSearch(){
+	cv_pageInfo.func = goSearch;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "ID", isAsc : false},
+			],
+			limit : 10
+	}
+	
+	params = {
+		word : $("#word").val().trim()
+	}
+	cf_callPage("/community/getNoticeList", params, pageInfo, goSearchCB);
+}
+function goSearchCB(data){
+	console.log(data);
+	g_dataList = data.list;
+	console.log(g_dataList);
+	
+	$("#noticeList").html("");
+	var listDivHtml = "";
+	
+ 	for(var i=0; i<g_dataList.length; i++){
+ 		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+ 		listDivHtml += '	<td>' + g_dataList[i].curNum + '</td>';
+ 		listDivHtml += '	<td><a onclick="goDetail(\'' + g_dataList[i].ID + '\')">' + g_dataList[i].TITLE + '</a></td>';
+ 		listDivHtml += '	<td>' + g_dataList[i].WRITER + '</td>';
+ 		listDivHtml += '	<td>' + g_dataList[i].REG_DT + '</td>';
+		listDivHtml += '</tr>';
+	}
+	$("#noticeList").html(listDivHtml);
+ 	$(".notice_table_tr_top2_2").last().addClass("notice_table_tr_last_2");
+ 	$(".search_result_number").text(data.pageInfo.totalCount);
+}
+
+function goDetail(ID){
+	location.href="/community/noticeDetail?ID=" + ID;
+}
+
+function saveInq(){
+	params = {
+		NAME : $("#NAME").val(),
+		TEL_NO : $("#TEL_01").val() + "-" + $("#TEL_02").val() + "-"+ $("#TEL_03").val(),
+		CORP_NM : $("#CORP_NM").val(),
+		CORP_DEP : $("#CORP_DEP").val(),
+		CORP_POS : $("#CORP_POS").val(),
+		E_MAIL : $("#E_MAIL_01").val() + "@" + $("#E_MAIL_02").val(),
+		CONTENT : $("#CONTENT").val(),
+	}
+	cf_call("/community/saveInq", params, saveInqCB);
+}
+function saveInqCB(data){
+	console.log(data);
+	
+}
+</script>
+</html>

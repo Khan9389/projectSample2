@@ -1,0 +1,202 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=i1uzkg0ztr"></script>
+
+<body>
+	<div class="wrapper">
+
+		<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+		
+		<!-- container -->
+		<div id="container">
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		    <div class="subVisual">
+		
+		        <div class="fixedWidth">
+		            <h2 class="tts">펜타에스</h2>
+		
+		            <div>
+		                <h2 class="sub_topbaner_title02">회사소개</h2>
+		                <p class="sub_topbaner_content02">미래를 중시하는 펜타에스</p>
+		
+		            </div>
+		        </div>
+		    </div>
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		
+		    <!-- tap메뉴 -->
+		    <p class="sub_menubar02"></p>
+		    <div class="main">
+	      
+		        <input id="tab3" type="radio" name="tabs" checked>
+		        <!--디폴트 메뉴-->
+		        <label for="tab3" class="menu-align01">회사소개</label>
+		
+		        <input id="tab4" type="radio" name="tabs">
+		        <label for="tab4">비전/역량</label>
+		
+		        <input id="tab5" type="radio" name="tabs">
+		        <label for="tab5">조직도</label>
+		
+		        <input id="tab6" type="radio" name="tabs">
+		        <label for="tab6">오시는 길</label>
+		       
+		        <section id="content3">
+		            <h3 class="chart_title01">회사소개</h3>
+		            <div> 
+		                <p class="company_content_img01"><img src="static_resources/homePage/img/company_img.jpg" alt="회사소개 이미지"
+		                        class="company_img01"></p>
+		                      
+		            </div>
+		            <div class="company_content_content01">
+		                <span class="company_content_content01_01">최선을 다하는 파트너가 되겠습니다.</span>
+		                <span class="company_content_content01_02">주식회사 펜타에스는 2017년 1월 고객의 만족을 위한 IT 시스템 구축 및 O2O 서비스 제공하기 위하여 설립된 회사입니다.
+                        <br><br>
+						즐겁게 일하고 밝은 미래를 추구하는 조직을 기반으로 작지만 강한 기업으로 성장하려 합니다.
+						<br><br>
+						주식회사 펜타에스와 함께하면 모두가 행복할 수 있는 IT 서비스와 솔루션을 제공받을 수 있도록 최선을 다하겠습니다.
+						<br><br>
+						항상 신뢰할 수 있는 파트너로 만나뵙기를 희망합니다.
+						<br><br>
+						감사합니다.
+						<br><br>
+						주식회사 펜타에스 대표이사 박 태영
+						<br><br>
+						</span>
+		            </div>
+		
+		            <table class="company_table01" style="clear:both;">
+		                <caption>
+		                    <!--회사내용 목록-->
+		                </caption>
+		                <colgroup>
+		                    <col style="width:30%">
+		                    <col style="width:70%">
+		                </colgroup>
+		                <thead>
+		                    <tr class="company_table_tr_top">
+		                        <th>회사명</th>
+		                        <td>주식회사 펜타에스</td>
+		                    </tr>
+		                </thead>
+		                <tbody>
+		                    <tr class="company_table_tr_top2">
+		                        <th>대표이사</th>
+		                        <td>박태영</td>		                    	
+		                    </tr>
+		                    <tr class="company_table_tr_top2">
+		                        <th>사업분야</th>
+		                        <td>소프트웨어 개발 및 시스템 구축</td>		                    	
+		                    </tr>		                    
+		                    <tr class="company_table_tr_top2">
+		                        <th>설립일</th>
+		                        <td>2018년 01월영</td>		                    	
+		                    </tr>		                    
+		                    <tr class="company_table_tr_top2">
+		                        <th>소재지</th>
+		                        <td>서울특별시 강서구 공항대로 247, 비동 1229호</td>	                    
+		                    </tr>
+		                    <tr class="company_table_tr_top2">
+		                        <th>홈페이지</th>
+		                        <td>https://pentas.co.kr </td>
+		                    </tr>
+		                    </tr>
+		                    <tr class="company_table_tr_last">
+		                        <th>전화번호</th>
+		                        <td>TEL : 010-6299-9668  <br>  FAX : 02-6020-9608</td>
+		                    </tr>
+		                </tbody>
+		            </table>
+		   <br><br>
+		
+		        </section>
+		        <section id="content4">
+		            <h3 class="chart_title01">비전/역량</h3>
+		            <p class="vision01"><img src="static_resources/homePage/img/vision_img.jpg" alt=""></p>
+		        </section>
+		
+		
+		        <section id="content5">
+		            <div class="chart01">
+		                <h3 class="chart_title01">조직도</h3>
+		                <p class="chart_img01"><img src="static_resources/homePage/img/chart_img.jpg" alt=""></p>
+		            </div>
+		        </section>
+		        <section id="content6">
+		            <div class="chart__content_top01">
+		
+		                <h3 class="chart_title01">오시는 길</h3>
+		
+		
+		                <p class="lotation_img">
+		                	<!-- <img src="static_resources/homePage/img/lotation_img.jpg" alt="지도 이미지"> -->
+		                	<div id="map" style="width: 980px; height: 432px; border:2px solid #999999;" ></div>
+		                	    
+		                </p>
+		
+		                <br><br>
+		                <span class="lotation_bullet00"><img src="static_resources/homePage/img/bullet01.png" alt=""></span>
+		                <h3 class="lotation_title00"> 오시는 길</h3>
+		
+		                <p class="lotation_content00"><img src="static_resources/homePage/img/address_icon.png" alt="" class="lotation_img_00">
+		                </p>
+		                <p>서울특별시 강서구 공항대로 247 B동 1229호 (마곡동, 퀸즈파크나인)</p>
+		                <p style="clear:both;"></p>
+		                <p class="lotation_content00"><img src="static_resources/homePage/img/phon_icon.png" alt="" class="lotation_img_00">
+		                </p>
+		                <p style="clear:bot">010-6299-9668</p>
+		                <p style="clear:both;"></p>
+		                <p class="lotation_content00"><img src="static_resources/homePage/img/fax_icon.png" alt="" class="lotation_img_00"></p>
+		                <p style="clear:bot">02-6020-9608</p>
+		                <p style="clear:both;"></p>
+		                <span class="lotation_bullet01"><img src="static_resources/homePage/img/bullet01.png" alt=""></span>
+		                <h3 class="lotation_title01"> 교통안내</h3>
+		                <div class="chart01">
+	                        <p class="lotation_content00"><img src="static_resources/homePage/img/subway_icon1.png" alt="" class="lotation_img_00"></p>
+			                <p>서울특별시 강서구 공항대로 247 B동 1229호 (마곡동, 퀸즈파크나인)</p>		                 
+		                </div>
+		
+		            </div>
+		
+		        </section>
+		
+		    </div>
+		    <!-- tap메뉴 -->
+		
+		</div>
+		<!--container-->
+		
+		
+		<%@include file="/WEB-INF/jsp/common/include/footer.jsp"%>
+
+	</div>
+</body>
+<script>
+	$(function(){
+		var tab = window.location.search;
+		tab = "tab"+ tab.substr(5);
+		changeTab(tab);
+	})
+	function changeTab(val){
+		$('#' + val + '').prop("checked", true)
+	}
+	
+	var mapOptions = {
+		    center: new naver.maps.LatLng(37.55940995140012, 126.83489617639066),
+		    //37.4818898, 127.0574661
+		    zoom: 15,
+		};
+	var map = new naver.maps.Map('map', mapOptions);
+
+	var marker = new naver.maps.Marker({
+		position : new naver.maps.LatLng(37.55940995140012, 126.83489617639066),
+		map : map
+	});
+</script>
+</html>

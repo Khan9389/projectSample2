@@ -1,0 +1,115 @@
+package common.config.interceptor;
+
+import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.web.servlet.support.RequestContextUtils;
+
+import common.exception.ForcedLogoutException;
+import common.utils.common.CmmnUtil;
+import common.utils.string.StringUtil;
+import k_chemicals.common.ctl.LoginCtl;
+import k_chemicals.common.svc.CommonSvc;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Component
+public class CustomInterceptor extends HandlerInterceptorAdapter {
+	
+	@Autowired
+	CommonSvc commonSvc;
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		
+		HttpSession session = request.getSession();
+		
+		// 세션에 디바이스 정보가 없는경우 한번 가져오는 로직을 수행한다.
+		String requestURI = StringUtil.defaultString(request.getRequestURI(), "");
+		
+		
+		String deviceType = (String) session.getAttribute("deviceType");
+		if(!StringUtil.equalsAny(requestURI, "/getDeviceInfo", "/setDeviceInfo") && deviceType == null) {
+			
+			String queryString = StringUtil.defaultString(request.getQueryString(), "");
+			if(!"".equals(queryString)) {
+				requestURI += "?" + queryString;
+			}
+			
+			session.setAttribute("getDeviceInfoRequestURI", requestURI);
+			response.sendRedirect("/getDeviceInfo");
+			return false;
+		}
+			
+		// 다국어 적용
+		LocaleResolver localeResolver = RequestContextUtils.getLocaleResolver(request);
+		
+		if(requestURI.length() >=3 ) {
+			String lang = requestURI.substring(0, 3);
+			
+			if(StringUtil.equalsAny(lang, "/kr", "/en")) {
+				if("/kr".equals(lang)) {
+					session.setAttribute("lang", "kr");
+					localeResolver.setLocale(request, response, Locale.KOREAN);
+				} else if("/en".equals(lang)) {
+					session.setAttribute("lang", "en");
+					localeResolver.setLocale(request, response, Locale.ENGLISH);
+				}
+			}
+		}
+		
+		// 중복로그인 방지
+		// 앞서 동일 아이디로 로그인한 사용자를 강제로 로그아웃 시킨다.
+		String USR_ID = (String) session.getAttribute("USR_ID");
+		if(USR_ID != null) {
+			if(!StringUtil.equals(session.getId(), commonSvc.getLoginSessionId(USR_ID))) {
+				
+				String lang = StringUtil.defaultString((String) session.getAttribute("lang"), "kr");
+				
+				CmmnUtil.clearLoginSession(session);
+				
+				SecurityContextHolder.clearContext();
+
+				ForcedLogoutException e = new ForcedLogoutException();
+				e.setLang(lang);
+				
+				throw e;
+			}
+		}
+		
+
+//		log.debug("Interceptor ===> preHandle");
+//		log.debug(StringUtil.join("URI ===> ", request.getRequestURI()));
+		
+//		String params_with_multipart = request.getParameter("params_with_multipart");
+//		if(params_with_multipart != null) {
+//			request.setAttribute("params", JsonUtil.fromJsonStr(PentasMap.class, params_with_multipart));
+//		}
+		
+		return true;
+	}
+
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+			ModelAndView modelAndView) throws Exception {
+
+//		log.debug("Interceptor ===> postHandle");
+	}
+
+	@Override
+	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+			throws Exception {
+//		log.debug("Interceptor ===> afterCompletion");
+	}
+	
+}

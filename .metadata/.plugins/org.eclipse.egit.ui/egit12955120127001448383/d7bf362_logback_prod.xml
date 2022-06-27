@@ -1,0 +1,31 @@
+<included>
+
+	<property name="directory" value="/usr/local/src/tomcat9/logs" />
+	
+	<appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${directory}/pentas.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${directory}/pentas_%d{yyyy-MM-dd}.log</fileNamePattern>	
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d %5p [%c] %m%n</pattern>
+		</encoder>
+	</appender>
+  
+	<logger name="jdbc.audit" level="ERROR"/>
+	<logger name="jdbc.sqlonly" level="ERROR"/>
+	<logger name="jdbc.resultset" level="ERROR"/>
+	<logger name="jdbc.resultsettable" level="ERROR"/>
+	<logger name="jdbc.connection" level="ERROR"/>
+	<logger name="jdbc.sqltiming" level="ERROR"/>
+	<logger name="com.k_chemicals" level="DEBUG"/>
+	<logger name="org" level="ERROR"/>
+	<logger name="log4jdbc" level="ERROR"/>
+	<logger name="com.zaxxer" level="ERROR"/>
+	<logger name="net.sf.ehcache" level="ERROR"/>
+  
+	<root level="DEBUG">
+		<appender-ref ref="ROLLING" />
+	</root>
+  
+</included>

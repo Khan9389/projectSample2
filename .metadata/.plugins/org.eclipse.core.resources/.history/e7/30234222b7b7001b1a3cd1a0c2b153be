@@ -1,0 +1,78 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<%@include file="/WEB-INF/jsp/common/include/common_meta.jsp" %>
+<%@include file="/WEB-INF/jsp/common/include/common_static_resource.jsp" %>
+</head>
+<body>
+<br><br>
+<a href="/sample/scriptTest">Script 테스트페이지 이동</a>
+<br><br>
+
+
+<a href="/sample/ajaxSelectTest">Ajax 조회 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/transactionTest">Transaction 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/ajaxParallelTest">Ajax 병렬실행 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/exceptionTest">Exception 테스트페이지 이동</a>
+<br><br>
+<br><br>
+<a href="/sample/chartTest">차트 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/webEditorTest">웹에디터 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/mapTest">Map 테스트페이지 이동</a>
+
+<br><br>
+<a href="/sample/fileMngTest">File Up/Down 테스트페이지 이동</a>
+<br><br>
+<br><br>
+<a href="/sample/iframeTest">iframe 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/ajaxCRUDTest">Ajax CRUD 테스트페이지 이동</a>
+
+
+
+
+<!-- <br><br>
+<a href="/sample/ajaxSelectTest">Ajax 조회 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/transactionTest">Transaction 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/ajaxParallelTest">Ajax 병렬실행 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/exceptionTest">Exception 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/fileMngTest">File Up/Down 테스트페이지 이동</a> ==== YY
+<br><br>
+<a href="/sample/excelMngTest">Excel Up/Down 테스트페이지 이동</a> ==== YY
+<br><br>
+<a href="/sample/webEditorTest">웹에디터 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/chartTest">차트 테스트페이지 이동</a> ===== O
+<br><br>
+<a href="/sample/iframeTest">iframe 테스트페이지 이동</a> ==== YY
+<br><br>
+<a href="/sample/websocketTest">웹소켓 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/ehcacheTest">EhCache 테스트페이지 이동</a> ==== X
+<br><br>
+<a href="/sample/schdulerTest">스케줄러 테스트페이지 이동</a> ==== X
+<br><br>
+<a href="/sample/springAsyncTest">스프링 비동기 테스트페이지 이동</a> ==== X
+<br><br>
+<a href="/sample/mongoTest">몽고DB 테스트페이지 이동</a> 
+<br><br>
+<a href="/sample/videoStreamingTest">동영상파일 스트리밍 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/chattingBuyer">채팅(바이어) 테스트페이지 이동</a>
+<br><br>
+<a href="/sample/chattingCorp">채팅(참여기업) 테스트페이지 이동</a>
+<br><br>
+ -->
+</body>
+</html>

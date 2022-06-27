@@ -1,0 +1,49 @@
+package pentas.sample.ajaxSelectTest.svc;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import common.dao.CmmnDao;
+import common.utils.common.PentasMap;
+import common.utils.mybatis_paginator.domain.Order;
+import common.utils.mybatis_paginator.domain.PageBounds;
+import common.utils.mybatis_paginator.domain.PageList;
+import common.utils.string.StringUtil;
+
+@Service
+public class AjaxSelectTestSvc {
+	
+	@Autowired
+	CmmnDao cmmnDao;
+
+	public List<PentasMap> selectTest01(PentasMap params) {
+		return cmmnDao.selectList("sample.ajaxSelectTest.selectTest01", params);
+	}
+
+	public PageList<PentasMap> selectTest02(PentasMap params) {
+		
+		int pageNo = params.getInt("PAGE_NO");
+		String SORT_01_TARGET = params.getString("SORT_01_TARGET");
+		String SORT_01_TYPE = params.getString("SORT_01_TYPE");
+		String SORT_02_TARGET = params.getString("SORT_02_TARGET");
+		String SORT_02_TYPE = params.getString("SORT_02_TYPE");
+		
+		Order[] orderArr = null;
+		if(StringUtil.isEmpty(SORT_02_TARGET)) {
+			orderArr = new Order[1];
+			orderArr[0] = Order.create(SORT_01_TARGET, SORT_01_TYPE);
+		} else {
+			orderArr = new Order[2];
+			orderArr[0] = Order.create(SORT_01_TARGET, SORT_01_TYPE);
+			orderArr[1] = Order.create(SORT_02_TARGET, SORT_02_TYPE);
+		}
+		PageBounds pageBounds = new PageBounds(pageNo, orderArr);
+        PageList<PentasMap> pageList = cmmnDao.selectListPage("sample.ajaxSelectTest.selectTest01", params, pageBounds);
+		
+		return pageList;
+	}
+	
+	
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='common'>
+
+	<select id="getComCodeMajor" resultType="String">
+		/* common.getComCodeMajor */
+		SELECT
+			ID
+		FROM CMMN_CD_MAJOR
+			WHERE 1=1
+			AND USE_YN = 'Y'
+			AND MAJOR_CD = #{MAJOR_CD_ID}
+	</select>
+	<select id="getComCodeList" resultType="pentasMap">
+		/* common.getComCodeList */
+		SELECT
+			B.MAJOR_CD
+			,B.MAJOR_NM
+			,A.MINOR_CD
+			,A.MINOR_NM
+			,A.MINOR_CD_ORD
+			,A.USE_YN
+		FROM CMMN_CD_MINOR A, CMMN_CD_MAJOR B
+		WHERE 1=1
+			AND A.USE_YN = 'Y'
+			AND A.MAJOR_CD_ID = B.ID
+	</select>
+	
+	<insert id="insertFileInfo">
+	/* common.insertFileInfo */
+		INSERT INTO CMMN_UPLOAD_FILE (
+			ID
+			,FILE_USE_TABLE
+			
+			,FILE_ORIG_NAME
+			,FILE_ORIG_EXT
+			,FILE_ORIG_TYPE
+			,FILE_SIZE
+			,FILE_STOR_NAME
+			,FILE_STOR_DIR
+			
+			,REG_DT
+			,MOD_DT
+		) VALUES (
+			#{FILE_ID}
+			,#{FILE_USE_TABLE}
+			
+			,#{FILE_ORIG_NAME}
+			,#{FILE_ORIG_EXT}
+			,#{FILE_ORIG_TYPE}
+			,#{FILE_SIZE}
+			,#{FILE_STOR_NAME}
+			,#{FILE_STOR_DIR}
+			
+			,SYSDATE()
+			,SYSDATE()
+		)
+	</insert>
+	
+	<select id="selectFileInfo" parameterType="string" resultType="pentasMap">
+	/* common.selectFileInfo */
+		SELECT
+			FILE_STOR_NAME
+			,FILE_ORIG_EXT
+			,FILE_STOR_DIR
+			,FILE_ORIG_NAME
+			/* ,FILE_SIZE */
+			/* ,REG_USR_ID */
+			/* ,MOD_USR_ID */
+		FROM CMMN_UPLOAD_FILE
+		WHERE 1=1
+			AND FILE_STOR_NAME = #{FILE_STOR_NAME}
+			<!-- AND DEL_YN = 'N' -->
+	</select>
+	
+	<select id="getSettingProperties" resultType="pentasMap">
+	/* common.getSettingProperties */
+		SELECT 
+			PROP.EMAIL_SMTP_SERVER
+			,PROP.EMAIL_SMTP_PORT
+			,PROP.EMAIL_SMTP_ID
+			,PROP.EMAIL_SMTP_PW
+			,PROP.EMAIL_SENDER_ADDR
+			,PROP.EMAIL_SENDER_NAME
+		FROM WARE_SETTING_PROPERTIES PROP
+		WHERE 1=1
+			AND ID = 1
+	</select>
+	
+</mapper>

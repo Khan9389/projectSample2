@@ -1,0 +1,12 @@
+/target/
+/.classpath
+/.project
+/.springBeans
+/src/**/*.properties
+/Servers/
+
+/.metadata/.mylyn
+/.metadata/.lock
+/.metadata/.log
+/.metadata/version.ini
+

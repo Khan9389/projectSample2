@@ -1,0 +1,302 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/home_static_resource.jsp" %>
+
+	<script src="/static_resources/lib/axios/0.21.0/axios.min.js"></script>
+	<script src="/static_resources/js/common.js?rscVer=<%=rscVer%>"></script>
+	<script src="/static_resources/js/prototype_polyfill.js?rscVer=<%=rscVer%>"></script>
+	<%@include file="/WEB-INF/jsp/common/include/common_js.jsp"  %>
+</head>
+<body class="sub fix">
+<div id="wrap" class="web">
+	<%@include file="/WEB-INF/jsp/common/include/home_header.jsp"%>
+	
+	<div id="container">
+		<div id="depthNav" class="subVisual subv1 subv1">
+			<div class="contTitle">
+				<div class="subTitle"><strong>프로젝트 구인</strong></div>
+			</div>
+		</div>
+		<!-- contents -->
+		<div id="section1"  class="brand-brand">
+		    <div id="section" class="listbox ani on">
+
+		    </div>
+		    <%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+		</div>
+		<!-- //contents -->
+	</div>
+	
+	<%@include file="/WEB-INF/jsp/common/include/home_footer.jsp"%>
+</div>
+</body>
+<div class="layerPrivacy">
+	<div class="bg"></div>
+	<div class="popupcont">
+		<div class="popupBody">
+			<div class="tit">지원하기</div>
+			<div class="btn_close"><a href="javascript:void(0);">close</a></div>
+			<div class="scrollbox">
+				<div class="board-box ani on" style="padding: 0px;">
+					<div id="app" class="customerBox-ip">
+						<div class="ipbox">
+							<div class="listbox">
+								<ul>
+									<li>
+										<label class="txt">지원프로젝트</label>
+										<input type="hidden" id="recrPrjId">
+										<div id="prjName" class="projectname" style="margin-top: 4px;"></div>
+									</li>
+									<li>
+										<label class="txt">이름 <span class="red-text">*</span></label>
+										<input id="recrName" type="text" maxlength="100" placeholder="이름 입력">
+									</li>
+									
+									<li>
+										<label class="txt">연락처 <span class="red-text">*</span></label>
+										<input id="recrTel" type="tel" maxlength="13" placeholder="'연락처 입력" onkeyup="telePhoneCheck(this);">
+									</li>
+									<li>
+										<label class="txt">이메일 <span class="red-text">*</span></label>
+										<input id="recrEmail" type="email" maxlength="100" placeholder="이메일 주소 입력">
+									</li>
+									<li>
+										<label class="txt">프로필 등록 <span class="red-text">*</span></label>
+										<input id="recrProFile" accept=".doc,.docx,.pdf,.hwp,.hwpx" type="file">
+									</li>
+								</ul>
+							</div>
+							<div class="txt-contents">
+								<label class="txt">비고</label>
+								<textarea id="recrMemo" placeholder="비고 내용 입력"></textarea>
+							</div>
+							<div class="sbox" style="margin: 20px 0 0 0; display: flex; justify-content: center;">
+								<div class="btn" style="text-align: center;">
+									<a href="#" class="" onclick="goSave()"><span>확인</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+var saveFlag = true;
+
+$(function(){
+	
+	getList();
+	
+	$('.layerPrivacy .btn_close, .layerPrivacy .bg').click(function() {
+		$('.layerPrivacy').removeClass('on');
+	});
+})
+	
+function getList(){
+	cv_pageInfo.func = getList;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "ID", isAsc : false},
+			],
+			limit : 3
+	}
+	params = {
+	}
+	cf_callPage("/project/getList", params, pageInfo, getListCB);
+}
+	
+function getListCB(data){
+	p_dataList = data.list;
+	$("#section").html("");
+	var listDivHtml = "";
+	
+ 	if(p_dataList.length == 0){
+		listDivHtml += '<div class="b_contbox">';
+		listDivHtml += '<div class="txtbox">';
+		listDivHtml += '<div class="sbox" >';
+		listDivHtml += '	<div style="text-align:center;">진행중인 프로젝트가 없습니다.</div>';
+		listDivHtml += '</div>';
+		listDivHtml += '</div>';
+		listDivHtml += '</div>';
+		$(".board-paging ul").css("display", "none");
+		$(".board-paging").css("height", "197px");
+	}else{
+	 	for(var i=0; i < p_dataList.length; i++){
+			listDivHtml += '<div class="b_contbox">';
+			listDivHtml += '<div class="txtbox">';
+			listDivHtml += '<div class="sbox" >';
+			
+			listDivHtml += '<div class="txt_link">';
+			listDivHtml += '	<p>' + p_dataList[i].PRJ_NAME + '</p>';
+			listDivHtml += '</div>';
+
+			listDivHtml += '<div class="txt_links">';
+			listDivHtml += '	<a href="javascript:void(0);" class="btn" onclick="goWrite(\'' + p_dataList[i].ID + '\',\'' + p_dataList[i].PRJ_NAME + '\')"><span>지원하기</span></a>';
+			listDivHtml += '</div>';
+			
+			listDivHtml += '<div class="project">';
+			listDivHtml += '	<div id="section1" class="listbox ani on">';
+			listDivHtml += '		<div class="topbox">';
+			listDivHtml += '			<div class="tit"></div>';
+			listDivHtml += '		</div>';
+			listDivHtml += '		<dl>';
+			listDivHtml += '			<dt>';
+			listDivHtml += '				<strong>프로젝트기간</strong>';
+			listDivHtml += ' 				<span>' + p_dataList[i].PRJ_START_DT + '~' + p_dataList[i].PRJ_END_DT + '</span>';
+			listDivHtml += '			</dt>';
+			listDivHtml += '			<dt>';
+			listDivHtml += '				<strong>고객사명</strong>';
+			listDivHtml += '				<span>' + p_dataList[i].PRJ_CLIENT + '</span>';
+			listDivHtml += '			</dt>';
+			listDivHtml += '			<dt>';
+			listDivHtml += '				<strong>프로젝트장소</strong>';
+			listDivHtml += '				<span>' + p_dataList[i].PRJ_LOCATION + '</span>';
+			listDivHtml += '			</dt>';
+			listDivHtml += '			<dt>';
+			listDivHtml += '				<strong>주요기술</strong>';
+			listDivHtml += '				<span>' + p_dataList[i].PRJ_TECH + '</span>';
+			listDivHtml += '			</dt>';
+			listDivHtml += '		</dl>';
+			listDivHtml += '	</div>';
+			listDivHtml += '</div>';
+
+ 			listDivHtml += '<div class="accordion">';
+ 			listDivHtml += '<ul>';
+ 			listDivHtml += '<li>';
+ 			listDivHtml += '	<input type="checkbox" checked>';
+ 			listDivHtml += '	<i></i>';
+ 			listDivHtml += '	<h2>프로젝트 정보</h2>';
+ 			listDivHtml += '	<p>' + p_dataList[i].PRJ_MEMO + '</p>';
+ 			listDivHtml += '</ul>';
+ 			listDivHtml += '</li>';
+			listDivHtml += '</div>';
+			
+			
+			listDivHtml += '</div>';
+			listDivHtml += '</div>';
+			listDivHtml += '</div>';
+		}
+	}
+	
+	$("#section").html(listDivHtml);
+}
+
+function validate(){
+	if(cf_isEmpty($("#recrName").val().trim())){
+		alert("이름을 입력하세요.");
+		$("#recrName").focus();
+		return false;
+	}
+	
+	if(cf_isEmpty($("#recrTel").val().trim())){
+		alert("연락처를 입력하세요.");
+		$("#recrTel").focus();
+		return false;
+	}
+	
+	if(cf_isEmpty($("#recrEmail").val().trim())){
+		alert("이메일을 입력하세요.");
+		$("#recrEmail").focus();
+		return false;
+	}
+	
+	// 이메일 유효성
+	var emailExp = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+	// 이메일 형식이 [알파벳/숫자/특수문자(_.-)]@[알파벳/숫자].[알파벳/숫자] 형식이 아닐경우
+	if(!emailExp.test($("#recrEmail").val().trim())){ 
+		alert("이메일 형식을 확인하세요.");
+		$("#recrEmail").focus();
+		return false;
+	}
+	
+	if ($("#recrProFile").length === 0 
+			|| $("#recrProFile")[0].files.length === 0) {
+		alert("이력서를 첨부해주세요.");
+		$("#recrProFile").focus();
+		return false;
+	}
+    
+	if(!saveFlag){
+		alert("처리중입니다.")
+		return false;
+	}
+	
+	return true;
+}
+
+function goWrite(id, name) {
+	$("#recrPrjId").val("");
+	$("#prjName").text("");
+	$("#recrName").val("");
+	$("#recrTel").val("");
+	$("#recrEmail").val("");
+	$("#recrMemo").val("");
+	/* 파일 업로드 S */
+	$("#recrProFile").val("");
+	/* 파일 업로드 E */
+	
+	$("#recrPrjId").val(id);
+	$("#prjName").text(name);
+	
+	$('.layerPrivacy').addClass('on');
+}
+
+function goSave(){
+	saveFlag = false;
+	console.log(saveFlag)
+	if(!validate()) return;
+
+	/* 파일 업로드 S */
+	var fileList = [];
+	var upfileIds = [];
+	setFileList(fileList, upfileIds, "recrProFile");
+	/* 파일 업로드 E */
+	
+	var params = {
+			baseUrl : window.location.protocol + "//" + window.location.host,
+			/* 파일 업로드 S */
+			upfileIds : upfileIds,
+			fileUseTable :"HOME_PRJ_RECRUIT",
+			/* 파일 업로드 E */
+			recrName : $("#recrName").val(),
+			recrTel : $("#recrTel").val(),
+			recrEmail : $("#recrEmail").val(),
+			recrPrjId : $("#recrPrjId").val(),
+			recrMemo : $("#recrMemo").val(),
+			recrPrjName : $("#prjName").text(),
+	};
+
+	//return;
+	cf_callWithFiles("/project/saveInfo", fileList, params, goSaveCB);
+}
+
+function goSaveCB(data){
+	saveFlag = true;
+	if (data.rsltStatus !== "SUCC") {
+		alert(data.errMsg);
+	} else {
+		alert("등록이 완료되었습니다.");
+		$('.layerPrivacy').removeClass('on');
+	}
+}
+
+/* 파일 업로드 S */
+// 파일 업로드 시 값 세팅
+function setFileList(fileList, upfileIds, target){
+	if(!cf_isFileEmpty(target)){
+		upfileIds.push(target);
+		fileList.push($("#" + target)[0].files[0]);
+	}
+}
+/* 파일 업로드 E */
+</script>
+</html>

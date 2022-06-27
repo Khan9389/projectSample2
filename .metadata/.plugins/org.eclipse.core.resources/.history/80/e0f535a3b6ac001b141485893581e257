@@ -1,0 +1,70 @@
+package common.config.matcher;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.security.web.util.matcher.RequestMatcher;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * IfpCsrfRequestMatcher.java
+ * - 요청에 대해 스프링 시큐리티에서 CSRF를 적용할건지 아닐건지 판단
+ * 
+ * ################ Spring Security CSRF Protection 설정 ##################
+ * [CsrfTokenAdder.java, 서블릿필터] ###"응답에 태그 삽입"###
+ * - Spring Security4 이상은 CSRF Enabled가 기본설정
+ * - HttpServletRequest(일반  JSP요청), XMLHttpRequest(AJAX) 요청이든 응답에 Csrf 히든테그 삽입
+ * - CSRF Protection을 위한 Text/Html 응답에 히든태그 Xsrf Token 삽입
+ * - AJAX JSON응답(콤보 채우기등)은 히든태그 Csrf Token 삽입할 필요없다.
+ * 
+ * [security-config.xaml]
+ * - 애당초 Spring Security 적용이 필요없는 부분에 대한 정의(/resources, /images 등)
+ * - RequestMatcher에 대한 정의(스프링 시큐리티에서 요청에 대해 CSRF를 적용할건지 아닐건지 판단)
+ * - AccessDeniedHandler에 대한 정의(403 에러발생시 대응)
+ * 
+ * [IfpCsrfRequestMatcher.java] ###"요청에 따라 CSRF 적용여부 결정"###
+ * - 스프링 시큐리티에서 CSRF를 적용할건지 아닐건지 판단
+ * - AJAX CALL, 첫화면, 최측메뉴로딩, 팝업로등 요청은 CSRF 적용하지 않음
+ * - (TEXT/HTML을 응답으로 보낸는 부분은 CsrfTokenAdder 필터에서 Csrf 히든태그 삽입함)
+ * - 403 Forbidden 에러가 발생하는 부분이 있다면 이곳에서 추가할 것
+ * 
+ * [IfpAccessDeniedHandler.java]
+ * - 403 Forbidden 에러 발생하는 경우 처리하는 핸들러
+ * ######################################################################
+ * @since 2019.03.28 
+ */
+@Slf4j
+public class IfpCsrfRequestMatcher implements RequestMatcher {
+
+	@Override
+	public boolean matches(HttpServletRequest request) {
+		String strUrl = request.getRequestURL().toString();
+    	String strUri = request.getRequestURI();
+    	String queryString = request.getQueryString() == null ? "" : request.getQueryString();
+    	String contentType = request.getContentType() == null ? "" : request.getContentType();
+    	
+    	//---------------------------------------------------------
+    	// CSRF 필터링, 필요시 추가 하세요. 여기에 추가안하시면 403 오류 발생!
+    	//---------------------------------------------------------
+    	// AJAX CALL
+        if ("XMLHttpRequest".equals(request.getHeader("X-Requested-With")))  
+        	                                           return false;
+        // 첫화면
+        else if ("/".equals(strUri))                   return false;  
+        // 좌측 메뉴로딩
+        else if ("/ad/menu.do".equals(strUri))         return false;
+        // 로그아웃
+        else if ("/ad/login.do".equals(strUri))        return false;
+        // 팝업
+        else if ("/ad/commpopup.do".equals(strUri))    return false;
+        else {
+        	log.info("###################################### request.getRequestURL() :: " + strUrl);
+        	log.info("###################################### request.getRequestURI() :: " + strUri);
+        	log.info("###################################### request.getQueryString() :: " + queryString);
+        	log.info("###################################### request.getContentType() :: " + contentType);
+        }
+
+        return true;
+	}
+
+}

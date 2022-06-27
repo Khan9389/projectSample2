@@ -1,0 +1,137 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+<meta charset="UTF-8">
+	<%@include file="/WEB-INF/jsp/common/include/common_meta.jsp" %>
+	<title>Insert title here</title>
+	<%@include file="/WEB-INF/jsp/common/include/common_static_resource.jsp" %>
+	
+	<!-- web editor summernote  S -->
+	<link href="/static_resources/lib/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+	<script src="/static_resources/lib/summernote/0.8.18/summernote-lite.min.js"></script>
+	<script src="/static_resources/lib/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+	<!-- web editor summernote  E -->
+	
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+	<br><br>
+	<br><br>
+	<h2>write</h2>
+	<br><br>
+	
+	<br>
+	title : <input type="text" id="TITLE">
+	<br><br>
+	<div id="summernote"></div>
+	<br><br>
+	
+	<br><br>
+	<button id="save"><a onclick="goSave()">save</a></button>
+	<button><a href="/board">board</a></button>
+	<button id="delete"><a onclick="goDelete()">delete</a></button>
+	
+	
+	<!-- <button><a href="/board/tourView">board</a></button> -->
+	
+</body>
+<script>
+var g_ID = "<%=ID%>";
+
+$(function(){
+	$('#summernote').summernote({
+		lang: 'ko-KR',
+		tabsize: 2,
+		height: 300,
+		width: 1000,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']],
+            ['height', ['height']],
+          ],
+	});
+	
+	$('#summernote').summernote('code');
+	
+	if(g_ID !== ""){
+		getInfo(g_ID);
+	}else{
+		$("#delete").remove();
+	}
+	
+})
+
+function getInfo(ID){
+	console.log(ID);
+	params = {
+		ID : ID,
+	}
+	cf_call("/board/getInfo", params, getInfoCB);
+}
+
+function getInfoCB(data){
+	console.log(data);
+	$("#TITLE").val(data.TITLE);
+	$('#summernote').summernote('code', data.CONTENT);
+	
+	if("<%=bnMbrId%>" != data.INP_ID){
+		$("#save").remove();
+		$("#delete").remove();
+		$("#TITLE").remove();
+		$("#summernote").remove();
+	}
+}
+
+function validate(){
+	
+	if($('#summernote').summernote('code') ==  "<p><br></p>"){
+		alert("내용을 등록하세요");
+		return false;
+	};
+	return true;
+}
+
+function goSave(){
+	
+	if(!validate()) return;
+	
+	params = {
+			mbrNm : "<%=mbrNm%>",
+			bnMbrId : "<%=bnMbrId%>",
+			useGbn : "<%=useGbn%>",
+			TITLE : $("#TITLE").val(),
+			CONTENT : $('#summernote').summernote('code'),
+			ID : g_ID
+	};	
+	console.log(params);
+	cf_call("/board/save", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/board";
+	}else{
+		alert("저장 실패");
+	}
+}
+
+function goDelete(){
+	params = {
+		ID : g_ID
+	}
+	
+	cf_call("/board/delete", params, goDeleteCB);
+}
+</script>
+</html>

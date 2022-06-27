@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<%@include file="/WEB-INF/jsp/common/include/common_meta.jsp" %>
+	<title>Insert title here</title>
+	<%@include file="/WEB-INF/jsp/common/include/common_static_resource.jsp" %>
+</head>
+<style>
+.flex{ display:flex;}
+.center{ align-items: center;}
+.w100 { width:100px;}
+.w500 { width:500px;}
+.textCut{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.border{border:1px solid black};
+</style>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+	<br><br>
+	<br><br>
+	<h2>board</h2>
+	
+	제목 : <input type="text" id="word">
+	<button onclick="goSearch()">검색</button>
+	<br><br>
+	<div id="listDiv">
+	</div>
+	<br>
+	<%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+	<br><br>
+	<button id="write"><a onclick="goWrite()">write</a></button>
+	<button><a href="/">main</a></button>
+</body>
+<script>
+$(function(){
+	var userNm = "<%=mbrNm%>";
+	
+	if(cf_isEmpty(userNm)){
+		$("#write").hide();
+	}else{
+		$("#write").show();
+	}
+	
+	goSearch();
+})
+
+function goSearch(){
+	cv_pageInfo.func = goSearch;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "INP_DT", isAsc : false},
+			],
+			limit : 10
+	}
+	var params = {
+			word : $("#word").val().trim()
+		}
+	console.log(params);
+	//return;
+	cf_callPage("/board/getList", params, pageInfo, goSearchCB);
+}
+
+function goSearchCB(data){
+	console.log(data.list);
+	g_dataList = data.list;
+	
+	$("#listDiv").html("");
+	var listDivHtml = "";
+	
+	for(var i=0; i<g_dataList.length; i++){
+		listDivHtml += '<div class="flex center textCut border" onclick="goWrite(\'' + g_dataList[i].ID + '\')">';
+		listDivHtml += '	<div class="w100 textCut">' + g_dataList[i].curNum + '</div>';
+		listDivHtml += '	<div class="w100 textCut">' + g_dataList[i].TITLE + '</div>';
+		listDivHtml += '	<div class="w500 textCut">' + g_dataList[i].CONTENT + '</div>';
+		listDivHtml += '	<div class="w100 textCut">' + g_dataList[i].INP_ID + '</div>';
+		listDivHtml += '	<div class="w100 textCut">' + g_dataList[i].INP_DT + '</div>';
+		listDivHtml += '</div>';
+	}
+	
+	$("#listDiv").html(listDivHtml);
+}
+
+function goWrite(ID){
+	if(ID === undefined){
+		location.href = "/board/write";
+	}else{
+		location.href = "/board/write?ID=" + ID;	
+	}
+}
+
+</script>
+</html>

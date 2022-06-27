@@ -1,0 +1,346 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	
+	<!-- web editor summernote  S -->
+	<link href="/static_resources/lib/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+	<script src="/static_resources/lib/summernote/0.8.18/summernote-lite.min.js"></script>
+	<script src="/static_resources/lib/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+	<!-- web editor summernote  E -->
+	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+<body>
+<style>
+/* .notice_table_tr_top2_2{
+height: 55px;
+} */
+.notice_table_tr_top2_2{height: 55px;}/*20210706 수정*/
+</style>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<div class="container">
+			<div id="sideBar">
+				<%@include file="/WEB-INF/jsp/common/include/lnb.jsp"%>
+			</div>
+			<div class="visual_item">
+				<div class="reportCont">
+					
+					<!-- test -->
+					<div class="btn_wrap">
+				 		<!-- 버튼 기본 컬러  -->
+		                <button type="button" class="btn btn-com" onclick="popupOpen('popupDialog')"><span>등록</span></button>
+				 		<!-- 버튼 기본 컬러  -->
+		            </div>
+					<!-- test -->
+					
+					
+					 <!-- 테이블형식 -->
+					<div class="formWrap formWrapProfile">
+					    <h2 class="header">
+					    	<div class="shbox">
+							    <div class="innerContView">
+									<h4 class="subTit tblMb">수행실적</h4>
+								</div>
+								<div class="row-con">
+					                <div class="input input-education-name he-10 wi-100">
+						                <input type="text" maxlength="50" placeholder="검색어를 입력해주세요.">
+						                <div class="search-icons">
+							                <i class="icon icon-search" aria-hidden="true"></i>
+						                </div>
+						            </div>
+					            </div>
+				            </div>
+						</h2> 
+						
+					    <div class="form formProfile pd-0 wi-100">
+					        <div class="row-con">
+				               <table>
+									<colgroup>
+										<col style="width:10%">
+										<col style="width:60%">
+										<col style="width:10%">
+										<col style="width:10%">
+										<col style="width:10%">
+									</colgroup>
+									<thead>
+									<tr class="notice_table_tr_top02">
+										<th>번호</th>
+										<th>제목</th>
+										<th>진행상태</th>
+										<th>시작일</th>
+										<th>종료일</th>
+									</tr>
+									</thead>
+									<tbody id="listDiv">
+	
+									</tbody>
+								</table>
+								<%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+				            </div>
+				        </div>
+					 </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+
+<div id="popupDialog" class="popup-wrap type-basic">
+	<section class="popup demo1">
+	<div class="popup-head">
+		<h3 class="popup-tit">수행실적</h3>
+	</div>
+	<div class="popup-body">
+		<div class="popup-content">
+			<!-- 여기에 추가해주시면 됩니다. -->
+			<div class="formWrap formWrapProfile">
+				<h2 class="header">
+				<div class="innerContView">
+					<h4 class="subTit tblMb">수행실적 등록</h4>
+				</div>
+				<div class="description">
+					<span class="star">*</span> 필수 입력 정보입니다.
+				</div>
+				</h2>
+				
+				<div class="form formProfile">
+					<div class="row-con">
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">
+								수행기간(년도)<span class="star">*</span>
+							</div>
+							<input type="number" id="perfYear">
+						</div>
+						<div class="input is-label input-profile-name is-value">
+		                    <div class="label">구분<span class="star">*</span></div>
+		                    <div class="radio-area">
+			                    <div class="radio-tx-area">
+	                                <span class="radio tx">
+	                                    <input type="radio" name="sRadio1" id="sRadio1" checked value="i">
+	                                    <label for="sRadio1"><div>진행중</div></label>
+	                                </span>
+	                            </div>
+	                            <div class="radio-tx-area">
+			                        <span class="radio tx">
+	                                    <input type="radio" name="sRadio1" id="sRadio2" value="e">
+	                                    <label for="sRadio2"><div>진행완료</div></label>
+	                                </span>
+	                            </div>
+		                    </div>
+		                </div>
+					</div>
+					
+					<div class="row-con">
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">
+								수행기간(시작일)<span class="star">*</span>
+							</div>
+							<input type="text" id="perfStartDt">
+						</div>
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">
+								수행기간(종료일)<span class="star">*</span>
+							</div>
+							<input type="text" id="perfEndDt">
+						</div>
+					</div>
+					
+				 	<div class="textarea is-label is-value">
+	                    <label for="Edu_Edu_Cntnt_c15">수행내용</label>
+	                    <textarea name="Edu[c15].Edu_Cntnt" cols="30" rows="10" id="perfContent" placeholder="수행실적에 대해 적어주세요."></textarea>
+	                </div>
+	                
+				</div>
+			</div>
+			<div class="btn_wrap">
+		 		<!-- 버튼 기본 컬러  -->
+                <button type="button" class="btn btn-com" onclick="goSave()"><span>저장</span></button>
+		 		<!-- 버튼 기본 컬러  -->
+            </div>
+			<!-- 여기에 추가해주시면 됩니다. -->
+		</div>
+	</div>
+	<div class="popup-close">
+		<button type="button" class="btn btn-close" onclick="popupClose('popupDialog')"><span><img src="../../../static_resources/groupware/image/ico_close01.png"></span></button>
+	</div>
+	</section>
+</div>
+<script>
+$(function(){
+	var now = new Date();
+	$("#perfYear").val(now.getFullYear());
+	
+	$('#perfStartDt, #perfEndDt').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		//,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		//,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		//,buttonText: "선택" //버튼 호버 텍스트              
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		,showAnim : 'slideDown'
+	});
+	
+	$('#perfStartDt').datepicker('setDate', 'today');
+	$('#perfEndDt').datepicker('setDate', 'today');
+	
+	selectYear();
+})
+
+function selectYear(){
+	params = {
+	}
+	cf_call("/groupware/performance/selectYear", params, selectYearCB);
+}
+function selectYearCB(data){
+	console.log(data)
+	/* $("#searchYear").html("");
+	var listDivHtml = "";
+	listDivHtml += '<option value="all" selected>all</option>';
+	for(var i=0; i<data.length; i++){
+		listDivHtml += '<option value="' + data[i].YEAR + '">' + data[i].YEAR + '</option>';
+	}
+	$("#searchYear").html(listDivHtml); */
+	getList();
+}
+
+function getList(){
+	cv_pageInfo.func = getList;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "PERF_START_DT", isAsc : false},
+			],
+			limit : 10
+	}
+	
+	params = {
+		/* searchYear : $("#searchYear").val().trim() */
+	}
+	cf_callPage("/groupware/performance/getList", params, pageInfo, getListCB);
+}
+function getListCB(data){
+	console.log(data)
+										
+	g_dataList = data.list;
+	console.log(111, g_dataList.length)
+	$("#listDiv").html("");
+	var listDivHtml = "";
+	if(g_dataList.length == 0){
+		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+		listDivHtml += '	<td class="wi-100" colspan="6">검색결과가 없습니다.</td>';
+		listDivHtml += '</tr>';
+	}else{
+	 	for(var i=0; i<g_dataList.length; i++){
+	 		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+	 		listDivHtml += '	<td>' + g_dataList[i].curNum + '</td>';
+			listDivHtml += '	<td><a onclick="goDetail(\'' + g_dataList[i].ID + '\')">' + g_dataList[i].PERF_CONTENT + '</a></td>';
+			listDivHtml += '	<td>' + g_dataList[i].PERF_STATUS + '</td>';
+			listDivHtml += '	<td>' + g_dataList[i].PERF_START_DT + '</td>';
+			listDivHtml += '	<td>' + g_dataList[i].PERF_END_DT + '</td>';
+	 		listDivHtml += '</tr>';
+		}
+	}
+	$("#listDiv").html(listDivHtml);
+	/*
+	$(".notice_table_tr_top2_2").last().addClass("notice_table_tr_last_2"); */
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function validate(){
+	if(cf_isEmpty($("#perfYear").val().trim())){
+		alert("수행기간(년도)을 입력하세요.");
+		$("#perfYear").focus();
+		return false;
+	}
+	if(cf_isEmpty($("#perfStartDt").val().trim())){
+		alert("수행기간(시작일)을 입력하세요."); 
+		$("#perfStartDt").focus();
+		return false;
+	}
+	if(cf_isEmpty($("#perfEndDt").val().trim())){
+		alert("수행기간(종료일)을 입력하세요."); 
+		$("#perfEndDt").focus();
+		return false;
+	}
+	if(cf_isEmpty($("#perfContent").val().trim())){
+		alert("수행내용을 입력하세요.");
+		$("#perfContent").focus();
+		return false;
+	}
+	
+	var start = $('#perfStartDt').datepicker('getDate');
+    var end   = $('#perfEndDt').datepicker('getDate');
+    checkDt = (end - start)/1000/60/60/24;
+    
+    if(checkDt < 0){
+    	alert("수행기간을 확인해주세요.");
+		return false;
+    }
+    
+	return true;
+}
+
+function goSave(){
+	if(!validate()) return;
+	
+	params = {
+			perfYear : $("#perfYear").val(),
+			perfContent : $("#perfContent").val(),
+			perfStartDt : $("#perfStartDt").val(),
+			perfEndDt : $("#perfEndDt").val(),
+			perfStatus : $("input[name=sRadio1]:checked").val(),
+	};
+	
+	console.log(params)
+	
+	cf_call("/groupware/performance/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		alert("등록이 완료되었습니다.");
+		location.reload();
+	}else{
+		alert("등록에 실패하였습니다.");
+	}
+}
+
+function goDetail(ID){
+	if(ID === undefined){
+		location.href="/groupware/performance/goDetail";
+	} else {
+		location.href="/groupware/performance/goDetail?ID=" + ID;
+	}
+}
+</script>
+</html>

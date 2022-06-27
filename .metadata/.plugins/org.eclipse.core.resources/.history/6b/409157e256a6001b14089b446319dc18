@@ -1,0 +1,53 @@
+package pentas.sample.ajaxSelectTest.ctl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import common.utils.common.PentasMap;
+import common.utils.mybatis_paginator.domain.PageList;
+import pentas.sample.ajaxSelectTest.svc.AjaxSelectTestSvc;
+
+@RequestMapping("/sample/ajaxSelectTest")
+@Controller
+public class AjaxSelectTestCtl {
+	
+	@Autowired
+	AjaxSelectTestSvc ajaxSelectTestSvc;
+	
+	@RequestMapping(value = {"", "/"})
+	public String openPage() {
+		
+		return "sample/AjaxSelectTest";
+	}
+	
+	@RequestMapping("/test01")
+	@ResponseBody
+	public PentasMap test01(@RequestBody PentasMap params) {
+		
+		List<PentasMap> list = ajaxSelectTestSvc.selectTest01(params);
+		
+		PentasMap rslt = new PentasMap();
+		rslt.put("list", list);
+		
+		return rslt;
+	}
+	
+	@RequestMapping("/test02")
+	@ResponseBody
+	public PentasMap test02(@RequestBody PentasMap params) {
+		
+		PageList<PentasMap> pageList = ajaxSelectTestSvc.selectTest02(params);
+		
+		PentasMap rslt = new PentasMap();
+		rslt.put("list", pageList);
+		rslt.put("pageInfo", pageList.getPaginator());
+		
+		return rslt;
+	}
+	
+}

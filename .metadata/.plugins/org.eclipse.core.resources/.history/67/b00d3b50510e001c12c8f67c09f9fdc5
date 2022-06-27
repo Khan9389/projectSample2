@@ -1,0 +1,148 @@
+package pentas.groupware.svc;
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import common.dao.CmmnDao;
+import common.utils.common.CmmnUtil;
+import common.utils.common.PageInfo;
+import common.utils.common.PentasMap;
+import common.utils.mybatis_paginator.domain.PageList;
+import common.utils.uuid.UuidUtil;
+
+@Service
+public class VacationGwSvc {
+
+	@Autowired
+	CmmnDao cmmnDao;
+	
+	// 현재일자 정보
+	Calendar cal = Calendar.getInstance();
+	int nowYear = 	cal.get(Calendar.YEAR);
+	int nowMonth = 	cal.get(Calendar.MONTH) + 1;
+	int nowDay =	cal.get(Calendar.DAY_OF_MONTH);
+	
+	public PentasMap getVctCntInfo(PentasMap params) throws ParseException {
+		
+		// VACATION_COUNT 테이블 최근 년도 가져온다
+		String vctCtnYear = cmmnDao.selectOne("groupWare.vacation.getVctCntYear", params);
+
+		// 입사일 정보
+		String joinDate = cmmnDao.selectOne("groupWare.vacation.getUserJoinDate", params);
+		int joinYear = 	Integer.parseInt(joinDate.split("-")[0]);
+		int joinMonth = Integer.parseInt(joinDate.split("-")[1]);
+		int joinDay = 	Integer.parseInt(joinDate.split("-")[2]);
+		
+		// 근속연수
+		int serviceYear =  nowYear - joinYear;
+		
+		// 근속연수 별 연차
+		int vctCount;
+		
+		if(serviceYear >= 23) {
+			vctCount = 25;
+		}else {
+			vctCount = cmmnDao.selectOne("groupWare.vacation.getVctCnt", serviceYear);
+		}
+		System.out.println("vctCount >> " + vctCount);
+		
+		params.put("nowYear", nowYear); 	// 현재 년도 
+		
+		// VACATION_COUNT 없을때 insert (1년에 한번)
+		if(null == vctCtnYear || "".equals(vctCtnYear) || !(Integer.toString(nowYear)).equals(vctCtnYear)) {
+			String ID = UuidUtil.getUuidOnlyString();
+			params.put("ID", ID);
+			
+			if( serviceYear >= 2 ) { // 근속연수가 2년 이상 - 연차 insert
+				cmmnDao.insert("groupWare.vacation.insertVctCnt", params);
+			} else if(serviceYear == 1){ // 근속연수가 1년차 - 연차 insert
+				// 전년도 근무일 구하기
+				String prevYear = Integer.toString( nowYear -1 ) + "-12-31"; /// 전년도 마지막 날짜
+				vctCount = (int) ((daysCalcMinus(prevYear, joinDate)/365)*15 + joinMonth - 1);
+				params.put("vctCount", vctCount);	// 근속연수 별 연차
+				cmmnDao.insert("groupWare.vacation.insertVctCnt", params);
+			}
+			if(serviceYear == 0) { // 근속연수 0년차 - 월차 insert
+				if(nowMonth > joinMonth && nowDay - joinDay >= 0 ) {
+					vctCount = nowMonth - joinMonth;
+					params.put("vctCount", vctCount);	// 근속연수 별 연차
+					cmmnDao.insert("groupWare.vacation.insertVctCnt", params);
+				}
+			}
+		} else {
+			// 0년차 월차 update			
+			if(serviceYear == 0) {
+				if(nowMonth > joinMonth && nowDay - joinDay >= 0 ) {
+					vctCount = nowMonth - joinMonth;
+					params.put("vctCount", vctCount);
+					cmmnDao.update("groupWare.vacation.updateVctCnt", params);
+				}
+			}
+		}
+		
+		return getUserVctCount(params);
+	}
+	
+	public double daysCalcMinus(String sDate, String eDate) throws ParseException {
+		double days = 0;
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+			Date FirstDate = format.parse(sDate);
+			Date SecondDate = format.parse(eDate);
+			
+			long calDate = FirstDate.getTime() - SecondDate.getTime(); 
+			
+			long calDateDays = calDate / ( 24*60*60*1000); 
+			 
+			calDateDays = Math.abs(calDateDays);
+			days = Long.valueOf(calDateDays).intValue();
+			        
+		return days;
+	}
+	
+	public PentasMap getUserVctCount(PentasMap params) {
+		params.put("nowYear", nowYear);
+		return cmmnDao.selectOne("groupWare.vacation.getUserVctCnt", params);
+	}
+	
+	
+	
+	
+	
+	public PageList<PentasMap> getList(PentasMap params, PageInfo pageInfo) {
+		PageList<PentasMap> pageList = cmmnDao.selectListPage("groupWare.vacation.getList", params, pageInfo); 
+		int startCurNum = CmmnUtil.getStartCurNum(pageList);
+		for (PentasMap map : pageList) {
+			map.put("curNum", startCurNum);
+			startCurNum--;
+		}
+		
+		return pageList;
+	}
+	
+	public PentasMap getInfo(PentasMap params) {
+		return cmmnDao.selectOne("groupWare.vacation.getInfo", params);
+	}
+	
+	
+	
+	
+	public void saveInfo(PentasMap params) {
+		params.put("nowYear", nowYear);
+		if(params.getString("ID").equals("")) { 
+			String ID = "VCT" + UuidUtil.getUuidOnlyString(); 
+			params.put("ID", ID);
+			cmmnDao.insert("groupWare.vacation.saveVct", params);
+		}else {
+			cmmnDao.update("groupWare.vacation.updateVct", params);
+		}
+		
+		cmmnDao.update("groupWare.vacation.updateVctRemCnt", params);
+	}
+
+}

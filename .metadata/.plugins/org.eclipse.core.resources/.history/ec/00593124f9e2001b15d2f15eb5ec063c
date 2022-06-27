@@ -1,0 +1,173 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	<!-- web editor summernote  S -->
+	<link href="/static_resources/lib/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+	<script src="/static_resources/lib/summernote/0.8.18/summernote-lite.min.js"></script>
+	<script src="/static_resources/lib/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+	<!-- web editor summernote  E -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<br><br>
+		<br><br>
+		<h2>제휴사 write</h2>
+		<br><br>
+		<p>제휴 기간(년도)
+			<input type="number" id="dateYear" value="2021">
+		</p>
+		<br><br>
+		<p>제휴 기간:
+	  		<input type="text" id="sDate"> ~
+			<input type="text" id="eDate">
+		</p>
+		<br><br>
+		<br><br>
+		<div id="summernote"></div>
+		<br><br>
+		<br><br>
+		<button class="gwButton mr10" id="save" onclick="goSave()">저장</button>
+		<button class="gwButton mr10" onclick="location.href='/groupware/partner'">목록</button>
+		<button class="gwButton mr10" id="delete" onclick="goDelete()">삭제</button>
+		<br><br>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+<script>
+var ID = "<%=ID%>";
+var userLv = "<%=USR_LV%>";
+$(function(){
+	$('#sDate, #eDate').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		,buttonText: "선택" //버튼 호버 텍스트              
+		,yearSuffix: "년" //달력의 년도 부분 뒤 텍스트
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		 //,minDate: "-5Y" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+		//,maxDate: "+5y" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+	});
+	
+	$('#summernote').summernote({
+		lang: 'ko-KR',
+		tabsize: 2,
+		height: 300,
+		width: 1000,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']],
+            ['height', ['height']],
+          ],
+	});
+});
+
+$(function(){
+	//checkUserLv();
+	
+	if(ID !== ""){
+		getInfo(ID);
+	}else{
+		$("#delete").remove();
+	}
+})
+
+function checkUserLv(){
+	if(userLv != "M"){
+		$('#sDate').datepicker('option','disabled',true);
+		$('#eDate').datepicker('option','disabled',true);
+		$('#summernote').summernote('disable');
+		$("#save").remove();
+		$("#delete").remove();
+	}
+}
+
+function getInfo(ID){
+	params = {
+		ID : ID,
+	}
+	cf_call("/groupware/partner/getInfo", params, getInfoCB);
+}
+
+function getInfoCB(data){
+	$("#dateYear").val(data.YEAR);
+	$("#sDate").val(data.START_DATE);
+	$("#eDate").val(data.END_DATE);
+	$('#summernote').summernote('code', data.CONTENT);
+}
+
+function validate(){
+	
+	if($('#summernote').summernote('code') ==  "<p><br></p>"){
+		alert("내용을 등록하세요");
+		return false;
+	};
+	return true;
+}
+
+function goSave(){
+	
+	if(!validate()) return;
+	
+	params = {
+			ID : ID,
+			YEAR : $("#dateYear").val(),
+			START_DATE : $("#sDate").val(),
+			END_DATE : $("#eDate").val(),
+			CONTENT : $('#summernote').summernote('code').replace(/<\/p>/gi, "\n")
+			 											 .replace(/<br\/?>/gi, "\n")
+			 											 .replace(/<\/?[^>]+(>|$)/g, ""),
+	};	
+	cf_call("/groupware/partner/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/partner";
+	}else{
+		alert("저장 실패");
+	}
+}
+
+function goDelete(){
+	params = {
+		ID : ID
+	}
+	
+	cf_call("/groupware/partner/goDelete", params, goDeleteCB);
+}
+
+function goDeleteCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/partner";
+	}else{
+		alert("삭제 실패");
+	}
+}
+</script>
+</html>

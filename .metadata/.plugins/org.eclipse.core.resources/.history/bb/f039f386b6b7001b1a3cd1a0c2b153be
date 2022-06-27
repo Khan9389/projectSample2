@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<%@include file="/WEB-INF/jsp/common/include/common_meta.jsp" %>
+	<title>Map 테스트</title>
+	<%@include file="/WEB-INF/jsp/common/include/common_static_resource.jsp" %>
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=i1uzkg0ztr"></script>
+</head>
+<body>
+	<h3>naver Map Api 테스트</h3>
+	<br><br>
+
+	<div id="map" style="height:500px; width:00px; border:1px solid red" ></div>
+	
+</body>
+<script>
+var mapOptions = {
+	    center: new naver.maps.LatLng(37.55940995140012, 126.83489617639066),
+	    //37.4818898, 127.0574661
+	    zoom: 15,
+	};
+var map = new naver.maps.Map('map', mapOptions);
+
+var marker = new naver.maps.Marker({
+	position : new naver.maps.LatLng(37.55940995140012, 126.83489617639066),
+	map : map
+});
+</script>
+</html>

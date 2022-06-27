@@ -1,0 +1,191 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	<!-- web editor summernote  S -->
+	<link href="/static_resources/lib/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+	<script src="/static_resources/lib/summernote/0.8.18/summernote-lite.min.js"></script>
+	<script src="/static_resources/lib/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+	<!-- web editor summernote  E -->
+	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<br><br>
+		<h2>사업실적 상세</h2>
+		<br><br>
+		<input name="performance" id="ing" type="radio" value="ing" checked><label for="ing">진행중</label>
+		<input name="performance" id="end" type="radio" value="end" ><label for="end">진행 완료</label>
+		<br><br>
+		<span class="w120">사업 기간(년도)</span>
+		<input type="number" id="dateYear" value="2021">
+		
+		<br><br>
+		<span class="w120">사업 기간</span>
+  		<input type="text" id="sDate">
+  		<span>~</span>
+		<input type="text" id="eDate">
+		<br><br>
+		<div id="summernote"></div>
+		<br>
+		
+		
+		<button class="gwButton mr10" id="save" onclick="goSave()">저장</button>
+		<button class="gwButton mr10" onclick="location.href='/groupware/performance'">목록</button>
+		<button class="gwButton mr10" id="delete" onclick="goDelete()">삭제</button>
+		<br><br>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+<script>
+var ID = "<%=ID%>";
+var userLv = "<%=USR_LV%>";
+$(function(){
+	$('#sDate, #eDate').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		//,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		//,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		//,buttonText: "선택" //버튼 호버 텍스트              
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		,showAnim : 'slideDown'
+	});
+	
+	$('#summernote').summernote({
+		lang: 'ko-KR',
+		tabsize: 2,
+		height: 300,
+		width: 1000,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']],
+            ['height', ['height']],
+          ],
+	});
+});
+
+$(function(){
+	//checkUserLv();
+	//statusCheck();
+	
+	if(ID !== ""){
+		getInfo(ID);
+	}else{
+		$("#delete").remove();
+	}
+})
+
+function checkUserLv(){
+	if(userLv != "M"){
+		$("input:radio").attr("disabled", true);
+		$('#sDate').datepicker('option','disabled',true);
+		$('#eDate').datepicker('option','disabled',true);
+		$('#summernote').summernote('disable');
+		$("#save").remove();
+		$("#delete").remove();
+	}
+}
+
+function statusCheck(){
+	var status = $("input[name=performance]:checked").val();
+	if(status == "ing"){
+		$('#eDate').datepicker('option','disabled',true);
+		$('#eDate').val("")
+	}else if(status == "end"){
+		$('#eDate').datepicker('option','disabled',false);
+	}
+}
+
+function getInfo(ID){
+	params = {
+		ID : ID,
+	}
+	cf_call("/groupware/performance/getInfo", params, getInfoCB);
+}
+
+function getInfoCB(data){
+	console.log(data);
+	$("[name=performance][value=" + data.STATUS + "]").prop("checked", true);
+	//statusCheck();
+	$("#dateYear").val(data.YEAR);
+	$("#sDate").val(data.START_DATE);
+	$("#eDate").val(data.END_DATE);
+	$('#summernote').summernote('code', data.CONTENT);
+}
+
+function validate(){
+	
+	if($('#summernote').summernote('code') ==  "<p><br></p>"){
+		alert("내용을 등록하세요");
+		return false;
+	};
+	return true;
+}
+
+function goSave(){
+	
+	if(!validate()) return;
+	
+	params = {
+			ID : ID,
+			YEAR : $("#dateYear").val(),
+			START_DATE : $("#sDate").val(),
+			END_DATE : $("#eDate").val(),
+			STATUS : $("input[name=performance]:checked").val(),
+			CONTENT : $('#summernote').summernote('code').replace(/<\/p>/gi, "\n")
+														 .replace(/<br\/?>/gi, "\n")
+														 .replace(/<\/?[^>]+(>|$)/g, ""),
+	};	
+	cf_call("/groupware/performance/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/performance";
+	}else{
+		alert("저장 실패");
+	}
+}
+
+function goDelete(){
+	params = {
+		ID : ID
+	}
+	
+	cf_call("/groupware/performance/goDelete", params, goDeleteCB);
+}
+
+function goDeleteCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/performance";
+	}else{
+		alert("삭제 실패");
+	}
+}
+</script>
+
+</html>

@@ -1,0 +1,140 @@
+1609752626126	Delete element
+1609752835856	Delete element
+1609752864952	Delete elements
+1609753002383	Delete element
+1609753007739	Delete element
+1609804531583	Delete element
+1609818722659	Rename resource 'AjaxTest_SQL.xm l'
+1609821296123	Delete element
+1609821372316	Delete elements
+1609821379045	Delete elements
+1609823600397	Rename resource 'common_prototype_polyfill.js'
+1609824056960	Rename resource 'include'
+1609824198150	Rename resource 'global_head.jsp'
+1609824391296	Rename resource 'global_header.jsp'
+1609824471567	Rename resource 'global_common.jsp'
+1609825694159	Rename resource 'satatic_resources'
+1609828617100	Delete element
+1609830492526	Rename resource 'axio.min.map'
+1609836979941	Delete element
+1609838576501	Delete element
+1609847599756	Delete element
+1609857303455	Rename type 'AjaxParallelRunTestController'
+1609858320429	Rename method 'selectTest1'
+1609858349575	Rename method 'selectTest3'
+1609858544728	Rename resource 'AjaxTestPage.jsp'
+1609858573670	Rename resource 'AjaxSelectTestPage.jsp'
+1609858610382	Rename type 'AjaxTestController'
+1609858618373	Rename type 'AjaxTestService'
+1609858626865	Rename field 'ajaxTestService'
+1609858706781	Rename resource 'AjaxTest_SQL.xml'
+1609859832752	Rename type 'MainController'
+1609859863050	Rename resource 'Main.jsp'
+1609859884847	Delete element
+1609859889870	Delete element
+1609859897332	Delete element
+1609860163719	Rename type 'SampleController'
+1609861074144	Rename type 'TransactionTestService'
+1609861849474	Delete element
+1609861927480	Delete element
+1609862003823	Delete elements
+1609862122060	Delete element
+1609862166272	Delete element
+1609862269310	Rename package 'com.k_chemicals.biz.sample.ExcelMngTest'
+1609862278293	Rename package 'com.k_chemicals.biz.sample.ExceptionTest'
+1609862334849	Rename package 'com.k_chemicals.biz.sample.transaction'
+1609862445962	Rename type 'AjaxCRUDController'
+1609862450347	Copy compilation unit
+1609862482534	Rename type 'AjaxCRUDTestController'
+1609862628583	Delete element
+1609862689409	Copy compilation unit
+1609862694903	Copy compilation unit
+1609862704943	Copy compilation unit
+1609862708115	Copy compilation unit
+1609862711176	Copy compilation unit
+1609862729282	Copy compilation unit
+1609862736479	Copy compilation unit
+1609862742208	Copy compilation unit
+1609862753639	Rename type 'AjaxParallelTestController'
+1609862760985	Rename type 'AjaxSelectTestController'
+1609862770586	Rename type 'ExcelMngTestController'
+1609862786119	Rename type 'ExceptionTestController'
+1609862792862	Rename type 'FileMngTestController'
+1609862803074	Rename type 'SampleIndexController'
+1609862812195	Rename type 'PopupTestController'
+1609862822351	Rename type 'TransactionTestController'
+1609862838328	Delete elements
+1609862845396	Delete element
+1609862870620	Copy compilation unit
+1609862884825	Rename type 'AjaxCRUDService'
+1609862909451	Copy compilation unit
+1609862918628	Rename type 'AjaxSelectTestService'
+1609862932381	Copy compilation unit
+1609862939377	Rename type 'ExcelMngTestService'
+1609862951619	Copy compilation unit
+1609862958365	Rename type 'ExceptionTestService'
+1609862973659	Copy compilation unit
+1609862981115	Rename type 'FileMngTestService'
+1609862993177	Copy compilation unit
+1609862996019	Copy compilation unit
+1609863003286	Rename type 'Tracsaction02TestService'
+1609863010935	Rename type 'Transaction01TestService'
+1609863026585	Delete element
+1609863296730	Copy compilation units
+1609863309015	Rename type 'GlobalExceptionHandlerController'
+1609863334335	Copy compilation unit
+1609863342408	Rename type 'MainController'
+1609863352337	Delete element
+1609863364764	Delete element
+1609863432697	Copy file
+1609863438922	Copy file
+1609863444857	Copy file
+1609863455949	Delete elements
+1609863598551	Rename resource 'AjaxCRUD_SQL.xml'
+1609863620658	Delete elements
+1609863644497	Delete element
+1609863654863	Delete elements
+1609863661309	Delete elements
+1609863702803	Delete element
+1609863709131	Delete element
+1609864314700	Copy file
+1609864430588	Delete element
+1609864494956	Copy file
+1609864535932	Delete element
+1609864587740	Copy files
+1609864597288	Copy compilation unit
+1609864610921	Delete element
+1609864654875	Delete element
+1609864808212	Delete element
+1609865683498	Delete element
+1609865731188	Copy compilation unit
+1609865735235	Delete element
+1609865739058	Copy compilation unit
+1609865742208	Delete element
+1609865810773	Rename type 'MainCtl'
+1609866200437	Move 'main.jsp' to 'common'
+1609866232620	Move '_include' to 'common'
+1609866341821	Rename resource '_include'
+1609866428820	Delete element
+1609867278349	Rename resource 'TranscationTest.jsp'
+1609882359353	Delete element
+1609882363709	Delete element
+1609886517226	Delete element
+1609888705434	Delete element
+1609888761432	Delete element
+1609888879828	Rename resource '작업폴더'
+1609888896015	Rename resource 'temp_box'
+1609889034358	Rename resource 'TEMP_BOX'
+1609898320210	Delete element
+1609898510753	Delete element
+1609898684782	Delete element
+1609899945592	Rename type 'Tracsaction02TestSvc'
+1609900865789	Rename method 'insertTest'
+1609901324177	Rename method 'test01'
+1609901337536	Rename method 'test02'
+1609901878725	Rename method 'selectTransactionData'
+1609944547974	Delete element
+1609944557717	Delete elements
+1609950281499	Rename type 'Transaction01TestSvc'
+1609950364920	Rename type 'TransactionService'
+1609953103515	Delete element

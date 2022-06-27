@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+</head>
+<body>
+	<div class="wrapper">
+
+		<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+		
+		<!-- container -->
+		<div id="container">
+		
+		    <div class="subVisual4">
+		
+		        <div class="fixedWidth">
+		            <h2 class="tts">펜타에스</h2>
+		
+		            <div>
+		                <h2 class="sub_topbaner_title01">커뮤니티</h2>
+		                <p class="sub_topbaner_content01">미래를 중시하는 펜타에스</p>
+		
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		</div>
+		
+		<!-- tap메뉴 -->
+		  <p class="sub_menubar05"></p>
+		<div class="main">
+		 <div class="tabmenu-align"> 	
+		    <input id="tab9" type="radio" name="tabs"  onclick="changeTab('9')">
+		        <label for="tab9">공지사항</label>
+		
+		        <input id="tab10" type="radio" name="tabs" onclick="changeTab('10')">
+		        <label for="tab10">인재채용</label>
+
+		        <input id="tab8" type="radio" name="tabs" onclick="changeTab('8')">
+		        <!--디폴트 메뉴-->
+		        <label for="tab8">사업문의</label>
+		  </div>
+		    <section id="content9">
+		        <h3 class="chart_title01">공지사항</h3>
+		
+		        <table>
+		            <caption>공지사항 상세 목록</caption>
+		            <colgroup>
+		                <col style="width:10%">
+		                <col style="width:90%">		                
+		            </colgroup>
+		            <thead>
+		                <tr class="noticepaper_table_tr_top3">
+		                    <th colspan="2" class="noticepaper_table_tr_top">공지사항 테스트 내용 입니다.</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		                <tr class="noticepaper_table_tr_top4">
+		                     <th id="writer"></th>
+		                    <th id="regDt">2021.05.05</th>
+		                </tr>
+		                <tr class="noticepaper_table_tr_top6">
+		                    <td colspan="2"  id="content">테스트 내용입니다.</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		        </p>
+		        <span class="list_button01">
+		            <a href="/community?tab=9">
+		                <img src="/static_resources/homePage/img/list_button1.png" alt="목록 이미지">
+		            </a>		        
+		        </span>
+	
+		    </section>
+		
+		
+		</div>
+		<!-- tap메뉴 -->
+		</div>
+		<!--container-->
+		
+		<%@include file="/WEB-INF/jsp/common/include/footer.jsp"%>
+
+	</div>
+</body>
+<script>
+var ID = "<%=ID%>";
+$(function(){
+	//getInfo(ID);
+	$("#content9").show();
+	$('#tab9').prop("checked", true)
+})
+
+function getInfo(ID){
+	params = {
+		ID : ID,
+	}
+	cf_call("/community/getNoticeInfo", params, getInfoCB);
+}
+
+function getInfoCB(data){
+	console.log(data)
+	$(".noticepaper_table_tr_top").text(data.TITLE);
+	$("#writer").text(data.WRITER);
+	$("#regDt").text(data.REG_DT);
+	$('#content').text(data.CONTENT);
+}
+
+function changeTab(val){
+	console.log(val)
+	location.href="/community?tab=" + val; 
+}	
+</script>
+</html>

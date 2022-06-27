@@ -1,0 +1,507 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<%
+	List<PentasMap> cmmnCodeList = (List<PentasMap>) request.getAttribute("cmmnCodeList");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<div class="container">
+			<div id="sideBar">
+				<%@include file="/WEB-INF/jsp/common/include/lnb.jsp"%>
+			</div>
+			<div class="visual_item">
+				<div class="reportCont">
+				
+				
+					<!-- 테이블형식 -->
+					<div class="formWrap formWrapProfile">
+					    <h2 class="header">
+					    	<div class="shbox">
+							    <div class="innerContView">
+									<h4 class="subTit tblMb">직원조회</h4>
+								</div>
+				            </div>
+				            <div class="row-con-l" style="justify-content: space-between;">
+								<div class="list-contn flex">
+					            	<div class="title-l">이름조회</div>
+									<div class="list-contsz flex" style="/* width: 50%; */">
+							            <div class="input input-type">
+							            	<input type="text" id="word" onkeyup="if( event.keyCode==13 ){ goSearch();}" placeholder="검색어를 입력해주세요.">
+						                </div>
+									</div>
+								</div>
+								<div class="btn_wrap">
+					                <button type="button" class="btn btn-com" onclick="goSearch()"><span>조회</span></button>
+					            </div>
+							</div>
+				            <div class="btn_wrap disbetr mrt-20">
+				                <button type="button" class="btn btn-com wi-10 A mr10" onclick="clearPopupOpen()" style="display:none"><span>등록</span></button>
+				                <button type="button" class="btn btn-del wi-10" onclick="goDelete()"><span>삭제</span></button>
+				            </div>
+						</h2> 
+					    <div class="form formProfile pd-0 wi-100">
+					        <div class="row-con-t">
+				               <table>
+									<colgroup>
+										<col style="width:5%">
+										<col style="width:60%">
+										<col style="width:10%">
+										<col style="width:10%">
+										<col style="width:10%">
+									</colgroup>
+									<thead>
+									<tr class="notice_table_tr_top02">
+										<th><input type="checkbox" id="selectAll"></th>
+										<th>제목</th>
+										<th>진행상태</th>
+										<th>시작일</th>
+										<th>종료일</th>
+									</tr>
+									</thead>
+									<tbody id="listDiv">
+									</tbody>
+								</table>
+								<%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+				            </div>
+				        </div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+
+<div id="popupDialog" class="popup-wrap type-basic">
+	<section class="popup demo1">
+	<div class="popup-head">
+		<h3 class="popup-tit">직원조회</h3>
+	</div>
+	<div class="popup-body">
+		<div class="popup-content">
+		
+			<!-- 여기에 추가해주시면 됩니다. -->	
+			<div class="formWrap formWrapProfile">
+				<h2 class="header">
+					<div class="innerContView">
+						<h4 class="subTit tblMb">직원조회</h4>
+					</div>
+					<div class="description">
+						<span class="star">*</span> 필수 입력 정보입니다.
+					</div>
+				</h2>
+				
+				<div class="form formProfile">
+				
+				    <div class="picture dropped" style="">
+				        <!-- <div class="guide" style="display: none;">사진추가</div>
+				        <a href="#" class="buttonAddFile" style="display: none;">
+				            사진등록
+				        </a> -->
+				        <div class="image" aria-hidden="true">
+				            <img src="../../../static_resources/groupware/image/rian.jpg">
+				        </div>
+				        <span class="file-add">
+				            <input type="text" id="sFileName21" class="input demo1" title="첨부된 파일명" style="display: none;">
+				            <label for="sFilesAdd21" class="btn demo1 btn-file" role="button">
+				                <span><input type="file" style="display: none;" name="sFilesAdd21" id="sFilesAdd21" value="찾아보기" tabindex="-1" aria-hidden="true">첨부</span>
+				            </label>
+				        </span>
+				    </div>
+				    
+				    <div class="row-pi">
+				        <div class="input is-label is-value mr10">
+				            <div class="label">구분<span class="star">*</span></div>
+				            <div class="radio-area">
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrType" id="usrTypeA" checked value="A">
+				                        <label for="usrTypeA">
+				                            <div>직원</div>
+				                        </label>
+				                    </span>
+				                </div>
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrType" id="usrTypeB" value="B">
+				                        <label for="usrTypeB">
+				                            <div>프리랜서</div>
+				                        </label>
+				                    </span>
+				                </div>
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrType" id="usrTypeC" value="C">
+				                        <label for="usrTypeC">
+				                            <div>협력사</div>
+				                        </label>
+				                    </span>
+				                </div>
+				            </div>
+				        </div>
+				        
+				        <div class="input is-label is-value">
+				            <div class="label">회원권한<span class="star">*</span></div>
+				            <div class="radio-area">
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrPrms" id="usrPrmsA" checked value="A">
+				                        <label for="usrPrmsA">
+				                            <div>시스템관리자</div>
+				                        </label>
+				                    </span>
+				                </div>
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrPrms" id="usrPrmsB" value="B">
+				                        <label for="usrPrmsB">
+				                            <div>관리자</div>
+				                        </label>
+				                    </span>
+				                </div>
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="usrPrms" id="usrPrmsC" value="C">
+				                        <label for="usrPrmsC">
+				                            <div>개인</div>
+				                        </label>
+				                    </span>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    
+				    <div class="row-pi">
+				        <div class="input is-label is-value mr10">
+				            <input type="text" placeholder="성명을 입력해주세요." id="usrName">
+				            <div class="label">성명<span class="star">*</span></div>
+				        </div>
+				       	<div class="input is-label is-value">
+				            <input type="text" placeholder="성명(영문)을 입력해주세요." id=usrNameEn>
+				            <div class="label">성명(영문)<span class="star">*</span></div>
+				        </div>
+				    </div>
+				</div>
+
+				<div class="form-end formProfile">
+		            <div class="row">
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="ID 입력해주세요." id="usrLogId">
+		                    <div class="label">ID
+		                    	<span class="star">*</span>
+		                    	<span id="idChk"></span>
+		                    </div>
+		                </div>
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="이메일를 입력해주세요." id="usrEmail">
+		                    <div class="label">이메일<span class="star">*</span></div>
+		                </div>
+					</div>
+					<div class="row">
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="비밀번호를 입력해주세요." id="usrLogPw">
+		                    <div class="label">비밀번호<span class="star">*</span></div>
+		                </div>
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="password" placeholder="비밀번호를 입력해주세요." id="usrLogPwChk">
+		                    <div class="label">비밀번호 확인
+		                    	<span class="star">*</span>
+								<span id="pwChk"></span>
+	                    	</div>
+		                </div>
+		            </div>
+		            
+		            <div class="row">
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="연락처를 입력해주세요." id="usrTel" onkeyup="telePhoneCheck(this);">
+		                    <div class="label">연락처<span class="star">*</span></div>
+		                </div>
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="비상 연락처를 입력해주세요." id="usrEmgTel" onkeyup="telePhoneCheck(this);">
+		                    <div class="label">비상 연락처<span class="star">*</span>
+	                    	</div>
+		                </div>
+		            </div>
+		            
+		            <div class="row">
+		                <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="주소를 입력해주세요." id="usrAddr">
+		                    <div class="label">주소<span class="star">*</span></div>
+		                </div>
+		                <div class="input is-label is-value">
+				            <input type="text" id="usrBirthDt">
+				            <div class="label">생년월일<span class="star">*</span></div>
+				        </div>
+		            </div>
+		            
+		            <div class="row">
+		                <div class="dropdown dropdown-education-category selected is-label input mr10">
+			                <div class="label">최종학력정보</div>
+			                <select class="button buttonChoose"  id="usrEduLv">
+			                	<option class="button" selected><span>고등학교</span></option>
+			                	<option class="button"><span>대학(2,3년)</span></option>
+			                	<option class="button"><span>대학교(4년)</span></option>
+			                	<option class="button"><span>대학원</span></option>
+			                </select>
+			            </div>
+		                <div class="input is-label is-value">
+				            <input type="text" id="usrGradDt">
+				            <div class="label">졸업년월일</div>
+				        </div>
+		            </div>
+		            
+		            <div class="row">
+		                 <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="소속사를 입력해주세요." id="usrCompany">
+		                    <div class="label">소속사<span class="star">*</span></div>
+		                </div>
+		                 <div class="input is-label is-value mr10">
+		                	<input type="text" placeholder="부서를 입력해주세요." id="usrDep">
+		                    <div class="label">부서</div>
+		                </div>	
+		                 <div class="input input-end is-label is-value mr10">
+		                	<input type="text" placeholder="직급을 입력해주세요." id="usrPos">
+		                    <div class="label">직급<span class="star">*</span></div>
+		                </div>
+		                 <div class="dropdown dropdown-education-category selected is-label input">
+			                <div class="label">기술자등급<span class="star">*</span></div>
+			                <select class="button buttonChoose"  id="usrTechLv">
+			                	<option class="button" selected><span>고등학교</span></option>
+			                	<option class="button"><span>대학(2,3년)</span></option>
+			                	<option class="button"><span>대학교(4년)</span></option>
+			                	<option class="button"><span>대학원</span></option>
+			                </select>
+			            </div>
+		            </div>
+		            
+	             	<div class="row">
+						<div class="input is-label is-value mr10">
+				            <input type="text" id="usrJoinDt">
+				            <div class="label">입사일<span class="star">*</span></div>
+				        </div>
+				        <div class="input is-label is-value">
+				            <input type="text" id="usrQuitDt">
+				            <div class="label">퇴사일</div>
+				        </div>
+		            </div>
+		            
+		            <div class="row">
+						<div class="textarea is-label is-value">
+		                    <label for="Edu_Edu_Cntnt_c15">비고</label>
+		                    <textarea cols="30" rows="10" id="usrMemo" placeholder="비고"></textarea>
+		                </div>
+		            </div>
+		            
+		            <div class="row">
+		            	<div class="row filebox">
+			                <div class="input input-full is-label dropdown-profile-sex is-value ">
+			                	<input type="file" id="usrProFile" >
+							  	<input class="upload-name" placeholder="파일선택">
+			                    <div class="label">프로필파일<span class="star">*</span></div>
+			                </div>
+				 				<div class="btn_wrap-ll">
+								  <label for="usrProFile">업로드</label> 
+								 </div>
+			                <div class="file-del-con">
+								<button type="button" class="btn btn-del-l"><span>삭제</span></button>
+                            </div>
+			            </div>
+		            </div>
+		            
+		            <div class="row">
+		            	<div class="row filebox">
+			                <div class="input input-full is-label dropdown-profile-sex is-value ">
+			                	<input type="file" id="usrCertFile" >
+							  	<input class="upload-name" placeholder="파일선택">
+			                    <div class="label">자격증빙파일<span class="star">*</span></div>
+			                </div>
+				 				<div class="btn_wrap-ll">
+								  <label for="usrCertFile">업로드</label> 
+								 </div>
+			                <div class="file-del-con">
+								<button type="button" class="btn btn-del-l"><span>삭제</span></button>
+                            </div>
+			            </div>
+		            </div>
+		            
+				</div>
+            </div>
+           	<!-- 여기에 추가해주시면 됩니다. -->
+           	
+           	<div class="btn_wrap">
+		 		<!-- 버튼 기본 컬러  -->
+                <button type="button" class="btn btn-com" onclick="goSave()"><span class="changeBtn">등록</span></button>
+		 		<!-- 버튼 기본 컬러  -->
+            </div>
+		</div>
+	</div>
+	<div class="popup-close">
+		<button type="button" class="btn btn-close" onclick="popupClose('popupDialog')"><span><img src="../../../static_resources/groupware/image/ico_close01.png"></span></button>
+	</div>
+	</section>
+</div>
+<script>
+var cmmnCodeList = "<%=cmmnCodeList%>";
+var ID = "";
+var USR_PRMS = "<%=USR_PRMS%>"
+
+var idFlag = false;
+var pwFlag = false;
+	
+$(function(){
+	console.log(cmmnCodeList)
+	$('#usrBirthDt, #usrGradDt, #usrJoinDt, #usrQuitDt').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		//,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		//,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		//,buttonText: "선택" //버튼 호버 텍스트              
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		,showAnim : 'slideDown'
+	});
+	
+	$('#usrBirthDt, #usrGradDt, #usrJoinDt, #usrQuitDt').datepicker('setDate', 'today');
+	
+	
+	
+	if(USR_PRMS == "A" || USR_PRMS == "S"){
+		$(".A").show();
+	} 
+})
+
+$('#usrLogId').blur(function(){
+	duplID();
+});
+$('#usrLogPw, #usrLogPwChk').blur(function(){
+	pWChk();
+});
+function duplID(){
+	var usrLogId = $('#usrLogId').val().trim();
+	if(usrLogId == ""){
+		$("#idChk").text("아이디를 입력해주세요!").css('color','red');
+		return
+	}
+	params = {
+		ID : usrLogId
+	}
+	cf_call("/groupware/member/duplId", params, dupleIdCB);
+}
+function dupleIdCB(data){
+	if(data.IDCHK == 0){
+		idFlag = true;
+		$("#idChk").text("사용 가능한 아이디입니다.").css('color','#1000ff');
+	}else{
+		idFlag = false;
+		$("#idChk").text("이미 사용중인 아이디입니다!").css('color','red');
+	}
+}
+function pWChk(){
+	var usrLogPw = $('#usrLogPw').val().trim();
+	var usrLogPwChk = $('#usrLogPwChk').val().trim();
+	 if(usrLogPw == "" && usrLogPwChk == ""){
+		 pwFlag = false;
+		 $("#pwChk").text("비밀번호를 입력해주세요!").css('color','red');
+		 return
+	 }
+		 
+	 if(usrLogPw == usrLogPwChk){
+		 pwFlag = true;
+		 $("#pwChk").text("비밀번호가 일치합니다!").css('color','#1000ff');
+	 }else{
+		 pwFlag = false;
+		 $("#pwChk").text("비밀번호가 일치하지 않습니다!").css('color','red');
+	 }
+}
+
+function validate(){
+	if(cf_isEmpty($("#usrName").val().trim())){
+		alert("이름을 입력하세요.");
+		$("#usrName").focus();
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	return true;
+}
+function goSave(){
+	if(!validate()) 
+	return;
+	
+	params = {
+		usrType		: $("input[name=usrType]:checked").val(),
+		usrPrms		: $("input[name=usrPrms]:checked").val(),
+		usrName		: $("#usrName").val(),
+		usrNameEn	: $("#usrNameEn").val(),
+		usrLogId	: $("#usrLogId").val(),
+		usrEmail	: $("#usrEmail").val(),
+		usrLogPw	: $("#usrLogPw").val(),
+		usrTel		: $("#usrTel").val(),
+		usrEmgTel	: $("#usrEmgTel").val(),
+		usrAddr		: $("#usrAddr").val(),
+		usrBirthDt	: $("#usrBirthDt").val(),
+		usrEduLv	: $("#usrEduLv").val(),
+		usrGradDt	: $("#usrGradDt").val(),
+		usrCompany	: $("#usrCompany").val(),
+		usrDep		: $("#usrDep").val(),
+		usrPos		: $("#usrPos").val(),
+		usrTechLv	: $("#usrTechLv").val(),
+		usrJoinDt	: $("#usrJoinDt").val(),
+		usrQuitDt	: $("#usrQuitDt").val(),
+		usrMemo		: $("#usrMemo").val(),
+	}
+	console.log(params)
+	
+}
+
+
+
+
+
+
+
+
+
+
+function clearPopupOpen(){
+
+	this.ID = "";
+	/* $('#perfStartDt').datepicker('setDate', 'today');
+	$('#perfEndDt').datepicker('setDate', 'today');
+	$("[name=sRadio1][value=i]").prop("checked", true);
+	$("#perfContent").val("");
+	$(".changeBtn").text("등록"); */
+	
+	popupOpen('popupDialog');
+}
+</script>
+</html>

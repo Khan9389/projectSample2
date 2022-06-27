@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=""/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="rg.springframework.security"/>
+			<item value="org.aspectj"/>
+			<item value="org"/>
+			<item value=".layerPrivacy_poly .popupcont"/>
+			<item value="isLogin"/>
+			<item value="validateLogin"/>
+			<item value="goShowRoom"/>
+			<item value="wishPrd"/>
+			<item value="setLnb"/>
+			<item value="getPrd"/>
+			<item value="getPrdToLnb"/>
+			<item value="getPrdToBrn"/>
+			<item value="brdName"/>
+			<item value="goList"/>
+			<item value="iframeList"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="equipmentAdmin"/>
+			<item value="notiImgFile_01"/>
+			<item value="notiImgFile01"/>
+			<item value="NOTI_IMG_FILE_01"/>
+			<item value="notiImgFile"/>
+			<item value="homepage"/>
+			<item value="pentas"/>
+			<item value="tbody02"/>
+			<item value="tbody01"/>
+			<item value="test01"/>
+			<item value="test02"/>
+			<item value="search03"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="289"/>
+		<item key="DIALOG_Y_ORIGIN" value="289"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

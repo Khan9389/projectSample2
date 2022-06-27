@@ -1,0 +1,1240 @@
+include.common_header.logout=\uB85C\uADF8\uC544\uC6C3 \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+
+include.header.directory=\uC804\uC2DC\uAD00\uC18C\uAC1C
+include.header.industry=\uC0B0\uC5C5\uC6A9\uD654\uD559\uC81C\uD488\uC804\uC2DC\uAD00
+include.header.cosmetics=\uD654\uC7A5\uD488\uC804\uC2DC\uAD00
+include.header.conference=\uCEE8\uD37C\uB7F0\uC2A4
+include.header.manager=\uAD00\uB9AC\uC790\uD398\uC774\uC9C0
+include.header.admin=\uC5B4\uB4DC\uBBFC\uD398\uC774\uC9C0
+include.header.logout=\uB85C\uADF8\uC544\uC6C3
+include.header.mypage=\uB9C8\uC774\uD398\uC774\uC9C0
+include.header.login=\uB85C\uADF8\uC778
+include.header.join=\uD68C\uC6D0\uAC00\uC785
+include.footer.address=?
+
+main.index.notice=\uC54C\uB9BC\uD31D\uC5C5
+main.index.site=\uBCF8 \uC0AC\uC774\uD2B8\uB294 <span class="blue-tx">Internet Explorer</span>\uC9C0\uC6D0\uC5D0 \uC81C\uC57D\uC774 \uC788\uC2B5\uB2C8\uB2E4.<span class="bl">\uD06C\uB86C\uBE0C\uB77C\uC6B0\uC838\uB97C \uB2E4\uC6B4\uB85C\uB4DC\uD574 \uC8FC\uC138\uC694.
+main.index.chrome=\uD06C\uB86C\uBE0C\uB77C\uC6B0\uC800 \uB2E4\uC6B4\uB85C\uB4DC
+main.index.search=\uD1B5\uD569\uAC80\uC0C9
+main.index.searchBtn=Search
+main.index.corperationName=\uAE30\uC5C5\uBA85
+main.index.productName=\uC81C\uD488\uBA85
+main.index.hsCode=HS Code
+main.index.casNo=CAS NO
+
+main.index.searchPh=\uAC80\uC0C9\uBA85\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+main.search.title=\uAC80\uC0C9
+main.search.all=\uC804\uCCB4\uC804\uC2DC\uAD00
+main.search.noInfo=\uD574\uB2F9\uD558\uB294 \uACB0\uACFC\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+member.join.buyerJoin=\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0 \uD68C\uC6D0\uAC00\uC785
+member.join.buyer=\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0 <span>\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0 \uAC00\uC785 \uC2DC \uC628\uB77C\uC778 \uC804\uC2DC\uAD00\uCC38\uAD00, \uD654\uC0C1\uC0C1\uB2F4 \uB4F1<span style="display: block;">\uBAA8\uB4E0 \uAE30\uB2A5\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.</span></span>
+member.join.corpJoin=\uCC38\uAC00\uAE30\uC5C5 \uAC00\uC785
+member.join.corpration=\uCC38\uAC00\uAE30\uC5C5 <span>\uCC38\uAC00\uAE30\uC5C5\uC740 \uC2B9\uC778 \uD6C4 \uAC00\uC785\uCC98\uB9AC\uAC00 \uC644\uB8CC\uB429\uB2C8\uB2E4.</span>
+          
+member.join_business.memberjoin=\uD68C\uC6D0\uAC00\uC785
+member.join_business.businesscorp=\uCC38\uC5EC\uAE30\uC5C5
+member.join_business.required=\uD544\uC218\uC785\uB825\uC0AC\uD56D
+member.join_business.id=\uC544\uC774\uB514
+member.join_business.duplchk=\uC911\uBCF5\uD655\uC778
+member.join_business.email=\uC774\uBA54\uC77C \uC8FC\uC18C
+member.join_business.pw=\uBE44\uBC00\uBC88\uD638
+member.join_business.passwordNotice= 6~10\uC790\uC758 \uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uC758 \uC870\uD569
+member.join_business.pwChk=\uBE44\uBC00\uBC88\uD638 \uD655\uC778
+member.join_business.nameByr=\uAC00\uC785\uC790\uBA85
+member.join_business.name=\uAC00\uC785\uC790\uBA85 (\uC601\uBB38)
+member.join_business.nation=\uAD6D\uAC00
+member.join_business.position=\uAC00\uC785\uC790 \uC9C1\uAE09
+member.join_business.telephone=\uC5F0\uB77D\uCC98
+member.join_business.corporationName=\uAE30\uC5C5\uBA85
+member.join_business.ceo=\uB300\uD45C\uC790\uBA85
+member.join_business.businesslicense=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638
+member.join_business.representationMail=\uD68C\uC0AC\uB300\uD45C\uBA54\uC77C
+member.join_business.representationMailalert=\uD68C\uC0AC\uB300\uD45C
+member.join_business.corporationTelephone=\uD68C\uC0AC\uC804\uD654\uBC88\uD638
+member.join_business.faxNumber=\uD68C\uC0AC\uD329\uC2A4\uBC88\uD638
+member.join_business.address=\uD68C\uC0AC\uC8FC\uC18C
+member.join_business.homepage=\uD68C\uC0AC\uD648\uD398\uC774\uC9C0
+member.join_business.recommendationOrganization=\uCD94\uCC9C\uAE30\uAD00
+member.join_business.exhibitionField=\uCC38\uAC00 \uD76C\uB9DD \uC804\uC2DC\uAD00
+member.join_business.policy=\uC774\uC6A9\uC57D\uAD00
+member.join_business.privatePolicy=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68
+member.join_business.agree=\uC774\uC6A9\uC57D\uAD00\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.
+member.join_business.policyWatch=\uC774\uC6A9\uC57D\uAD00\uBCF4\uAE30
+member.join_business.notice=\u203B \uD68C\uC6D0\uAC00\uC785 \uC2B9\uC778 \uD6C4 \uAD00\uB9AC\uAE30\uB2A5\uC774 \uC81C\uACF5\uB429\uB2C8\uB2E4.
+member.join_business.privatePolicyWatch=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uBCF4\uAE30
+member.join_business.privatePolicyAgree=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.
+member.join_business.join=\uD68C\uC6D0\uAC00\uC785
+member.join_business.cancel=\uCDE8\uC18C
+member.join_business.aprv=\uC2B9\uC778
+member.join_business.noAprv=\uBBF8\uC2B9\uC778
+
+member.join_business.emailPh=\uC0AC\uC6A9\uD560 \uC774\uBA54\uC77C \uC8FC\uC18C \uC785\uB825
+member.join_business.pwPh=\uC0AC\uC6A9\uD560 \uBE44\uBC00\uBC88\uD638 \uC785\uB825
+member.join_business.pwChkPh=\uC785\uB825\uD55C \uBE44\uBC00\uBC88\uD638 \uC785\uB825
+member.join_business.namePhByr=\uAC00\uC785\uC790\uBA85\uC744 \uC785\uB825
+member.join_business.namePh=\uAC00\uC785\uC790\uBA85\uC744 \uC785\uB825 (\uC601\uBB38)
+member.join_business.nationPh=\uAD6D\uAC00 \uC785\uB825
+member.join_business.positionPh=\uAC00\uC785\uC790 \uC9C1\uAE09 \uC785\uB825
+member.join_business.telephonePh=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825 (\uC22B\uC790)
+member.join_business.corporationNamePh=\uD68C\uC0AC\uBA85 \uC785\uB825
+member.join_business.ceoPh=\uB300\uD45C\uC790\uBA85 \uC785\uB825
+member.join_business.businesslicensePh=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638 \uC785\uB825 (\uC22B\uC790)
+member.join_business.representationMailPh=\uD68C\uC0AC\uB300\uD45C\uBA54\uC77C \uC785\uB825
+member.join_business.corporationTelephonePh=\uD68C\uC0AC\uC804\uD654\uBC88\uD638 \uC785\uB825 (\uC22B\uC790)
+member.join_business.faxNumberPh=\uD68C\uC0AC\uD329\uC2A4\uBC88\uD638 \uC785\uB825 (\uC22B\uC790)
+member.join_business.addressPh=\uC8FC\uC18C\uB97C \uC785\uB825
+member.join_business.recommendationOrganizationPh=\uCD94\uCC9C\uAE30\uAD00 \uC785\uB825
+member.join_business.exhibitionFieldPh=\uCC38\uAC00 \uD76C\uB9DD \uC804\uC2DC\uAD00 \uC785\uB825
+member.join_business.homepageUrlPh=\uD68C\uC0AC\uD648\uD398\uC774\uC9C0url \uC785\uB825
+
+member.join_business.emailAlert=\uC544\uC774\uB514\uB85C \uC0AC\uC6A9\uD560 \uC774\uBA54\uC77C\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_business.emailFormAlert=\uC774\uBA54\uC77C \uD615\uC2DD\uC774 \uC62C\uBC14\uB974\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.join_business.emailDuplAlert=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC744 \uD574\uC8FC\uC138\uC694.
+member.join_business.emailUsedAlert=\uC774\uBBF8 \uC0AC\uC6A9\uC911\uC778 \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+member.join_business.emailAbleAlert=\uC0AC\uC6A9 \uAC00\uB2A5\uD55C \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+member.join_business.passwordAlert=\uBE44\uBC00\uBC88\uD638 \uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.passwordFormAlert=6\uC790\uB9AC ~ 10\uC790\uB9AC \uC774\uB0B4\uB85C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_business.passwordBlankAlert=\uACF5\uBC31 \uC5C6\uC774 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_business.passwordMixAlert=\uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uB97C \uD63C\uD569\uD558\uC5EC \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_business.passwordIncorrectAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.join_business.idChkAlert=\uC785\uB825\uB41C \uC544\uC774\uB514\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+member.join_business.idDuplChkAlert=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.pwChkAlert=\uC785\uB825\uB41C \uBE44\uBC00\uBC88\uD638\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+member.join_business.pwDuplChkAlert=\uBE44\uBC00\uBC88\uD638 \uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.nameChkAlert=\uAC00\uC785\uC790\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.positionChkAlert=\uAC00\uC785\uC790 \uC9C1\uAE09\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.nationChkAlert=\uAD6D\uAC00\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.telephoneChkAlert=\uC5F0\uB77D\uCC98\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.corporationNameChkAlert=\uD68C\uC0AC\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.ceoChkAlert=\uB300\uD45C\uC790\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.businesslicensePhChkAlert=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.corporationTelephoneChkAlert=\uD68C\uC0AC\uC804\uD654\uBC88\uD638\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.addressChkAlert=\uD68C\uC0AC\uC8FC\uC18C\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.representationMailChkAlert=\uD68C\uC0AC\uB300\uD45C\uBA54\uC77C\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_business.policyChkAlert=\uC774\uC6A9\uC57D\uAD00\uC5D0 \uB3D9\uC758\uD574\uC8FC\uC138\uC694.
+member.join_business.privatePolicyChkAlert=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uC5D0 \uB3D9\uC758\uD574\uC8FC\uC138\uC694
+member.join_business.joinAlert=\uD68C\uC6D0\uAC00\uC785 \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+member.join_business.joinSuccessAlert=\uD68C\uC6D0\uAC00\uC785\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC774\uBA54\uC77C \uC778\uC99D \uD6C4 \uB85C\uADF8\uC778\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+member.join_business.joinFailAlert=\uD68C\uC6D0\uAC00\uC785\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+member.join_buyer.join=\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0 \uD68C\uC6D0\uAC00\uC785
+member.join_buyer.address=\uC8FC\uC18C
+member.join_buyer.belong=\uC18C\uC18D
+member.join_buyer.position=\uC9C1\uAE09
+member.join_buyer.interestedBusiness=\uAD00\uC2EC\uC5C5\uC885
+member.join_buyer.interestedProduct=\uAD00\uC2EC\uC81C\uD488
+member.join_buyer.interestedProductA=\uAD00\uC2EC\uC81C\uD488
+member.join_buyer.agree=\uC774\uC6A9\uC57D\uAD00\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.
+member.join_buyer.policyWatch=\uC774\uC6A9\uC57D\uAD00\uBCF4\uAE30
+member.join_buyer.policyAgree=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uC5D0 \uB3D9\uC758\uD569\uB2C8\uB2E4.
+member.join_buyer.privacyPolicyWatch=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uBCF4\uAE30
+member.join_buyer.confirm=\uD655\uC778
+member.join_buyer.cancel=\uCDE8\uC18C
+
+member.join_buyer.addressPh=\uC8FC\uC18C \uC785\uB825
+member.join_buyer.belongPh=\uC18C\uC18D \uC785\uB825
+member.join_buyer.positionPh=\uC9C1\uAE09 \uC785\uB825
+
+member.join_buyer.emailAlert=\uC544\uC774\uB514\uB85C \uC0AC\uC6A9\uD560 \uC774\uBA54\uC77C\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_buyer.emailFormAlert=\uC774\uBA54\uC77C \uD615\uC2DD\uC774 \uC62C\uBC14\uB974\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.join_buyer.emailOverlapAlert=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC744 \uD574\uC8FC\uC138\uC694.
+member.join_buyer.usedEmailAlert=\uC774\uBBF8 \uC0AC\uC6A9\uC911\uC778 \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+member.join_buyer.ableEmailAlert=\uC0AC\uC6A9 \uAC00\uB2A5\uD55C \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+member.join_buyer.passwordAlert=\uBE44\uBC00\uBC88\uD638 \uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.passwordFormAlert=6\uC790\uB9AC ~ 10\uC790\uB9AC \uC774\uB0B4\uB85C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_buyer.passwordblankAlert=\uACF5\uBC31 \uC5C6\uC774 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_buyer.passwordMixAlert=\uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uB97C \uD63C\uD569\uD558\uC5EC \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.join_buyer.passwordIncorrectAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.join_buyer.idCheck=\uC785\uB825\uB41C \uC544\uC774\uB514\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+member.join_buyer.idDuplCheck=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.pwCheck=\uC785\uB825\uB41C \uBE44\uBC00\uBC88\uD638\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+member.join_buyer.pwDuplCheck=\uBE44\uBC00\uBC88\uD638 \uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.nameCheck=\uAC00\uC785\uC790\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.nationCheck=\uAD6D\uAC00\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.telephoneCheck=\uC5F0\uB77D\uCC98\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+member.join_buyer.policyCheck=\uC774\uC6A9\uC57D\uAD00\uC5D0 \uB3D9\uC758\uD574\uC8FC\uC138\uC694.
+member.join_buyer.privatePolicyCheck=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68\uC5D0 \uB3D9\uC758\uD574\uC8FC\uC138\uC694.
+member.join_buyer.interestedBusinessCheck=\uAD00\uC2EC\uC5C5\uC885\uC744 1\uAC1C \uC774\uC0C1 \uC120\uD0DD\uD574\uC8FC\uC138\uC694.
+member.join_buyer.interestedProduct=\uAD00\uC2EC\uC81C\uD488\uC744 1\uAC1C \uC774\uC0C1 \uC120\uD0DD\uD574\uC8FC\uC138\uC694.
+member.join_buyer.joinAlert=\uD68C\uC6D0\uAC00\uC785 \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+member.join_buyer.joinSuccessAlert=\uD68C\uC6D0\uAC00\uC785\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC774\uBA54\uC77C \uC778\uC99D \uD6C4 \uB85C\uADF8\uC778\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+member.join_buyer.joinFailAlert=\uD68C\uC6D0\uAC00\uC785\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+member.join_buyer.policy=\uC774\uC6A9\uC57D\uAD00
+member.join_buyer.privatePolicy=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68
+
+member.join_buyer.01=\uC815\uBC00\uD654\uD559
+member.join_buyer.02=\uD50C\uB77C\uC2A4\uD2F1
+member.join_buyer.03=\uC11D\uC720\uD654\uD559
+member.join_buyer.04=\uACE0\uBB34
+member.join_buyer.05=\uD654\uC7A5\uD488
+
+member.join_buyer.product_01=\uAC74\uCD95
+member.join_buyer.product_02=\uC790\uB3D9\uCC28
+member.join_buyer.product_03=\uC870\uC120
+member.join_buyer.product_04=\uD654\uC7A5\uD488
+member.join_buyer.product_05=\uC758\uC57D
+member.join_buyer.product_06=\uC12C\uC720/\uC758\uB958
+member.join_buyer.product_07=\uC0DD\uD65C\uD654\uD559
+member.join_buyer.product_08=\uAE30\uD0C0
+
+member.login.login=\uB85C\uADF8\uC778
+member.login.id_search=\uC544\uC774\uB514 \uCC3E\uAE30
+member.login.pw_search=\uBE44\uBC00\uBC88\uD638 \uCC3E\uAE30
+member.login.signUp=\uD68C\uC6D0\uAC00\uC785
+member.login.register=\uC544\uC9C1 \uD68C\uC6D0\uC774 \uC544\uB2C8\uC138\uC694? \uD68C\uC6D0\uAC00\uC785\uC744 \uC9C4\uD589\uD574\uC8FC\uC138\uC694.
+
+member.login.idPh=\uC544\uC774\uB514\uB97C \uC785\uB825\uD558\uC138\uC694.
+member.login.pwPh=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD558\uC138\uC694.
+
+member.login.notexistIdAlert=\uC544\uC774\uB514 \uC815\uBCF4\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.login.notexistPwAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+member.login.newEnvirenmentAlert=\uC0C8\uB85C\uC6B4 \uD658\uACBD\uC5D0\uC11C \uB3D9\uC77C\uD55C \uC544\uC774\uB514\uB85C \uB85C\uADF8\uC778\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+member.login.wrongAlert=\uD5C8\uC6A9\uB418\uC9C0 \uC54A\uB294 \uD398\uC774\uC9C0\uC5D0 \uC811\uADFC\uD588\uC2B5\uB2C8\uB2E4.
+member.login.idAlert=\uC544\uC774\uB514\uB97C \uC785\uB825\uD558\uC138\uC694.
+member.login.pwAlert=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD558\uC138\uC694.
+
+member.id_search.name=\uC774\uB984
+member.id_search.telephone=\uC5F0\uB77D\uCC98
+member.id_search.btn=\uC544\uC774\uB514 \uCC3E\uAE30
+
+member.id_search.namePh=\uAC00\uC785\uC790\uBA85 \uC785\uB825
+member.id_search.telephonePh=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD558\uC138\uC694
+
+member.id_search.yourIdAlert=\uADC0\uD558\uC758 ID\uB294 
+member.id_search.yourIdisAlert= \uC785\uB2C8\uB2E4.
+member.id_search.noIdAlert=\uD574\uB2F9 \uC815\uBCF4\uB85C \uAC00\uC785\uB41C \uACC4\uC815\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.
+member.id_search.nameAlert=\uC774\uB984\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.id_search.telephoneAlert=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+member.pw_search.id=ID
+member.pw_search.name=\uC774\uB984
+member.pw_search.telephone=\uC5F0\uB77D\uCC98
+
+member.pw_search.idPh=ID \uC785\uB825
+member.pw_search.namePh=\uAC00\uC785\uC790\uBA85 \uC785\uB825
+member.pw_search.telephonePh=\uAC00\uC785\uC790 \uC5F0\uB77D\uCC98 \uC785\uB825
+member.pw_search.txt=\uAC00\uC785\uD558\uC2E0 \uC774\uBA54\uC77C\uC8FC\uC18C\uB97C \uD655\uC778\uD558\uC5EC \uD574\uB2F9 \uBA54\uC77C\uB85C \uC784\uC2DC\uBE44\uBC00\uBC88\uD638\uB97C \uBC1C\uAE09\uD574\uB4DC\uB9BD\uB2C8\uB2E4.
+member.pw_search.btn=\uBE44\uBC00\uBC88\uD638 \uCC3E\uAE30
+
+member.pw_search.sendEmailAlert=\uAC00\uC785\uD558\uC2E0 \uC774\uBA54\uC77C\uB85C \uC784\uC2DC \uBE44\uBC00\uBC88\uD638\uAC00 \uC804\uC1A1\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC57D 10\uBD84 \uD6C4 \uBA54\uC77C\uC744 \uBC1B\uC9C0 \uBABB\uD588\uC744 \uACBD\uC6B0 \uC7AC\uC2DC\uB3C4 \uBC14\uB78D\uB2C8\uB2E4.
+member.pw_search.idAlert=ID\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.pw_search.nameAlert=\uC774\uB984\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+member.pw_search.telephoneAlert=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+member.email_auth_succ.emailAuth=\uC774\uBA54\uC77C \uC778\uC99D\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+member.email_auth_succ.login=\uAC00\uC785\uB41C \uACC4\uC815\uC815\uBCF4\uB85C \uB85C\uADF8\uC778 \uD574\uC8FC\uC138\uC694.
+member.email_auth_succ.move=\uB85C\uADF8\uC778 \uD398\uC774\uC9C0 \uC774\uB3D9
+
+member.email_auth_send.email=\uAC00\uC785 \uC2DC \uC785\uB825\uD55C \uC774\uBA54\uC77C\uB85C \uC778\uC99D\uBA54\uC77C\uC774 \uBC1C\uC1A1\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+member.email_auth_send.auth=\uC57D 10\uBD84 \uD6C4 \uC778\uC99D\uBA54\uC77C\uC744 \uBC1B\uC9C0 \uBABB\uD588\uC744 \uACBD\uC6B0 \uC7AC\uC2DC\uB3C4 \uBC14\uB78D\uB2C8\uB2E4.
+member.email_auth_send.retry=\uC774\uBA54\uC77C \uC778\uC99D \uC7AC\uC2DC\uB3C4
+member.email_auth_send.zoom=\uCC38\uC5EC\uAE30\uC5C5 \uD68C\uC6D0\uC77C \uACBD\uC6B0 \uD654\uC0C1\uC0C1\uB2F4 \uAE30\uB2A5\uC774\uC6A9\uC744 \uC704\uD574 Zoom \uB4F1\uB85D\uBA54\uC77C\uC774 \uBC1C\uC1A1\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+member.email_auth_resend.resend=\uC774\uBA54\uC77C \uC778\uC99D\uC774 \uC2E4\uD328\uD588\uC744 \uACBD\uC6B0 \uC778\uC99D\uBA54\uC77C\uC744 \uC7AC\uC804\uC1A1 \uBC1B\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4.
+member.email_auth_resend.id=ID
+member.email_auth_resend.authResend=\uC778\uC99D\uBA54\uC77C \uC7AC\uC804\uC1A1
+
+member.email_auth_resend.idPh=\uAC00\uC785\uC2DC ID\uB85C \uC0AC\uC6A9\uD55C \uC774\uBA54\uC77C \uC785\uB825
+
+member.email_auth_resend.sendEmailAlert=\uAC00\uC785\uD558\uC2E0 \uC774\uBA54\uC77C\uB85C \uC784\uC2DC \uBE44\uBC00\uBC88\uD638\uAC00 \uC804\uC1A1\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC57D 10\uBD84 \uD6C4 \uBA54\uC77C\uC744 \uBC1B\uC9C0 \uBABB\uD588\uC744 \uACBD\uC6B0 \uC7AC\uC2DC\uB3C4 \uBC14\uB78D\uB2C8\uB2E4.
+member.email_auth_resend.emailFormAlert=\uC774\uBA54\uC77C\uD615\uC2DD\uC774 \uC62C\uBC14\uB974\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+
+corp_hall.corp_list.searchResult=\uAC80\uC0C9\uACB0\uACFC<span id="totalCnt"></span> \uAC74
+corp_hall.corp_list.excelDownload=\uC5D1\uC140 \uB2E4\uC6B4\uB85C\uB4DC
+corp_hall.corp_list.industry=\uC0B0\uC5C5\uC6A9\uD654\uD559\uC81C\uD488\uC804\uC2DC\uAD00
+corp_hall.corp_list.industryMo=\uC0B0\uC5C5\uC6A9<div>\uD654\uD559\uC81C\uD488</div>
+corp_hall.corp_list.industrySub=Industrial Chemicals Exhibition Hall
+corp_hall.corp_list.cosmetics=\uD654\uC7A5\uD488\uC804\uC2DC\uAD00
+corp_hall.corp_list.cosmeticsMo=\uD654\uC7A5\uD488
+corp_hall.corp_list.cosmeticsSub=Cosmetics Exhibition Hall
+corp_hall.corp_list.enter=\uC804\uC2DC\uAD00 \uB4E4\uC5B4\uAC00\uAE30
+corp_hall.corp_list.noResult=\uD574\uB2F9\uD558\uB294 \uACB0\uACFC\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+corp_hall.corp_list.searchPh=\uAE30\uC5C5\uBA85\uC744 \uAC80\uC0C9
+
+popup.intro_corp.introduce=\uAE30\uC5C5\uC18C\uAC1C
+popup.intro_corp.corpName=\uAE30\uC5C5\uBA85
+popup.intro_corp.ceo=\uB300\uD45C\uC790
+popup.intro_corp.establish=\uC124\uB9BD\uB144\uB3C4
+popup.intro_corp.contact=\uC804\uD654\uBC88\uD638
+popup.intro_corp.faxNumber=\uD329\uC2A4\uBC88\uD638
+popup.intro_corp.address=\uC8FC\uC18C
+popup.intro_corp.email=\uC774\uBA54\uC77C
+popup.intro_corp.homepage=\uD648\uD398\uC774\uC9C0
+popup.intro_corp.brochureName=\uBE0C\uB85C\uC154\uBA85
+popup.intro_corp.download=\uB2E4\uC6B4\uB85C\uB4DC
+popup.intro_corp.corpInfo=\uD68C\uC0AC\uC815\uBCF4
+popup.intro_corp.introInfo=\uC18C\uAC1C\uC790\uB8CC
+popup.intro_corp.noBrochure=\uB4F1\uB85D\uB41C E-\uBE0C\uB85C\uC154\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+popup.product_total.noProduct=\uB4F1\uB85D\uB41C \uC81C\uD488\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+popup.brochure.brochure=\uBE0C\uB85C\uC154
+popup.brochure.brochureName=\uBE0C\uB85C\uC154\uBA85
+popup.brochure.download=\uB2E4\uC6B4\uB85C\uB4DC
+popup.brochure.noBrochure=\uB4F1\uB85D\uB41C E-\uBE0C\uB85C\uC154\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+popup.pns_mtg_booking.videoConsultationBooking=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D\uD604\uD669
+popup.pns_mtg_booking.videoConsultationStatus=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D\uD604\uD669
+popup.pns_mtg_booking.timeZone=\uD0C0\uC784\uC874\uC124\uC815
+popup.pns_mtg_booking.date=\uB0A0\uC9DC
+popup.pns_mtg_booking.request=[\uC0C1\uB2F4\uC694\uCCAD]
+
+popup.pns_mtg_booking_confirm.videoMeetingBookingConfirm=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D \uD655\uC778
+popup.pns_mtg_booking_confirm.meetingCorporation=\uC0C1\uB2F4\uAE30\uC5C5
+popup.pns_mtg_booking_confirm.meetingDate=\uC0C1\uB2F4\uC77C\uC790
+popup.pns_mtg_booking_confirm.meetingTime=\uC0C1\uB2F4\uC2DC\uAC04
+popup.pns_mtg_booking_confirm.meetingMessage=\uBBF8\uD305\uBA54\uC2DC\uC9C0
+popup.pns_mtg_booking_confirm.save=\uC800\uC7A5
+popup.pns_mtg_booking_confirm.alert=\uD654\uC0C1\uC0C1\uB2F4 \uC694\uCCAD\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uC694\uCCAD \uD655\uC778\uC740 \uB9C8\uC774\uD398\uC774\uC9C0 > \uD654\uC0C1\uC0C1\uB2F4\uC5D0\uC11C \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+
+popup.pns_corp_inquiry.inquiry=\uBB38\uC758\uD558\uAE30
+popup.pns_corp_inquiry.inquiryCorp=\uBB38\uC758\uAE30\uC5C5
+popup.pns_corp_inquiry.inquiryTitle=\uBB38\uC758\uC81C\uBAA9
+popup.pns_corp_inquiry.inquiryContents=\uBB38\uC758\uB0B4\uC6A9
+popup.pns_corp_inquiry.save=\uC800\uC7A5
+
+popup.pns_corp_inquiry.inquiryTitleAlert=\uBB38\uC758\uC81C\uBAA9\uC744 \uC785\uB825\uD558\uC138\uC694.
+popup.pns_corp_inquiry.inquiryContentsAlert=\uBB38\uC758\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694
+popup.pns_corp_inquiry.inquirySaveAlert=\uBB38\uC758\uB0B4\uC5ED\uC744 \uC800\uC7A5\uD588\uC2B5\uB2C8\uB2E4.\\n\uBB38\uC758\uB0B4\uC5ED \uD655\uC778\uC740 \uB9C8\uC774\uD398\uC774\uC9C0 > \uBB38\uC758\uB0B4\uC5ED\uC5D0\uC11C \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+
+common.pns-module.first=\uC804\uC2DC\uAD00 \uCCAB\uBD80\uC2A4\uC785\uB2C8\uB2E4.
+common.pns-module.last=\uC804\uC2DC\uAD00 \uB9C8\uC9C0\uB9C9 \uBD80\uC2A4\uC785\uB2C8\uB2E4.
+common.pns-module.login=\uB85C\uADF8\uC778 \uD6C4 \uC774\uC6A9\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.pns-module.Qualification=\uD574\uB2F9 \uAE30\uB2A5\uC740 \uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0\uB9CC \uC774\uC6A9 \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.pns-module.add=\uB2E4\uC74C \uAE30\uC5C5\uC774 \uAD00\uC2EC\uAE30\uC5C5\uC73C\uB85C \uCD94\uAC00\uB429\uB2C8\uB2E4 : 
+common.pns-module.interested=\uC774(\uAC00) \uAD00\uC2EC\uAE30\uC5C5\uC5D0 \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uB9C8\uC774\uD398\uC774\uC9C0 > \uAD00\uC2EC\uAE30\uC5C5\uAD00\uB9AC\uC5D0\uC11C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.pns-module.exchange=\uB2E4\uC74C \uAE30\uC5C5\uACFC \uBA85\uD568\uC744 \uAD50\uD658\uD569\uB2C8\uB2E4 : 
+common.pns-module.exchangeComplete= \uC640(\uACFC) \uBA85\uD568\uAD50\uD658\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\\n\uB9C8\uC774\uD398\uC774\uC9C0 > \uBA85\uD568\uAD50\uD658\uC5D0\uC11C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.pns-module.checkedPopup=\uCC44\uD305\uCC3D\uC774 \uC548 \uB728\uBA74 \uD31D\uC5C5\uCC28\uB2E8 \uD574\uC7AC \uD6C4 \uB2E4\uC2DC \uC2DC\uB3C4\uD558\uC2DC\uAE30 \uBC14\uB78D\uB2C8\uB2E4.
+
+corp_hall.corp_list.searchPh=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825
+
+common.pns-module.intrestCorp=\uAD00\uC2EC\uAE30\uC5C5
+common.pns-module.businesscardExchange=\uBA85\uD568\uAD50\uD658
+common.pns-module.question=\uBB38\uC758\uD558\uAE30
+common.pns-module.videoConsultation=\uD654\uC0C1\uC0C1\uB2F4
+common.pns-module.chat=\uCC44\uD305\uD558\uAE30
+
+chat.chat_buyer_pop.chatRoom=\uCC44\uD305\uBC29
+chat.chat_buyer_pop.send=\uC804\uC1A1
+chat.chat_buyer_pop.Entrance= \uB2D8\uAED8\uC11C \uC785\uC7A5\uD558\uC168\uC2B5\uB2C8\uB2E4.</span>
+chat.chat_buyer_pop.wentout=)\uB2D8\uAED8\uC11C \uCC44\uD305\uBC29\uC744 \uB098\uAC00\uC168\uC2B5\uB2C8\uB2E4.</span>
+
+chat.chat_corp_pop.chatRoom=\uCC44\uD305\uBC29
+chat.chat_corp_pop.send=\uC804\uC1A1
+chat.chat_corp_pop.Entrance=\uB2D8\uAED8\uC11C \uC785\uC7A5\uD558\uC168\uC2B5\uB2C8\uB2E4.</span>
+chat.chat_corp_pop.wentout=)\uB2D8\uAED8\uC11C \uCC44\uD305\uBC29\uC744 \uB098\uAC00\uC168\uC2B5\uB2C8\uB2E4.</span>
+
+common.chattingCtl.Missed=\uD604\uC7AC \uB2F4\uB2F9\uC790\uAC00 \uBD80\uC7AC\uC911\uC785\uB2C8\uB2E4.<br>\uBB38\uC758\uD558\uAE30 \uB610\uB294 \uD654\uC0C1\uC0C1\uB2F4 \uC774\uC6A9\uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4.
+
+include.my_business_nav.corpMemeberInfo=\uAE30\uC5C5\uAC00\uC785\uC815\uBCF4
+include.my_business_nav.boothManagement=\uBD80\uC2A4\uAD00\uB9AC
+include.my_business_nav.brochure=\uBE0C\uB85C\uC154
+include.my_business_nav.video=\uD64D\uBCF4\uC601\uC0C1
+include.my_business_nav.productInfo=\uC81C\uD488\uC815\uBCF4
+include.my_business_nav.question=\uBB38\uC758\uB0B4\uC5ED
+include.my_business_nav.chat=\uCC44\uD305\uB0B4\uC5ED
+include.my_business_nav.videoChatConfig=\uD654\uC0C1\uC0C1\uB2F4\uC124\uC815
+include.my_business_nav.videoChatStatus=\uD654\uC0C1\uC0C1\uB2F4\uD604\uD669\uAD00\uB9AC
+include.my_business_nav.videoChatBook=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D\uD604\uD669
+include.my_business_nav.businessCardExchange=\uBA85\uD568\uAD50\uD658
+include.my_business_nav.employeeManagement=\uC9C1\uC6D0\uAD00\uB9AC
+include.my_business_nav.myInfo=\uB0B4\uC815\uBCF4\uAD00\uB9AC
+include.my_business_nav.corpLog=\uAD00\uB9AC\uC790\uB85C\uADF8\uC870\uD68C
+
+include.my_buyer_nav.myInfo=\uB0B4\uC815\uBCF4\uAD00\uB9AC
+include.my_buyer_nav.chatRecord=\uCC44\uD305\uB0B4\uC5ED
+include.my_buyer_nav.videoChat=\uD654\uC0C1\uC0C1\uB2F4
+include.my_buyer_nav.intrestedCorpManagement=\uAD00\uC2EC\uAE30\uC5C5\uAD00\uB9AC
+include.my_buyer_nav.businessCardExchange=\uBA85\uD568\uAD50\uD658
+include.my_buyer_nav.question=\uBB38\uC758\uB0B4\uC5ED
+
+include.my_buyer_nav_mobile.myInfo=Menu : \uB0B4\uC815\uBCF4\uAD00\uB9AC
+include.my_buyer_nav_mobile.chatRecord=Menu : \uCC44\uD305\uB0B4\uC5ED
+include.my_buyer_nav_mobile.videoChat=Menu : \uD654\uC0C1\uC0C1\uB2F4
+include.my_buyer_nav_mobile.intrestedCorpManagement=Menu : \uAD00\uC2EC\uAE30\uC5C5\uAD00\uB9AC
+include.my_buyer_nav_mobile.businessCardExchange=Menu : \uBA85\uD568\uAD50\uD658
+include.my_buyer_nav_mobile.question=Menu : \uBB38\uC758\uB0B4\uC5ED
+
+popup.product.productIntroduce=\uC81C\uD488\uC18C\uAC1C
+popup.product.productList=\uC81C\uD488\uBAA9\uB85D
+
+popup.promote_list.video=\uD64D\uBCF4\uC601\uC0C1
+
+popup.promote_video.video=\uD64D\uBCF4\uC601\uC0C1
+popup.promote_video.list=\uBAA9\uB85D\uC73C\uB85C
+
+mypage.my_business_info.info=\uB0B4\uC815\uBCF4\uAD00\uB9AC
+mypage.my_business_info.id=ID
+mypage.my_business_info.name=\uD68C\uC6D0\uBA85
+mypage.my_business_info.password=\uBE44\uBC00\uBC88\uD638
+mypage.my_business_info.changePassword=\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD
+mypage.my_business_info.newPassword=\uC0C8 \uBE44\uBC00\uBC88\uD638
+mypage.my_business_info.newPasswordCheck=\uC0C8 \uBE44\uBC00\uBC88\uD638 \uD655\uC778
+mypage.my_business_info.telephone=\uC5F0\uB77D\uCC98
+mypage.my_business_info.position=\uC9C1\uAE09
+mypage.my_business_info.authority=\uC2E4\uC2DC\uAC04 \uCC44\uD305\uAD8C\uD55C
+mypage.my_business_info.possible=\uAC00\uB2A5
+mypage.my_business_info.impossible=\uBD88\uAC00\uB2A5
+mypage.my_business_info.save=\uC800\uC7A5
+mypage.my_business_info.apprYn=\uC2B9\uC778\uC5EC\uBD80
+
+mypage.my_business_info.positionPh=\uC9C1\uAE09\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.telephonePh=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.passwordPh=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD558\uC138\uC694.
+mypage.my_business_info.passwordNotice=6~10\uC790\uC758 \uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uC758 \uC870\uD569
+
+mypage.my_business_info.passwordAlert=\uBE44\uBC00\uBC88\uD638 \uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_info.passwordFormAlert=6\uC790\uB9AC ~ 10\uC790\uB9AC \uC774\uB0B4\uB85C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.blankAlert=\uACF5\uBC31 \uC5C6\uC774 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.mixAlert=\uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uB97C \uD63C\uD569\uD558\uC5EC \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.passwordIncorrectAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+mypage.my_business_info.passwordInsertAlert=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.passwordInsertCheckAlert=\uC785\uB825\uB41C \uBE44\uBC00\uBC88\uD638\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+mypage.my_business_info.passwordCheckAlert=\uBE44\uBC00\uBC88\uD638 \uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_info.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_info.modifyAlert=\uB0B4\uC815\uBCF4\uB97C \uC218\uC815\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business_info.modifyFailAlert=\uB0B4\uC815\uBCF4\uC218\uC815\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business.corpInfo=\uAE30\uC5C5\uAC00\uC785 \uC815\uBCF4
+mypage.my_business.required=\uD544\uC218\uC785\uB825\uD56D\uBAA9
+mypage.my_business.id=\uAC00\uC785\uC790\uACC4\uC815
+mypage.my_business.nation=\uAD6D\uAC00(\uAD6D\uBB38)
+mypage.my_business.nationEnglish=\uAD6D\uAC00(\uC601\uBB38)
+mypage.my_business.corporationName=\uD68C\uC0AC\uBA85(\uAD6D\uBB38)
+mypage.my_business.corporationNameEnglish=\uD68C\uC0AC\uBA85(\uC601\uBB38)
+mypage.my_business.ceo=\uB300\uD45C\uC790\uBA85(\uAD6D\uBB38)
+mypage.my_business.ceoEnglish=\uB300\uD45C\uC790\uBA85(\uC601\uBB38)
+mypage.my_business.businesslicense=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638
+mypage.my_business.email=\uB300\uD45C\uC774\uBA54\uC77C
+mypage.my_business.corporationTelephone=\uD68C\uC0AC\uC804\uD654\uBC88\uD638
+mypage.my_business.faxNumber=\uD68C\uC0AC\uD329\uC2A4\uBC88\uD638
+mypage.my_business.address=\uD68C\uC0AC\uC8FC\uC18C(\uAD6D\uBB38)
+mypage.my_business.addressEnglish=\uD68C\uC0AC\uC8FC\uC18C(\uC601\uBB38)
+mypage.my_business.homepage=\uD68C\uC0AC\uD648\uD398\uC774\uC9C0
+mypage.my_business.established=\uD68C\uC0AC\uC124\uB9BD\uB144\uB3C4
+mypage.my_business.permission=\uC2B9\uC778\uC0C1\uD0DC
+mypage.my_business.save=\uC800\uC7A5
+mypage.my_business.notice=*\uC2B9\uC778 \uC644\uB8CC \uD6C4 \uAD00\uB9AC\uAE30\uB2A5\uC744 \uC0AC\uC6A9\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.
+mypage.my_business.notice-l=* \uB300\uD45C\uC790\uBA85, \uB300\uD45C\uC774\uBA54\uC77C, \uD68C\uC0AC\uC804\uD654\uBC88\uD638\uB294 \uBA85\uD568 \uAD50\uD658 \uC2DC \uBC14\uC774\uC5B4\uC5D0\uAC8C \uACF5\uAC1C\uB429\uB2C8\uB2E4.
+mypage.my_business.selectNation=\uAD6D\uC801\uC744 \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business.year= \uB144
+
+mypage.my_business.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business.modifyAlert=\uAE30\uC5C5\uC815\uBCF4\uB97C \uC218\uC815\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business.modifyFailAlert=\uAE30\uC5C5\uC815\uBCF4\uC218\uC815\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business.selectYear=\uC124\uB9BD\uB144\uB3C4\uB97C \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business.NationAlert=\uAD6D\uC801\uC744 \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business.nationAlert=\uAD6D\uAC00\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.corporationNameAlert=\uD68C\uC0AC\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.ceoAlert=\uB300\uD45C\uC790\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.businesslicenseAlert=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.emailAlert=\uB300\uD45C\uC774\uBA54\uC77C\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.corporationTelephonAlert=\uD68C\uC0AC\uC804\uD654\uBC88\uD638\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business.addressAlert=\uD68C\uC0AC\uC8FC\uC18C\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+
+mypage.my_business.corporationNamePh=\uD68C\uC0AC\uBA85\uC744 \uC785\uB825
+mypage.my_business.ceoPh=\uB300\uD45C\uC790\uBA85\uC744 \uC785\uB825
+mypage.my_business.businesslicensePh=\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638 \uC785\uB825
+mypage.my_business.emailPh=\uB300\uD45C\uC774\uBA54\uC77C \uC785\uB825
+mypage.my_business.corporationTelephonePh=\uD68C\uC0AC\uC804\uD654\uBC88\uD638 \uC785\uB825
+mypage.my_business.faxNumberPh=\uD68C\uC0AC\uD329\uC2A4\uBC88\uD638 \uC785\uB825
+mypage.my_business.addressPh=\uD68C\uC0AC\uC8FC\uC18C \uC785\uB825
+mypage.my_business.homepagePh=\uD68C\uC0AC\uD648\uD398\uC774\uC9C0 \uC785\uB825
+
+mypage.my_business_booth.corpTyp01=\uC815\uBC00\uD654\uD559
+mypage.my_business_booth.corpTyp02=\uC11D\uC720\uD654\uD559
+mypage.my_business_booth.corpTyp03=\uD50C\uB77C\uC2A4\uD2F1
+mypage.my_business_booth.corpTyp04=\uACE0\uBB34
+mypage.my_business_booth.corpTyp05=\uD654\uC7A5\uD488
+
+mypage.my_business_booth.boothManage=\uBD80\uC2A4\uAD00\uB9AC
+mypage.my_business_booth.required=\uD544\uC218\uC785\uB825\uD56D\uBAA9
+mypage.my_business_booth.exhibition=\uC804\uC2DC\uBD84\uC57C
+mypage.my_business_booth.industryExhibit=\uC0B0\uC5C5\uC6A9\uC81C\uD488\uC804\uC2DC\uAD00
+mypage.my_business_booth.beautyExhibit=\uD654\uC7A5\uD488\uC804\uC2DC\uAD00
+mypage.my_business_booth.mainWork=\uC8FC\uC5C5\uC885
+mypage.my_business_booth.save=\uC800\uC7A5
+mypage.my_business_booth.ci=\uD68C\uC0AC\uB85C\uACE0\uC774\uBBF8\uC9C0
+mypage.my_business_booth.companyImage=(\uD68C\uC0AC\uB85C\uACE0\uC774\uBBF8\uC9C0)
+mypage.my_business_booth.notice=* CI\uB294 200*100px \uD574\uC0C1\uB3C4\uC5D0 png \uD30C\uC77C\uB85C \uC5C5\uB85C\uB4DC \uD574\uC57C\uD569\uB2C8\uB2E4.
+mypage.my_business_booth.corpIntroduce=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9(\uAD6D\uBB38)
+mypage.my_business_booth.corpIntroduceEnglish=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9(\uC601\uBB38)
+mypage.my_business_booth.boothType=\uBD80\uC2A4\uD0C0\uC785
+mypage.my_business_booth.boothA=\uBD80\uC2A4A
+mypage.my_business_booth.boothB=\uBD80\uC2A4B
+mypage.my_business_booth.boothC=\uBD80\uC2A4C
+mypage.my_business_booth.boothOpen=\uBD80\uC2A4\uC624\uD508\uC5EC\uBD80
+mypage.my_business_booth.boothOpenPrepare=\uC624\uD508 \uC900\uBE44\uC911
+mypage.my_business_booth.boothOpening=\uC624\uD508
+mypage.my_business_booth.boothShortcut=\uC804\uC2DC\uBD80\uC2A4 \uBC14\uB85C\uAC00\uAE30
+mypage.my_business_booth.preview=* \uC624\uD508 \uC900\uBE44\uC911\uC778 \uACBD\uC6B0\uC5D0\uB3C4 \uC804\uC2DC\uBD80\uC2A4\uBC14\uB85C\uAC00\uAE30 \uBC84\uD2BC\uC744 \uD074\uB9AD\uD558\uC2DC\uBA74 \uC804\uC2DC\uBD80\uC2A4\uB97C \uD655\uC778\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4
+mypage.my_business_booth.fileSizeAlert=\uD30C\uC77C \uC0AC\uC774\uC988\uAC00 10MB\uB97C \uCD08\uACFC \uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_booth.mainWorkAlert=\uC8FC\uC5C5\uC885\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_booth.exhibitionAlert=\uC804\uC2DC\uBD84\uC57C\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_booth.logoimgAlert=\uB85C\uACE0\uC774\uBBF8\uC9C0\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_booth.corpIntroduceAlert=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_booth.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_booth.saveSuccessAlert=\uBD80\uC2A4\uC815\uBCF4\uB97C \uC800\uC7A5\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business_booth.saveFailAlert=\uBD80\uC2A4\uC815\uBCF4\uC800\uC7A5\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business_brochure.deleteSuccessAlert=\uC0AD\uC81C\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_brochure.brochure=\uBE0C\uB85C\uC154
+mypage.my_business_brochure.add=\uCD94\uAC00
+mypage.my_business_brochure.delete=\uC0AD\uC81C
+mypage.my_business_brochure.no=No
+mypage.my_business_brochure.brochureName=\uBE0C\uB85C\uC154\uBA85
+mypage.my_business_brochure.download=\uB2E4\uC6B4\uB85C\uB4DC
+mypage.my_business_brochure.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_brochure.deleteAlert=\uC0AD\uC81C\uD560 \uBE0C\uB85C\uC154\uB97C \uC120\uD0DD\uD574\uC8FC\uC138\uC694
+mypage.my_business_brochure.deleteAskAlert=\uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+
+mypage.my_business_brochure_dtl.language=\uC5B8\uC5B4
+mypage.my_business_brochure_dtl.addEbrochure=\uBE0C\uB85C\uC154 \uB4F1\uB85D
+mypage.my_business_brochure_dtl.required=\uD544\uC218\uC785\uB825\uD56D\uBAA9
+mypage.my_business_brochure_dtl.brochureName=\uBE0C\uB85C\uC154\uBA85
+mypage.my_business_brochure_dtl.mainProduct=\uB300\uD45C
+mypage.my_business_brochure_dtl.notice=* \u201C\uB300\uD45C\u201D \uC124\uC815 \uC2DC \uC6B0\uC120\uC801\uC73C\uB85C \uC870\uD68C\uB429\uB2C8\uB2E4.
+mypage.my_business_brochure_dtl.fileEnroll=\uD30C\uC77C\uB4F1\uB85D
+mypage.my_business_brochure_dtl.fileEnrollEnglish=\uD30C\uC77C\uB4F1\uB85D
+mypage.my_business_brochure_dtl.pdf=* PDF \uD30C\uC77C\uB85C \uC5C5\uB85C\uB4DC \uD574\uC57C\uD569\uB2C8\uB2E4.
+mypage.my_business_brochure_dtl.save=\uC800\uC7A5
+mypage.my_business_brochure_dtl.list=\uBAA9\uB85D
+mypage.my_business_brochure_dtl.delete=\uC0AD\uC81C
+
+mypage.my_business_brochure_dtl.titleAlert=\uBE0C\uB85C\uC154\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_brochure_dtl.brochureAlert=\uBE0C\uB85C\uC154\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_brochure_dtl.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_brochure_dtl.saveSuccessAlert=\uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_brochure_dtl.saveFailAlert=\uC800\uC7A5\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_brochure_dtl.brochureNamePh=\uBE0C\uB85C\uC154\uBA85\uC744 \uC785\uB825
+
+mypage.my_business_video.video=\uD64D\uBCF4\uC601\uC0C1
+mypage.my_business_video.tab1=VIDEO
+mypage.my_business_video.tab2=3D Contents
+mypage.my_business_video.add=\uCD94\uAC00
+mypage.my_business_video.delete=[\uC0AD\uC81C]
+mypage.my_business_video.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_video.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_video.saveSuccessAlert=\uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_video_dtl.language=\uC5B8\uC5B4
+mypage.my_business_video_dtl.korean=Korean
+mypage.my_business_video_dtl.english=English
+mypage.my_business_video_dtl.add=\uD64D\uBCF4\uC601\uC0C1 \uB4F1\uB85D
+mypage.my_business_video_dtl.required=\uD544\uC218\uC785\uB825\uD56D\uBAA9
+mypage.my_business_video_dtl.division=\uC601\uC0C1\uAD6C\uBD84
+mypage.my_business_video_dtl.videoTitle=\uC601\uC0C1\uC81C\uBAA9
+mypage.my_business_video_dtl.mainProduct=\uB300\uD45C
+mypage.my_business_video_dtl.notice= * \u201C\uB300\uD45C\u201D \uC124\uC815 \uC2DC \uC6B0\uC120\uC801\uC73C\uB85C \uC870\uD68C\uB429\uB2C8\uB2E4.
+mypage.my_business_video_dtl.youtube=\uC720\uD29C\uBE0C
+mypage.my_business_video_dtl.addMp4=\uD30C\uC77C\uB4F1\uB85D(mp4)
+mypage.my_business_video_dtl.addFile=\uD30C\uC77C\uB4F1\uB85D
+mypage.my_business_video_dtl.Video=VIDEO
+mypage.my_business_video_dtl.selectVideo=(VIDEO\uC120\uD0DD\uC2DC)
+mypage.my_business_video_dtl.3DContents=3D Contents
+mypage.my_business_video_dtl.select3DContents=(3D \uC120\uD0DD\uC2DC)
+mypage.my_business_video_dtl.link=(https://youtu.be/<span>51r6tdV2yfg</span> \uBE68\uAC04\uC0C9\uB9CC \uAE30\uC7AC\uD558\uC138\uC694.)
+mypage.my_business_video_dtl.url=\uB9C1\uD06C(url)
+mypage.my_business_video_dtl.addGlb=\uD30C\uC77C\uB4F1\uB85D(glb)
+mypage.my_business_video_dtl.save=\uC800\uC7A5
+mypage.my_business_video_dtl.list=\uBAA9\uB85D
+mypage.my_business_video_dtl.linkedProduct=\uC5F0\uAD00\uC81C\uD488
+mypage.my_business_video_dtl.selectProduct=\uC5F0\uAD00\uC81C\uD488\uC744 \uC120\uD0DD\uD558\uC138\uC694
+mypage.my_business_video_dtl.fileSizeAlert=\uD30C\uC77C \uC0AC\uC774\uC988\uAC00 150MB\uB97C \uCD08\uACFC \uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_video_dtl.titleAlert=\uC601\uC0C1\uC81C\uBAA9\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_video_dtl.typeAlert=\uC601\uC0C1\uC720\uD615\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_video_dtl.type_linkAlert=\uB3D9\uC601\uC0C1\uC720\uD615\uACFC \uB9C1\uD06C\uB97C \uD655\uC778\uD558\uC138\uC694.
+mypage.my_business_video_dtl.type_FileAlert=\uB3D9\uC601\uC0C1\uC720\uD615\uACFC \uD30C\uC77C\uC744 \uD655\uC778\uD558\uC138\uC694.
+mypage.my_business_video_dtl.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_video_dtl.saveSuccessAlert=\uC800\uC7A5\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_video_dtl.saveFailAlert=\uC800\uC7A5\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_video_dtl.videoTitlePh=\uC601\uC0C1\uC81C\uBAA9\uC744 \uC785\uB825
+
+mypage.my_business_product.productInfo=\uC81C\uD488\uC815\uBCF4
+mypage.my_business_product.addProduct=\uCD94\uAC00
+mypage.my_business_product.productNoInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+mypage.my_business_product.delete=[\uC0AD\uC81C]
+
+mypage.my_business_product.deleteAlert=\uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_product.deleteSuccessAlert=\uC0AD\uC81C\uAC00 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_product_dtl.add=\uCD94\uAC00
+mypage.my_business_product_dtl.delete=\uC0AD\uC81C
+mypage.my_business_product_dtl.addProduct=\uC81C\uD488\uB4F1\uB85D
+mypage.my_business_product_dtl.required=\uD544\uC218\uC785\uB825\uD56D\uBAA9
+mypage.my_business_product_dtl.productName=\uC81C\uD488\uBA85(\uAD6D\uBB38)
+mypage.my_business_product_dtl.productNameEnglish=\uC81C\uD488\uBA85(\uC601\uBB38)
+mypage.my_business_product_dtl.mainProduct=\uB300\uD45C
+mypage.my_business_product_dtl.catalogProduct=e-catalog
+mypage.my_business_product_dtl.notice=* \u201C\uB300\uD45C\u201D \uC124\uC815 \uC2DC \uC6B0\uC120\uC801\uC73C\uB85C \uC870\uD68C\uB429\uB2C8\uB2E4.
+mypage.my_business_product_dtl.hs_code=HS_CODE
+mypage.my_business_product_dtl.cas_no=CAS_NO
+mypage.my_business_product_dtl.usage=\uC81C\uD488\uC6A9\uB3C4
+mypage.my_business_product_dtl.select=(1\uAC1C \uC774\uC0C1\uD544\uC218 \uC120\uD0DD)
+
+mypage.my_business_product_dtl.prod_purp_01=\uAC74\uCD95
+mypage.my_business_product_dtl.prod_purp_02=\uC790\uB3D9\uCC28
+mypage.my_business_product_dtl.prod_purp_03=\uC870\uC120
+mypage.my_business_product_dtl.prod_purp_04=\uD654\uC7A5\uD488
+mypage.my_business_product_dtl.prod_purp_05=\uC758\uC57D
+mypage.my_business_product_dtl.prod_purp_06=\uC12C\uC720/\uC758\uB958
+mypage.my_business_product_dtl.prod_purp_07=\uC0DD\uD65C\uD654\uD559
+mypage.my_business_product_dtl.prod_purp_08=\uAE30\uD0C0
+
+mypage.my_business_product_dtl.productIntroduce=\uC81C\uD488\uC18C\uAC1C(\uAD6D\uBB38)
+mypage.my_business_product_dtl.productIntroduceEnglish=\uC81C\uD488\uC18C\uAC1C(\uC601\uBB38)
+mypage.my_business_product_dtl.mainProductImg=\uB300\uD45C \uC774\uBBF8\uC9C0
+mypage.my_business_product_dtl.condition=* \uC81C\uD488\uC774\uBBF8\uC9C0\uB294 800*400px \uD574\uC0C1\uB3C4\uC5D0 png \uD30C\uC77C\uB85C \uC5C5\uB85C\uB4DC \uD574\uC57C\uD569\uB2C8\uB2E4.
+mypage.my_business_product_dtl.productImg=\uCD94\uAC00 \uC774\uBBF8\uC9C0
+mypage.my_business_product_dtl.save=\uC800\uC7A5
+mypage.my_business_product_dtl.list=\uBAA9\uB85D
+mypage.my_business_product_dtl.fileSizeAlert=\uD30C\uC77C \uC0AC\uC774\uC988\uAC00 10MB\uB97C \uCD08\uACFC \uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_product_dtl.maxAlert=\uCD5C\uB300 \uAC1C\uC218\uB97C \uC785\uB825\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business_product_dtl.titleAlert=\uC81C\uBAA9\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_product_dtl.useAlert=\uC81C\uD488\uC6A9\uB3C4\uB97C 1\uAC1C \uC774\uC0C1 \uC120\uD0DD\uD574\uC8FC\uC138\uC694.
+mypage.my_business_product_dtl.productIntrduceAlert=\uC81C\uD488\uC18C\uAC1C\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_product_dtl.imgAlert=\uB300\uD45C\uC774\uBBF8\uC9C0\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_product_dtl.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_product_dtl.saveSuccessAlert=\uC800\uC7A5\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_product_dtl.overAlert=\uBD80\uC2A4\uBA54\uC778\uB178\uCD9C \uAC1C\uC218\uB97C \uCD08\uACFC\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_inquiry.ask=\uBB38\uC758\uB0B4\uC5ED
+mypage.my_business_inquiry.No=No
+mypage.my_business_inquiry.answer=\uB2F5\uBCC0\uC0C1\uD0DC
+mypage.my_business_inquiry.askTitle=\uBB38\uC758\uC81C\uBAA9
+mypage.my_business_inquiry.askPerson=\uBB38\uC758\uC790
+mypage.my_business_inquiry.askDate=\uB4F1\uB85D\uB0A0\uC9DC
+mypage.my_business_inquiry.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+mypage.my_business_inquiry.answer=\uB2F5\uBCC0\uB300\uAE30
+mypage.my_business_inquiry.answerConfirm=\uB2F5\uBCC0\uC644\uB8CC
+
+mypage.my_business_inquiry.notexistAlert=\uD574\uB2F9 \uB0B4\uC5ED\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_inquiry_log.corpInfo=\uAE30\uC5C5\uC815\uBCF4
+mypage.my_business_inquiry_log.booth=\uBD80\uC2A4\uAD00\uB9AC
+mypage.my_business_inquiry_log.gallery=\uD64D\uBCF4\uAC24\uB7EC\uB9AC
+mypage.my_business_inquiry_log.video=\uD64D\uBCF4\uC601\uC0C1
+mypage.my_business_inquiry_log.product=\uC81C\uD488
+mypage.my_business_inquiry_log.brochure=\uBE0C\uB85C\uC154
+mypage.my_business_inquiry_log.inquriy=\uBB38\uC758\uB0B4\uC5ED
+mypage.my_business_inquiry_log.businessCard=\uBA85\uD568\uAD50\uD658 \uD68C\uC6D0
+mypage.my_business_inquiry_log.modifyDate=\uC218\uC815\uC77C\uC2DC
+mypage.my_business_inquiry_log.modifier=\uC218\uC815\uC790
+mypage.my_business_inquiry_log.corpName=\uAE30\uC5C5\uBA85
+mypage.my_business_inquiry_log.ceo=\uD68C\uC0AC\uB300\uD45C\uBA85
+mypage.my_business_inquiry_log.status=\uC0C1\uD0DC
+mypage.my_business_inquiry_log.list=\uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30
+mypage.my_business_inquiry_log.board=\uAC8C\uC2DC\uD310
+mypage.my_business_inquiry_log.modifydate=\uC218\uC815\uC77C\uC2DC
+mypage.my_business_inquiry_log.modifier=\uC218\uC815\uC790
+mypage.my_business_inquiry_log.title=\uBB38\uC758\uC81C\uBAA9
+mypage.my_business_inquiry_log.id=ID
+mypage.my_business_inquiry_log.name=\uC774\uB984
+mypage.my_business_inquiry_log.answer=\uB2F5\uBCC0\uC0C1\uD0DC
+mypage.my_business_inquiry_log.backList=\uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30
+
+mypage.my_business_inquiry_log.notexistAlert=\uD574\uB2F9 \uB0B4\uC5ED\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_inquiry_log_dtl.corpInfo=\uAE30\uC5C5\uC815\uBCF4
+mypage.my_business_inquiry_log_dtl.booth=\uBD80\uC2A4\uAD00\uB9AC
+mypage.my_business_inquiry_log_dtl.gallery=\uD64D\uBCF4\uAC24\uB7EC\uB9AC
+mypage.my_business_inquiry_log_dtl.video=\uD64D\uBCF4\uC601\uC0C1
+mypage.my_business_inquiry_log_dtl.product=\uC81C\uD488
+mypage.my_business_inquiry_log_dtl.brochure=\uBE0C\uB85C\uC154
+mypage.my_business_inquiry_log_dtl.inquriy=\uBB38\uC758\uB0B4\uC5ED
+mypage.my_business_inquiry_log_dtl.board=\uAC8C\uC2DC\uD310
+mypage.my_business_inquiry_log_dtl.businessCard=\uBA85\uD568\uAD50\uD658 \uD68C\uC6D0
+mypage.my_business_inquiry_log_dtl.belong=\uC18C\uC18D
+mypage.my_business_inquiry_log_dtl.name=\uC9C1\uD568
+mypage.my_business_inquiry_log_dtl.telephone=\uC5F0\uB77D\uCC98
+mypage.my_business_inquiry_log_dtl.email=E-mail
+mypage.my_business_inquiry_log_dtl.answer=\uB2F5\uBCC0
+mypage.my_business_inquiry_log_dtl.answerstatus=\uB2F5\uBCC0\uC0C1\uD0DC
+mypage.my_business_inquiry_log_dtl.answerwait=\uB2F5\uBCC0\uB300\uAE30
+mypage.my_business_inquiry_log_dtl.list=\uBAA9\uB85D
+
+mypage.my_business_inquiry_log_dtl.wrongAlert=\uC798\uBABB\uB41C \uC811\uADFC\uC785\uB2C8\uB2E4.
+
+mypage.my_business_chat.chatRecord=\uCC44\uD305\uB0B4\uC5ED
+mypage.my_business_chat.No=No
+mypage.my_business_chat.chatStatus=\uD655\uC778\uC0C1\uD0DC
+mypage.my_business_chat.chatpartner=\uB300\uC0C1\uAE30\uC5C5
+mypage.my_business_chat.chatRequestDate=\uCC44\uD305\uC694\uCCAD\uC77C\uC2DC
+mypage.my_business_chat.chatView=\uCC44\uD305\uB0B4\uC6A9\uBCF4\uAE30
+mypage.my_business_chat.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+mypage.my_business_chat.chatIn=[\uCC44\uD305\uCC38\uC5EC]
+mypage.my_business_chat.chatCheck=\uD655\uC778
+mypage.my_business_chat.chatNoneCheck=\uBBF8\uD655\uC778
+
+mypage.my_business_chat.confirmAlert=\uD655\uC778\uC644\uB8CC
+mypage.my_business_chat.openAlert=\uD574\uB2F9 \uCC44\uD305\uBC29\uC774 \uC5F4\uB824\uC788\uC2B5\uB2C8\uB2E4.
+mypage.my_business_chat.exitAlert=\uBC14\uC774\uC5B4\uAC00 \uC774\uBBF8 \uD574\uB2F9\uCC44\uD305\uBC29\uC744 \uD1F4\uC7A5\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_mtg_config.meetingSetting=\uD654\uC0C1\uC0C1\uB2F4\uC124\uC815
+mypage.my_business_mtg_config.easySetting=\uAC04\uD3B8\uC124\uC815
+mypage.my_business_mtg_config.detailSetting=\uC0C1\uC138\uC124\uC815
+mypage.my_business_mtg_config.meetingDateSetting=\uD68C\uC758\uAC00\uB2A5\uC694\uC77C
+mypage.my_business_mtg_config.monday=\uC6D4\uC694\uC77C
+mypage.my_business_mtg_config.tuesday=\uD654\uC694\uC77C
+mypage.my_business_mtg_config.wednesday=\uC218\uC694\uC77C
+mypage.my_business_mtg_config.thursday=\uBAA9\uC694\uC77C
+mypage.my_business_mtg_config.friday=\uAE08\uC694\uC77C
+mypage.my_business_mtg_config.saturday=\uD1A0\uC694\uC77C
+mypage.my_business_mtg_config.sunday=\uC77C\uC694\uC77C
+mypage.my_business_mtg_config.HolidayMeeting=\uBC95\uC815\uACF5\uD734\uC77C \uD68C\uC758\uAC00\uB2A5\uC5EC\uBD80
+mypage.my_business_mtg_config.possible=\uAC00\uB2A5
+mypage.my_business_mtg_config.impossible=\uBD88\uAC00\uB2A5
+mypage.my_business_mtg_config.meetingTime=\uAC00\uB2A5\uC2DC\uAC04
+mypage.my_business_mtg_config.save=\uC800\uC7A5
+
+mypage.my_business_mtg_config.timeGen00=00:00 ~ 01:00
+mypage.my_business_mtg_config.timeGen01=01:00 ~ 02:00
+mypage.my_business_mtg_config.timeGen02=02:00 ~ 03:00
+mypage.my_business_mtg_config.timeGen03=03:00 ~ 04:00
+mypage.my_business_mtg_config.timeGen04=04:00 ~ 05:00
+mypage.my_business_mtg_config.timeGen05=05:00 ~ 06:00
+mypage.my_business_mtg_config.timeGen06=06:00 ~ 07:00
+mypage.my_business_mtg_config.timeGen07=07:00 ~ 08:00
+mypage.my_business_mtg_config.timeGen08=08:00 ~ 09:00
+mypage.my_business_mtg_config.timeGen09=09:00 ~ 10:00
+mypage.my_business_mtg_config.timeGen10=10:00 ~ 11:00
+mypage.my_business_mtg_config.timeGen11=11:00 ~ 12:00
+mypage.my_business_mtg_config.timeGen12=12:00 ~ 13:00
+mypage.my_business_mtg_config.timeGen13=13:00 ~ 14:00
+mypage.my_business_mtg_config.timeGen14=14:00 ~ 15:00
+mypage.my_business_mtg_config.timeGen15=15:00 ~ 16:00
+mypage.my_business_mtg_config.timeGen16=16:00 ~ 17:00
+mypage.my_business_mtg_config.timeGen17=17:00 ~ 18:00
+mypage.my_business_mtg_config.timeGen18=18:00 ~ 19:00
+mypage.my_business_mtg_config.timeGen19=19:00 ~ 20:00
+mypage.my_business_mtg_config.timeGen20=20:00 ~ 21:00
+mypage.my_business_mtg_config.timeGen21=21:00 ~ 22:00
+mypage.my_business_mtg_config.timeGen22=22:00 ~ 23:00
+mypage.my_business_mtg_config.timeGen23=23:00 ~ 24:00
+
+mypage.my_business_mtg_config.holidayAlert=\uACF5\uD734\uC77C \uD68C\uC758\uAC00\uB2A5\uC5EC\uBD80\uB97C \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business_mtg_config.meetingDateAlert=\uD68C\uC758\uAC00\uB2A5\uC694\uC77C\uC744 \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business_mtg_config.timeAlert=\uD68C\uC758\uAC00\uB2A5\uC2DC\uAC04\uC744 \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_business_mtg_config.SimpleSettingAlert=\uD654\uC0C1\uC0C1\uB2F4 \uAC04\uD3B8\uC124\uC815\uC744 \uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_mtg_config.SimpleSettingSuccessAlert=\uAC04\uD3B8\uC124\uC815\uC774 \uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_mtg_config.DetailSettingAlert=\uD654\uC0C1\uC0C1\uB2F4 \uC0C1\uC138\uC124\uC815\uC744 \uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_mtg_config.DetailSettingSuccessAlert=\uC0C1\uC138\uC124\uC815\uC774 \uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+mypage.my_business_mtg_status.meetingResrveStatus=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D\uD604\uD669
+mypage.my_business_mtg_status.confirmMeeting=\uD655\uC815\uB41C \uBBF8\uD305
+mypage.my_business_mtg_status.waitingMeeting=\uD655\uC815\uB300\uAE30 \uC911 \uBBF8\uD305
+mypage.my_business_mtg_status.cancelMeeting=\uAC70\uC808/\uCDE8\uC18C\uD55C \uBBF8\uD305
+mypage.my_business_mtg_status.date=\uB0A0\uC9DC
+mypage.my_business_mtg_status.time=\uC2DC\uAC04
+mypage.my_business_mtg_status.companyName=\uC5C5\uCCB4\uBA85
+mypage.my_business_mtg_status.requester=\uC694\uCCAD\uC790\uBA85
+mypage.my_business_mtg_status.requesterEmail=\uC694\uCCAD\uC790 E-mail
+mypage.my_business_mtg_status.manager=\uB2F4\uB2F9\uC790
+mypage.my_business_mtg_status.meetingResult=\uBBF8\uD305\uACB0\uACFC
+mypage.my_business_mtg_status.save=\uC800\uC7A5
+mypage.my_business_mtg_status.requesterMessage=\uC694\uCCAD\uC790 \uBA54\uC138\uC9C0
+mypage.my_business_mtg_status.meetingMessage=\uBBF8\uD305\uBA54\uC138\uC9C0
+mypage.my_business_mtg_status.cancelManager=\uB2F4\uB2F9\uC790(\uCDE8\uC18C\uB2F4\uB2F9\uC790)
+mypage.my_business_mtg_status.reason=\uC0AC\uC720
+mypage.my_business_mtg_status.doingMeeting=\uD654\uC0C1\uC0C1\uB2F4\uC5EC\uBD80
+mypage.my_business_mtg_status.MeetingFinish=\uC0C1\uB2F4\uC644\uB8CC
+mypage.my_business_mtg_status.MeetingNotFinish=\uC0C1\uB2F4\uBBF8\uC644\uB8CC
+mypage.my_business_mtg_status.resultRecord=\uACB0\uACFC\uB4F1\uB85D
+mypage.my_business_mtg_status.requestInfomation=\uBC14\uC774\uC5B4\uAC00 \uD654\uC0C1\uBBF8\uD305\uC744 \uC694\uCCAD\uD55C \uC0AC\uC720\uC5D0 \uB300\uD55C \uC815\uBCF4
+mypage.my_business_mtg_status.meetingAccpet=\uBBF8\uD305\uC218\uB77D\uC5EC\uBD80
+mypage.my_business_mtg_status.accpet=\uC218\uB77D
+mypage.my_business_mtg_status.denied=\uAC70\uBD80
+mypage.my_business_mtg_status.deniedReason=\uAC70\uBD80\uC0AC\uC720
+mypage.my_business_mtg_status.deniedMessage=\uAC70\uBD80\uBA54\uC138\uC9C0
+mypage.my_business_mtg_status.ImpossibleDate=\uBBF8\uD305\uC77C\uC815\uBD88\uAC00
+mypage.my_business_mtg_status.changeDate=\uBBF8\uD305\uC77C\uC815\uBCC0\uACBD\uC694\uCCAD
+mypage.my_business_mtg_status.etc=\uAE30\uD0C0
+mypage.my_business_mtg_status.enroll=\uB4F1\uB85D
+mypage.my_business_mtg_status.save=\uC800\uC7A5
+mypage.my_business_mtg_status.buyerCancel=\uBC14\uC774\uC5B4 \uCDE8\uC18C
+mypage.my_business_mtg_status.enrollment=\uB4F1\uB85D
+mypage.my_business_mtg_status.watch=\uBCF4\uAE30
+
+mypage.my_business_mtg_status.saveAlert=\uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_mtg_status.reasonAlert=\uAC70\uBD80\uC0AC\uC720 \uBC0F \uAC70\uBD80\uBA54\uC2DC\uC9C0\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+mypage.my_business_mtg_status.companyIntroducePh=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694
+mypage.my_business_mtg_status.requestInfomationPh=\uBC14\uC774\uC5B4\uAC00 \uD654\uC0C1\uBBF8\uD305\uC744 \uC694\uCCAD\uD55C \uC0AC\uC720\uC5D0 \uB300\uD55C \uC815\uBCF4
+mypage.my_business_mtg_status.resultPh=\uBBF8\uD305 \uACB0\uACFC\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_mtg_status.reasonPh=\uBBF8\uD305 \uAC70\uBD80 \uC0C1\uC138\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+mypage.my_business_mtg_booking.booking=\uD654\uC0C1\uC0C1\uB2F4\uC608\uC57D\uD604\uD669
+mypage.my_business_mtg_booking.onApprovedClick='\uD655\uC815' \uD074\uB9AD \uC2DC \uD574\uB2F9 Zoom \uBBF8\uD305\uB8F8\uC774 \uC5F4\uB9BD\uB2C8\uB2E4.
+mypage.my_business_mtg_booking.WhetherMeeting=\uD654\uC0C1\uC0C1\uB2F4\uC5EC\uBD80
+mypage.my_business_mtg_booking.meetingFinish=\uC0C1\uB2F4\uC644\uB8CC
+mypage.my_business_mtg_booking.meetingUnFinish=\uC0C1\uB2F4\uBBF8\uC644\uB8CC
+mypage.my_business_mtg_booking.resultEnroll=\uACB0\uACFC\uB4F1\uB85D
+mypage.my_business_mtg_booking.save=\uC800\uC7A5
+mypage.my_business_mtg_booking.meetingMessage=\uBBF8\uD305\uBA54\uC138\uC9C0
+mypage.my_business_mtg_booking.meetingReason=\uBC14\uC774\uC5B4\uAC00 \uD654\uC0C1\uBBF8\uD305\uC744 \uC694\uCCAD\uD55C \uC0AC\uC720\uC5D0 \uB300\uD55C \uC815\uBCF4
+mypage.my_business_mtg_booking.whetherAccpet=\uBBF8\uD305\uC218\uB77D\uC5EC\uBD80
+mypage.my_business_mtg_booking.Accept=\uC218\uB77D
+mypage.my_business_mtg_booking.dinied=\uAC70\uBD80
+mypage.my_business_mtg_booking.diniedReason=\uAC70\uBD80\uC0AC\uC720
+mypage.my_business_mtg_booking.calendarImpossible=\uBBF8\uD305\uC77C\uC815\uBD88\uAC00
+mypage.my_business_mtg_booking.dateChange=\uBBF8\uD305\uC77C\uC815\uBCC0\uACBD\uC694\uCCAD
+mypage.my_business_mtg_booking.etc=\uAE30\uD0C0
+mypage.my_business_mtg_booking.diniedMessage=\uAC70\uBD80\uBA54\uC138\uC9C0
+mypage.my_business_mtg_booking.enroll=\uB4F1\uB85D
+mypage.my_business_mtg_booking.save=\uC800\uC7A5
+
+mypage.my_business_mtg_booking.corpIntroducePh=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+mypage.my_business_card.cardExchange=\uBA85\uD568\uAD50\uD658
+mypage.my_business_card.No=No
+mypage.my_business_card.name=\uC774\uB984
+mypage.my_business_card.belong=\uC18C\uC18D
+mypage.my_business_card.position=\uC9C1\uAE09
+mypage.my_business_card.telephone=\uC5F0\uB77D\uCC98
+mypage.my_business_card.email=\uC774\uBA54\uC77C
+mypage.my_business_card.nation=\uAD6D\uAC00
+mypage.my_business_card.regiDate=\uB4F1\uB85D\uC77C
+
+mypage.my_business_member.employeeManagement=\uC9C1\uC6D0\uAD00\uB9AC
+mypage.my_business_member.add=\uCD94\uAC00
+mypage.my_business_member.delete=\uC0AD\uC81C
+mypage.my_business_member.no=No
+mypage.my_business_member.id=ID
+mypage.my_business_member.name=\uC774\uB984
+mypage.my_business_member.telephone=\uC5F0\uB77D\uCC98
+mypage.my_business_member.chatAuth=\uCC44\uD305 \uAD8C\uD55C
+mypage.my_business_member.regiDate=\uB4F1\uB85D\uC77C
+mypage.my_business_member.addEmployee=\uC9C1\uC6D0\uB4F1\uB85D
+
+mypage.my_business_member.memberId=\uD68C\uC6D0 ID
+mypage.my_business_member.dupliCheck=\uC911\uBCF5\uD655\uC778
+mypage.my_business_member.firstPw=\uCD08\uAE30 \uBE44\uBC00\uBC88\uD638
+mypage.my_business_member.firstPwCheck=\uCD08\uAE30 \uBE44\uBC00\uBC88\uD638 \uD655\uC778
+mypage.my_business_member.condition=6 ~ 10\uC790\uC758 \uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uC758 \uC870\uD569
+mypage.my_business_member.employeeName=\uC774\uB984
+mypage.my_business_memberEn.employeeName=\uC774\uB984 (\uC601\uBB38)
+mypage.my_business_member.employeeTelephone=\uC5F0\uB77D\uCC98
+mypage.my_business_member.employeeChatAuth=\uCC44\uD305 \uAD8C\uD55C
+mypage.my_business_member.possible=\uAC00\uB2A5
+mypage.my_business_member.impossible=\uBD88\uAC00\uB2A5
+mypage.my_business_member.notice=* \uB4F1\uB85D\uB41C \uD68C\uC6D0\uC740 \uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD \uD6C4 \uC0AC\uC6A9\uD558\uAE30\uB97C \uAD8C\uC7A5\uD558\uC2DC\uAE30 \uBC14\uB78D\uB2C8\uB2E4.
+mypage.my_business_member.Enrollment=\uB4F1\uB85D
+
+mypage.my_business_member.emailPh=\uC0AC\uC6A9\uD560 \uC774\uBA54\uC77C\uC8FC\uC18C \uC785\uB825
+mypage.my_business_member.firstPwPh=\uC0AC\uC6A9\uD560 \uBE44\uBC00\uBC88\uD638 \uC785\uB825	
+mypage.my_business_member.firstPwCheckPh=\uC785\uB825\uD55C \uBE44\uBC00\uBC88\uD638 \uC785\uB825
+mypage.my_business_member.employeeNamePh=\uC774\uB984\uC744 \uC785\uB825\uD558\uC138\uC694
+mypage.my_business_memberEn.employeeNamePh=\uC774\uB984\uC744 \uC785\uB825\uD558\uC138\uC694. (\uC601\uBB38)
+mypage.my_business_member.employeeTelephonePh=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694
+
+mypage.my_business_member.emailAlert=\uC544\uC774\uB514\uB85C \uC0AC\uC6A9\uD560 \uC774\uBA54\uC77C\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.emailformAlert=\uC774\uBA54\uC77C \uD615\uC2DD\uC774 \uC62C\uBC14\uB974\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+mypage.my_business_member.emailDuplAlert=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC744 \uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.usedEmailAlert=\uC774\uBBF8 \uC0AC\uC6A9\uC911\uC778 \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+mypage.my_business_member.availableEmailAlert=\uC0AC\uC6A9 \uAC00\uB2A5\uD55C \uC544\uC774\uB514 \uC785\uB2C8\uB2E4.
+mypage.my_business_member.necessaryPasswordAlert=\uBE44\uBC00\uBC88\uD638 \uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_member.PasswordFormAlert=6\uC790\uB9AC~10\uC790\uB9AC \uC774\uB0B4\uB85C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.PasswordBlankAlert=\uACF5\uBC31 \uC5C6\uC774 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.PasswordMixAlert=\uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uB97C \uD63C\uD569\uD558\uC5EC \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.PasswordMissAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+mypage.my_business_member.checkIdAlert=\uC785\uB825\uB41C \uC544\uC774\uB514\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.checkIdDuplAlert=\uC544\uC774\uB514 \uC911\uBCF5\uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_member.checkPasswordAlert=\uC785\uB825\uB41C \uBE44\uBC00\uBC88\uD638\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.checkPasswordDuplAlert=\uBE44\uBC00\uBC88\uD638 \uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_member.checkNameAlert=\uD68C\uC6D0\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_member.checkTelephoneAlert=\uC5F0\uB77D\uCC98\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_business_member.checkNextAlert=\uB2E4\uC74C \uD56D\uBAA9\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.signupAlert=\uD68C\uC6D0\uAC00\uC785 \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_member.signupSuccessAlert=\uD68C\uC6D0\uAC00\uC785\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_business_member.signupFailAlert=\uD68C\uC6D0\uAC00\uC785\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_business_member.deleteAlert=\uC0AD\uC81C\uD560 \uB300\uC0C1\uC744 \uC120\uD0DD\uD574\uC8FC\uC138\uC694.
+mypage.my_business_member.alreadyAlert=\uD604\uC7AC \uB85C\uADF8\uC778\uC911\uC778 \uC544\uC774\uB514\uAC00 \uD3EC\uD568\uB418\uC5B4\uC788\uC2B5\uB2C8\uB2E4.
+mypage.my_business_member.deleteAskAlert=\uC0AD\uC81C \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_business_member.deleteFinishAlert=\uC0AD\uC81C\uAC00 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+mypage.my_buyer_info.info=\uB0B4\uC815\uBCF4\uAD00\uB9AC
+mypage.my_buyer_info.id=ID
+mypage.my_buyer_info.name=\uD68C\uC6D0\uBA85
+mypage.my_buyer_info.password=\uBE44\uBC00\uBC88\uD638
+mypage.my_buyer_info.passwordChange=\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD
+mypage.my_buyer_info.newPassword=\uC0C8 \uBE44\uBC00\uBC88\uD638
+mypage.my_buyer_info.pwFormatNotice=6 ~ 10\uC790\uC758 \uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uC758 \uC870\uD569
+mypage.my_buyer_info.newPasswordCheck=\uC0C8 \uBE44\uBC00\uBC88\uD638 \uD655\uC778
+mypage.my_buyer_info.nation=\uAD6D\uAC00
+mypage.my_buyer_info.selectNation=\uAD6D\uC801\uC744 \uC120\uD0DD\uD558\uC138\uC694.
+mypage.my_buyer_info.telephone=\uC5F0\uB77D\uCC98
+mypage.my_buyer_info.belong=\uC18C\uC18D
+mypage.my_buyer_info.grade=\uC9C1\uAE09
+mypage.my_buyer_info.address=\uC8FC\uC18C
+mypage.my_buyer_info.interestedBusiness=\uAD00\uC2EC\uC5C5\uC885
+mypage.my_buyer_info.interestedProduct=\uAD00\uC2EC\uC81C\uD488
+mypage.my_buyer_info.save=\uC800\uC7A5
+
+mypage.my_buyer_info.passwordPh=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD558\uC138\uC694.
+mypage.my_buyer_info.telephonePh=\uC5F0\uB77D\uCC98\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+mypage.my_buyer_info.passwordMatchAlert=\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+mypage.my_buyer_info.passwordInsertAlert=\uBE44\uBC00\uBC88\uD638 \uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.passwordFormAlert=6\uC790\uB9AC ~ 10\uC790\uB9AC \uC774\uB0B4\uB85C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_buyer_info.blankAlert=\uACF5\uBC31 \uC5C6\uC774 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_buyer_info.mixAlert=\uC601\uBB38, \uC22B\uC790, \uD2B9\uC218\uBB38\uC790\uB97C \uD63C\uD569\uD558\uC5EC \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_buyer_info.passwordAlert=\uBE44\uBC00\uBC88\uD638\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+mypage.my_buyer_info.passwordInsertCheckAlert=\uC785\uB825\uB41C \uBE44\uBC00\uBC88\uD638\uB97C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+mypage.my_buyer_info.passwordCheckAlert=\uBE44\uBC00\uBC88\uD638 \uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.nationAlert=\uAD6D\uAC00\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.telephoneAlert=\uC5F0\uB77D\uCC98\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.passwordChangeAlert=\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD\uC2DC \uBE44\uBC00\uBC88\uD638\uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.newPasswordChangeAlert=\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD\uC2DC \uC0C8 \uBE44\uBC00\uBC88\uD638\uC785\uB825\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.newPasswordChangeCheckAlert=\uBE44\uBC00\uBC88\uD638 \uBCC0\uACBD\uC2DC \uC0C8 \uBE44\uBC00\uBC88\uD638\uC785\uB825\uD655\uC778\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+mypage.my_buyer_info.newPasswordChangeCheckIncorrectAlert=\uBE44\uBC00\uBC88\uD638\uC640 \uBE44\uBC00\uBC88\uD638\uD655\uC778\uC774 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+mypage.my_buyer_info.saveAlert=\uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_buyer_info.modifyAlert=\uC815\uBCF4\uB97C \uC218\uC815\uD558\uC600\uC2B5\uB2C8\uB2E4.
+mypage.my_buyer_info.modifyFailAlert=\uC815\uBCF4\uC218\uC815\uC5D0 \uC2E4\uD328\uD558\uC600\uC2B5\uB2C8\uB2E4.
+
+mypage.my_buyer_info.business01=\uC815\uBC00\uD654\uD559
+mypage.my_buyer_info.business02=\uD50C\uB77C\uC2A4\uD2F1
+mypage.my_buyer_info.business03=\uC11D\uC720\uD654\uD559
+mypage.my_buyer_info.business04=\uACE0\uBB34
+mypage.my_buyer_info.business05=\uD654\uC7A5\uD488
+
+mypage.my_buyer_info.product01=\uAC74\uCD95
+mypage.my_buyer_info.product02=\uC790\uB3D9\uCC28
+mypage.my_buyer_info.product03=\uC870\uC120
+mypage.my_buyer_info.product04=\uD654\uC7A5\uD488
+mypage.my_buyer_info.product05=\uC758\uC57D
+mypage.my_buyer_info.product06=\uC12C\uC720/\uC758\uB958
+mypage.my_buyer_info.product07=\uC0DD\uD65C\uD654\uD559
+mypage.my_buyer_info.product08=\uAE30\uD0C0
+
+mypage.my_buyer_chat.chat=\uCC44\uD305\uB0B4\uC6A9\uBCF4\uAE30
+
+mypage.my_buyer_chat_video_call.videoCallManagement=\uD654\uC0C1\uC0C1\uB2F4\uD604\uD669\uAD00\uB9AC
+mypage.my_buyer_chat_video_call.confirm=\uD655\uC815\uB41C \uBBF8\uD305
+mypage.my_buyer_chat_video_call.waitConfirm=\uD655\uC815\uB300\uAE30 \uC911 \uBBF8\uD305
+mypage.my_buyer_chat_video_call.cancel=\uAC70\uC808/\uCDE8\uC18C\uD55C \uBBF8\uD305
+mypage.my_buyer_chat_video_call.date=\uB0A0\uC9DC
+mypage.my_buyer_chat_video_call.time=\uC2DC\uAC04
+mypage.my_buyer_chat_video_call.corpName=\uC5C5\uCCB4\uBA85
+mypage.my_buyer_chat_video_call.requestName=\uC694\uCCAD\uC790\uBA85
+mypage.my_buyer_chat_video_call.requestEmail=\uC694\uCCAD\uC790 E-mail
+mypage.my_buyer_chat_video_call.requestMessage=\uC694\uCCAD\uC790 \uBA54\uC138\uC9C0
+mypage.my_buyer_chat_video_call.manager=\uB2F4\uB2F9\uC790
+mypage.my_buyer_chat_video_call.cancelManager=\uB2F4\uB2F9\uC790(\uCDE8\uC18C\uB2F4\uB2F9\uC790)
+mypage.my_buyer_chat_video_call.reason=\uC0AC\uC720
+mypage.my_buyer_chat_video_call.result=\uBBF8\uD305\uACB0\uACFC
+mypage.my_buyer_chat_video_call.save=\uC800\uC7A5
+mypage.my_buyer_chat_video_call.whetherVideoCall=\uD654\uC0C1\uC0C1\uB2F4\uC5EC\uBD80
+mypage.my_buyer_chat_video_call.impossible=\uBBF8\uD305\uC77C\uC815\uBD88\uAC00
+mypage.my_buyer_chat_video_call.dateChange=\uBBF8\uD305\uC77C\uC815\uBCC0\uACBD\uC694\uCCAD
+mypage.my_buyer_chat_video_call.etc=\uAE30\uD0C0
+mypage.my_buyer_chat_video_call.finish=\uC0C1\uB2F4\uC644\uB8CC
+mypage.my_buyer_chat_video_call.notFinish=\uC0C1\uB2F4\uBBF8\uC644\uB8CC
+mypage.my_buyer_chat_video_call.resultEnroll=\uACB0\uACFC\uB4F1\uB85D
+mypage.my_buyer_chat_video_call.meetingMessage=\uBBF8\uD305\uBA54\uC138\uC9C0
+mypage.my_buyer_chat_video_call.diniedMessage=\uAC70\uBD80\uBA54\uC138\uC9C0
+mypage.my_buyer_chat_video_call.requestInfo=\uBC14\uC774\uC5B4\uAC00 \uD654\uC0C1\uBBF8\uD305\uC744 \uC694\uCCAD\uD55C \uC0AC\uC720\uC5D0 \uB300\uD55C \uC815\uBCF4
+mypage.my_buyer_chat_video_call.meetingAccpet=\uBBF8\uD305\uC218\uB77D\uC5EC\uBD80
+mypage.my_buyer_chat_video_call.accpet=\uC218\uB77D
+mypage.my_buyer_chat_video_call.dinied=\uAC70\uBD80
+mypage.my_buyer_chat_video_call.diniedReason=\uAC70\uBD80\uC0AC\uC720
+mypage.my_buyer_chat_video_call.enroll=\uB4F1\uB85D
+
+mypage.my_buyer_chat_video_call.corpIntroducePh=\uAE30\uC5C5\uC18C\uAC1C\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+mypage.my_buyer_favor_corp.interestedCorp=\uAD00\uC2EC\uAE30\uC5C5
+mypage.my_buyer_favor_corp.delete=\uAD00\uC2EC\uAE30\uC5C5\uC0AD\uC81C
+mypage.my_buyer_favor_corp.no=No
+mypage.my_buyer_favor_corp.corperationName=\uAE30\uC5C5\uBA85
+mypage.my_buyer_favor_corp.ceo=\uB300\uD45C\uC790\uBA85
+mypage.my_buyer_favor_corp.email=\uB300\uD45C\uC774\uBA54\uC77C
+mypage.my_buyer_favor_corp.booth=\uC804\uC2DC\uBD80\uC2A4
+mypage.my_buyer_favor_corp.go=\uBC14\uB85C\uAC00\uAE30
+
+mypage.my_buyer_favor_corp.deleteObjectAlert=\uC0AD\uC81C\uB300\uC0C1\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.
+mypage.my_buyer_favor_corp.deleteAlert=\uC120\uD0DD\uD55C \uB300\uC0C1\uC744 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+
+mypage.my_buyer_card.businesscard=\uBA85\uD568\uAD50\uD658
+mypage.my_buyer_card.no=No
+mypage.my_buyer_card.corperationName=\uAE30\uC5C5\uBA85
+mypage.my_buyer_card.telephone=\uAE30\uC5C5\uC5F0\uB77D\uCC98
+mypage.my_buyer_card.homepage=\uD648\uD398\uC774\uC9C0
+mypage.my_buyer_card.regiDate=\uB4F1\uB85D\uC77C
+mypage.my_buyer_card.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+mypage.my_buyer_inquiry.inquiry=\uBB38\uC758\uB0B4\uC5ED
+mypage.my_buyer_inquiry.no=No
+mypage.my_buyer_inquiry.answer=\uB2F5\uBCC0\uC0C1\uD0DC
+mypage.my_buyer_inquiry.title=\uBB38\uC758\uC81C\uBAA9
+mypage.my_buyer_inquiry.questionCorp=\uBB38\uC758\uC0AC\uBA85
+mypage.my_buyer_inquiry.answerDate=\uB2F5\uBCC0\uB4F1\uB85D\uC77C
+
+mypage.my_buyer_inquiry_dtl.inquriy=\uBB38\uC758\uB0B4\uC6A9
+mypage.my_buyer_inquiry_dtl.inquriyTitle=\uC81C\uBAA9
+mypage.my_buyer_inquiry_dtl.corporateName=\uAE30\uC5C5\uBA85
+mypage.my_buyer_inquiry_dtl.regiDate=\uB4F1\uB85D\uC77C
+mypage.my_buyer_inquiry_dtl.answer=\uB2F5\uBCC0\uB0B4\uC6A9
+mypage.my_buyer_inquiry_dtl.file=\uCCA8\uBD80\uD30C\uC77C
+mypage.my_buyer_inquiry_dtl.list=\uBAA9\uB85D
+
+mypage.my_buyer_meeting.videoConsultation=\uD654\uC0C1\uC0C1\uB2F4
+mypage.my_buyer_meeting.timeZone=\uD0C0\uC784\uC874\uC124\uC815
+mypage.my_buyer_meeting.date=\uB0A0\uC9DC
+mypage.my_buyer_meeting.time=\uC2DC\uAC04
+mypage.my_buyer_meeting.corporation=\uB300\uC0C1\uAE30\uC5C5
+mypage.my_buyer_meeting.status=\uC9C4\uD589\uC0C1\uD0DC
+mypage.my_buyer_meeting.manager=\uB2F4\uB2F9\uC790
+mypage.my_buyer_meeting.managerEmail=\uB2F4\uB2F9\uC790 e-mail
+mypage.my_buyer_meeting.cancelRequest=\uCDE8\uC18C\uC694\uCCAD
+mypage.my_buyer_meeting.dinialReason=\uAC70\uC808\uC0AC\uC720
+mypage.my_buyer_meeting.reason=\uC0AC\uC720
+mypage.my_buyer_meeting.message=\uBA54\uC138\uC9C0
+mypage.my_buyer_meeting.noInfo=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+mypage.my_buyer_meeting.cancelAsk=\uD654\uC0C1\uBBF8\uD305\uC744 \uCDE8\uC18C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+mypage.my_buyer_meeting.cancel=\uD654\uC0C1\uBBF8\uD305\uC774 \uCDE8\uC18C\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+mypage.my_buyer_meeting.goZoom=\uBC84\uD2BC \uD074\uB9AD \uC2DC Zoom \uCC44\uD305\uC11C\uBE44\uC2A4\uB85C \uC774\uB3D9\uB429\uB2C8\uB2E4.
+
+mypage.my_business_log.corpLog=\uAD00\uB9AC\uC790\uB85C\uADF8\uC870\uD68C
+mypage.my_business_log.All=\uC804\uCCB4
+mypage.my_business_log.corpInfo=\uAE30\uC5C5\uAC00\uC785\uC815\uBCF4
+mypage.my_business_log.corpbooth=\uBD80\uC2A4\uAD00\uB9AC
+mypage.my_business_log.corpProduct=\uC81C\uD488\uC815\uBCF4
+mypage.my_business_log.corpEmployee=\uC9C1\uC6D0\uAD00\uB9AC
+mypage.my_business_log.menu=\uBA54\uB274\uBA85
+mypage.my_business_log.division=\uAD6C\uBD84
+mypage.my_business_log.change=\uC8FC\uC694\uB0B4\uC6A9\uBCC0\uACBD
+mypage.my_business_log.employeeId=\uC9C1\uC6D0ID
+mypage.my_business_log.date=\uC77C\uC2DC
+
+include.admin_nav.admission=\uCC38\uAC00\uAE30\uC5C5\uC2B9\uC778
+include.admin_nav.idManagement=\uCC38\uAC00\uAE30\uC5C5ID\uAD00\uB9AC
+include.admin_nav.conferenceManagement=\uCEE8\uD37C\uB7F0\uC2A4\uAD00\uB9AC
+include.admin_nav.policyManagement=\uC57D\uAD00\uAD00\uB9AC
+include.admin_nav.bannerManagement=\uBC30\uB108\uAD00\uB9AC
+include.admin_nav.signupstatistics=\uAC00\uC785\uD1B5\uACC4
+include.admin_nav.videostatistics=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4
+include.admin_nav.chatstatistics=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4
+include.admin_nav.loginstatistics=\uB85C\uADF8\uC778\uD604\uD669\uD1B5\uACC4
+include.admin_nav.codemasterManagement=\uACF5\uD1B5\uCF54\uB4DC\uB9C8\uC2A4\uD130 \uAD00\uB9AC
+include.admin_nav.codedtlManagement=\uACF5\uD1B5\uCF54\uB4DC\uC0C1\uC138 \uAD00\uB9AC
+include.admin_nav.systemManagement=\uC2DC\uC2A4\uD15C\uC124\uC815\uAC12 \uAD00\uB9AC
+include.admin_nav.managerManagement=\uAD00\uB9AC\uC790 \uAD00\uB9AC
+include.admin_nav.myInfoManagement=\uB0B4\uC815\uBCF4\uAD00\uB9AC
+include.admin_nav.daySignupstatistics=\uC77C\uBCC4\uAC00\uC785\uD1B5\uACC4
+include.admin_nav.monthSignupstatistics=\uC6D4\uBCC4\uAC00\uC785\uD1B5\uACC4
+include.admin_nav.corpLoginstatistics=\uB85C\uADF8\uC778\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+include.admin_nav.buyerLoginstatistics=\uB85C\uADF8\uC778\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+include.admin_nav.corpVideostatistics=\uD654\uC0C1\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+include.admin_nav.buyerVideostatistics=\uD654\uC0C1\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+include.admin_nav.corpChatstatistics=\uCC44\uD305\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+include.admin_nav.buyerChatstatistics=\uCC44\uD305\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+
+include.common_js.logout=\uB85C\uADF8\uC544\uC6C3 \uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+include.common_js.fileName=\uC5D1\uC140\uD30C\uC77C\uBA85 'fileName'\uC774 \uC815\uC758\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.
+include.common_js.sheetName=\uC5D1\uC140\uC2DC\uD2B8\uBA85 'sheetName'\uC774 \uC815\uC758\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.
+include.common_js.columsInfo=\uC5D1\uC140 \uCEEC\uB7FC\uC815\uBCF4 'columnsInfo'\uAC00 \uC815\uC758\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.
+include.common_js.notExist=\uD30C\uC77C\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+include.common_js.error=\uCC98\uB9AC\uC911 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4. \\n\uAD00\uB9AC\uC790\uC5D0\uAC8C \uBB38\uC758\uD558\uC138\uC694.
+include.common_js.server=\uB124\uD2B8\uC6CC\uD06C\uC0C1\uD0DC \uB610\uB294 \uC11C\uBC84 \uAD6C\uB3D9\uC0C1\uD0DC\uB97C \uD655\uC778\uD574 \uC8FC\uC138\uC694.
+include.common_js.page=\uD398\uC774\uC9D5\uCC98\uB9AC\uC911 \uC624\uB958\uAC00 \uBC1C\uC0DD\uD588\uC2B5\uB2C8\uB2E4.
+
+corp_hall.CorpBoothPnsSvc.alreadyAdd=\uC774\uBBF8 \uAD00\uC2EC\uAE30\uC5C5\uC73C\uB85C \uB4F1\uB85D\uD55C \uAE30\uC5C5\uC785\uB2C8\uB2E4.\n\uB9C8\uC774\uD398\uC774\uC9C0 > \uAD00\uC2EC\uAE30\uC5C5\uAD00\uB9AC\uC5D0\uC11C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+corp_hall.CorpBoothPnsSvc.alreadyExchange=\uC774\uBBF8 \uBA85\uD568\uAD50\uD658\uD55C \uAE30\uC5C5\uC785\uB2C8\uB2E4.\n\uB9C8\uC774\uD398\uC774\uC9C0 > \uBA85\uD568\uAD50\uD658\uC5D0\uC11C \uD655\uC778\uD574\uC8FC\uC138\uC694.
+
+corp_hall.CorpBoothPnsCtl.login=\uB85C\uADF8\uC778 \uD6C4 \uC774\uC6A9\uC774 \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+corp_hall.CorpBoothPnsCtl.wrong=\uC798\uBABB\uB41C \uC811\uADFC\uC785\uB2C8\uB2E4.
+common.ChattingCtl.absence=\uD604\uC7AC \uB2F4\uB2F9\uC790\uAC00 \uBD80\uC7AC\uC911\uC785\uB2C8\uB2E4.<br>\uBB38\uC758\uD558\uAE30 \uB610\uB294 \uD654\uC0C1\uC0C1\uB2F4 \uC774\uC6A9\uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4.
+common.ChattingCtl.login=\uB85C\uADF8\uC778 \uD574\uC8FC\uC138\uC694.
+
+mobile.index.home=\uD648
+mobile.index.menu=\uBA54\uB274
+mobile.index.search=\uAC80\uC0C9
+mobile.member.email_auth.Title=\uC774\uBA54\uC77C \uC778\uC99D
+
+corp_hall.corp_booth_A.product=\uC81C\uD488
+corp_hall.corp_booth_A.CompanyInformation=\uAE30\uC5C5\uC815\uBCF4
+corp_hall.corp_booth_A.video=\uD64D\uBCF4\uC601\uC0C1
+corp_hall.corp_booth_A.brochure=\uBE0C\uB85C\uC154
+
+member_mng.adm_corp_appr_list.Approval=\uC2B9\uC778
+member_mng.adm_corp_appr_list.selectAlert=\uC2B9\uC778 \uB300\uC0C1\uC744 \uC120\uD0DD\uD574\uC8FC\uC138\uC694.
+member_mng.adm_corp_appr_list.selectAskAlert=\uC120\uD0DD \uAE30\uC5C5\uC744 \uC2B9\uC778\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+member_mng.adm_corp_appr_list.selectFinishAlert=\uC2B9\uC778\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+member_mng.adm_corp_mng.approvalId=\uC2B9\uC778\uD55C \uD68C\uC6D0ID
+member_mng.adm_corp_mng.status=\uC804\uC2DC\uBD80\uC2A4\uC0C1\uD0DC
+member_mng.adm_corp_mng.idModify=\uB300\uD45C\uACC4\uC815 \uC218\uC815
+member_mng.adm_corp_mng.Modify=\uC218\uC815
+member_mng.adm_corp_mng.productCnt=\uC81C\uD488\uB4F1\uB85D \uC218
+
+member_mng.adm_corp_mng_dtl.idManagement=\uCC38\uAC00\uAE30\uC5C5\uB300\uD45CID\uAD00\uB9AC
+member_mng.adm_corp_mng_dtl.mainId=\uB300\uD45C\uACC4\uC815
+member_mng.adm_corp_mng_dtl.mainIdChanged=\uBCC0\uACBD \uB300\uD45C\uACC4\uC815
+member_mng.adm_corp_mng_dtl.Change=\uBCC0\uACBD
+member_mng.adm_corp_mng_dtl.managerInfoChange=\uAE30\uC5C5 \uB2F4\uB2F9\uC790 \uC815\uBCF4\uB97C \uC218\uC815\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+member_mng.adm_corp_mng_dtl.ChangeFinish=\uBCC0\uACBD\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+
+contents.adm_conference_dtl.language=\uC5B8\uC5B4\uC720\uD615
+contents.adm_conference_dtl.Disclosure=\uACF5\uAC1C
+contents.adm_conference_dtl.Organizer=\uC8FC\uCD5C\uC790
+contents.adm_conference_dtl.Order=\uC815\uB82C\uC21C\uC11C
+contents.adm_conference_dtl.detail=\uC0C1\uC138\uB0B4\uC6A9
+contents.adm_conference_dtl.video=\uC601\uC0C1
+contents.adm_conference_dtl.checkNext=\uB2E4\uC74C \uD56D\uBAA9\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+
+contents.adm_conference_dtl.subjectAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uC81C\uBAA9\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.organizerAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uC8FC\uCD5C\uC790\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.sortOderAlert=\uC815\uB82C\uC21C\uC11C\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.languageAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uB300\uC0C1\uC5B8\uC5B4\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.videoAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uC601\uC0C1\uC720\uD615\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.linkAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uC601\uC0C1\uB9C1\uD06C\uB97C \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.fileAlert=\uCEE8\uD37C\uB7F0\uC2A4 \uC601\uC0C1\uD30C\uC77C\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+contents.adm_conference_dtl.conferenceAlert=\uCEE8\uD37C\uB7F0\uC2A4\uB97C \uB4F1\uB85D\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?
+
+contents.adm_tos_list.type=\uBB38\uC11C\uC720\uD615
+contents.adm_tos_list.organizerName=\uB4F1\uB85D\uC790\uBA85
+contents.adm_tos_list.RegistrationDate=\uB4F1\uB85D\uC77C
+contents.adm_tos_list.contents=\uB0B4\uC6A9
+contents.adm_tos_list.korean=\uD55C\uAE00
+contents.adm_tos_list.English=\uC601\uBB38
+contents.adm_tos_list.privatePolicy=\uAC1C\uC778\uC815\uBCF4\uB3D9\uC758\uC11C
+contents.adm_tos_list.contentsInput=\uB0B4\uC6A9\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+
+contents.adm_tos_list.bannerManagement=\uBA54\uC778\uBC30\uB108 \uAD00\uB9AC
+contents.adm_tos_list.ciName=CI\uBA85
+contents.adm_tos_list.link=\uB9C1\uD06C\uC8FC\uC18C
+contents.adm_tos_list.ciImage=CI \uC774\uBBF8\uC9C0
+
+contents.adm_tos_list.ciNameAlert=CI\uBA85\uC740 \uD544\uC218\uC785\uB2C8\uB2E4.
+contents.adm_tos_list.orderAlert=\uC815\uB82C\uC21C\uC11C\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+contents.adm_tos_list.imageAlert=CI\uC774\uBBF8\uC9C0\uB294 \uD544\uC218\uC785\uB2C8\uB2E4.
+
+popup.product_total_mobile.total=\uC804\uCCB4\uC81C\uD488\uBCF4\uAE30
+popup.promote_list_mobile.noContents=\uB4F1\uB85D\uB41C \uCEE8\uD150\uCE20\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+popup.promote_list_mobile.noVideo=\uB4F1\uB85D\uB41C \uD64D\uBCF4\uC601\uC0C1\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+common.statistics.login_buyer.title=\uB85C\uADF8\uC778\uD604\uD669\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+common.statistics.login_buyer.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.login_buyer.search=\uC870\uD68C
+common.statistics.login_buyer.number=No.
+common.statistics.login_buyer.id=\uD68C\uC6D0ID
+common.statistics.login_buyer.belong=\uC18C\uC18D
+common.statistics.login_buyer.belongNation=\uC18C\uC18D\uAD6D\uAC00
+common.statistics.login_buyer.loginCnt=\uB85C\uADF8\uC778 \uAC74\uC218
+common.statistics.login_buyer.lastLoginDate=\uCD5C\uC885\uB85C\uADF8\uC778\uC77C\uC2DC
+common.statistics.login_buyer.alert1=\uB85C\uADF8\uC778\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.login_buyer.alert2=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_buyer.alert3=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_buyer.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.login_buyer.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.login_corp.title=\uB85C\uADF8\uC778\uD604\uD669\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+common.statistics.login_corp.search=\uC870\uD68C
+common.statistics.login_corp.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.login_corp.number=No.
+common.statistics.login_corp.coprNm=\uAE30\uC5C5\uBA85
+common.statistics.login_corp.id=\uD68C\uC6D0ID
+common.statistics.login_corp.loginCnt=\uB85C\uADF8\uC778 \uAC74\uC218
+common.statistics.login_corp.lastLoginDate=\uCD5C\uC885\uB85C\uADF8\uC778\uC77C\uC2DC
+common.statistics.login_corp.alert1=\uB85C\uADF8\uC778\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.login_corp.alert2=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_corp.alert3=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_corp.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.login_corp.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.meeting_buyer.title=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+common.statistics.meeting_buyer.search=\uC870\uD68C
+common.statistics.meeting_buyer.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.meeting_buyer.number=No.
+common.statistics.meeting_buyer.id=\uD68C\uC6D0ID
+common.statistics.meeting_buyer.belong=\uC18C\uC18D
+common.statistics.meeting_buyer.belongNation=\uC18C\uC18D\uAD6D\uAC00
+common.statistics.meeting_buyer.request=\uC694\uCCAD
+common.statistics.meeting_buyer.cancel=\uCDE8\uC18C
+common.statistics.meeting_buyer.undecided=\uBBF8\uD655\uC815
+common.statistics.meeting_buyer.decided=\uD655\uC815
+common.statistics.meeting_buyer.enrollment=\uACB0\uACFC\uB4F1\uB85D
+common.statistics.meeting_buyer.unregistered=\uACB0\uACFC\uBBF8\uB4F1\uB85D
+common.statistics.meeting_buyer.alert1=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.meeting_buyer.alert2=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_buyer.alert3=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_buyer.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.meeting_buyer.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.meeting_corp.title=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+common.statistics.meeting_corp.search=\uC870\uD68C
+common.statistics.meeting_corp.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.meeting_corp.number=No.
+common.statistics.meeting_corp.corpNm=\uAE30\uC5C5\uBA85
+common.statistics.meeting_corp.request=\uC694\uCCAD
+common.statistics.meeting_corp.cancel=\uCDE8\uC18C
+common.statistics.meeting_corp.undecided=\uBBF8\uD655\uC815
+common.statistics.meeting_corp.decided=\uD655\uC815
+common.statistics.meeting_corp.enrollment=\uACB0\uACFC\uB4F1\uB85D
+common.statistics.meeting_corp.unregistered=\uACB0\uACFC\uBBF8\uB4F1\uB85D
+common.statistics.meeting_corp.alert1=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.meeting_corp.alert2=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_corp.alert3=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_corp.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.meeting_corp.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.chat_buyer.head=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+common.statistics.chat_buyer.search=\uC870\uD68C
+common.statistics.chat_buyer.excelDownload=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.chat_buyer.no=No
+common.statistics.chat_buyer.id=\uD68C\uC6D0ID
+common.statistics.chat_buyer.party=\uC18C\uC18D
+common.statistics.chat_buyer.nation=\uC18C\uC18D\uAD6D\uAC00
+common.statistics.chat_buyer.request=\uC694\uCCAD
+common.statistics.chat_buyer.response=\uC751\uB2F5
+common.statistics.chat_buyer.alert1=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.chat_buyer.alert2=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.chat_buyer.no_contents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+common.statistics.chat_corp.head=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+common.statistics.chat_corp.copr=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD574\uC8FC\uC138\uC694.
+common.statistics.chat_corp.search=\uC870\uD68C
+common.statistics.chat_corp.excelDownload=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.chat_corp.no=No
+common.statistics.chat_corp.company_name=\uAE30\uC5C5\uBA85
+common.statistics.chat_corp.request=\uC694\uCCAD
+common.statistics.chat_corp.response=\uC751\uB2F5
+common.statistics.chat_corp.alert1=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.chat_corp.alert2=\uC2E4\uC2DC\uAC04\uCC44\uD305\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.chat_corp.no_contents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+common.statistics.join_day.head=\uC77C\uBCC4\uAC00\uC785\uD1B5\uACC4
+common.statistics.join_day.search=\uC870\uD68C
+common.statistics.join_day.excelDownload=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.join_day.date=DATE
+common.statistics.join_day.buyer=\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0
+common.statistics.join_day.corp=\uCC38\uAC00\uAE30\uC5C5
+common.statistics.join_day.alert1=\uC77C\uBCC4\uAC00\uC785\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.join_day.alert2=\uC77C\uBCC4\uAC00\uC785\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.join_day.no_contents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+common.statistics.join_month.head=\uC6D4\uBCC4\uAC00\uC785\uD1B5\uACC4
+common.statistics.join_month.search=\uC870\uD68C
+common.statistics.join_month.excelDownload=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.join_month.date=DATE
+common.statistics.join_month.buyer=\uBC14\uC774\uC5B4/\uC77C\uBC18\uD68C\uC6D0
+common.statistics.join_month.corp=\uCC38\uAC00\uAE30\uC5C5
+common.statistics.join_month.alert1=\uC6D4\uBCC4\uAC00\uC785\uD1B5\uACC4\uC870\uD68C \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.join_month.alert2=\uC6D4\uBCC4\uAC00\uC785\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 1\uB144\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.join_month.no_contents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+
+common.footer.address=[\uC6B0] 08379 \uC11C\uC6B8\uD2B9\uBCC4\uC2DC \uAD6C\uB85C\uAD6C \uB514\uC9C0\uD138\uB85C32\uAE38 29 (\uAD6C\uB85C\uB3D9) \uCE74\uCF55\uC2A4\uBCA4\uCC98\uC13C\uD130 501\uD638
+common.footer.policyWatch=\uC774\uC6A9\uC57D\uAD00
+common.footer.policyAgree=\uAC1C\uC778\uC815\uBCF4\uCDE8\uAE09\uBC29\uCE68
+common.checkByteAlrty1=\uCD5C\uB300
+common.checkByteAlrty2=\uAE4C\uC9C0 \uC785\uB825\uAC00\uB2A5 \uD569\uB2C8\uB2E4.

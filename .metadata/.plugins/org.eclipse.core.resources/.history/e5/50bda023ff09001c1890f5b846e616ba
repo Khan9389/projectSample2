@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+</head>
+<body>
+	<div class="wrapper">
+
+		<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+		
+		<!-- container -->
+		<div id="container">
+		
+		    <div class="subVisual">
+		
+		        <div class="fixedWidth">
+		            <h2 class="tts">펜타에스</h2>
+		
+		            <div>
+		                <h2 class="sub_topbaner_title01">커뮤니티</h2>
+		                <p class="sub_topbaner_content01">미래를 중시하는 펜타에스</p>
+		
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		</div>
+		
+		<!-- tap메뉴 -->
+		<div class="main">
+		    <input id="tab9" type="radio" name="tabs" checked>
+		    <!--디폴트 메뉴-->
+		    <label for="tab9">사업문의</label>
+		
+		    <section id="content9">
+		        <h3 class="chart_title01">사업문의</h3>
+		
+		        <table>
+		            <caption>사업문의 상세 목록</caption>
+		            <colgroup>
+		                <col style="width:100%">
+		            </colgroup>
+		            <thead>
+		                <tr class="community01_table_tr_top3">
+		                    <th class="community01_table_tr_top">궁금하신 솔루션 또는 시스템 구축과 관련하여 말해주세요</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		                <tr class="community01_table_tr_top4">
+		                    <th>관리자</th>
+		                </tr>
+		                <tr class="community01_table_tr_top6">
+		                    <td>테스트 내용입니다.</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		        </p>
+		        <span style="margin-top:20px; padding-bottom:50px;">
+		            <a href="/community?tab=8">
+		                <img src="/static_resources/homePage/img/list_button2.png" alt="목록 이미지">
+		            </a>
+		        </span>
+		
+		
+		    </section>
+		
+		
+		</div>
+		<!-- tap메뉴 -->
+		</div>
+		<!--container-->
+		
+		<%@include file="/WEB-INF/jsp/common/include/footer.jsp"%>
+
+	</div>
+</body>
+</html>

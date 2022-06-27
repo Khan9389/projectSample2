@@ -1,0 +1,64 @@
+package pentas.groupWare.svc;
+
+
+import java.util.Calendar;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import common.dao.CmmnDao;
+import common.utils.common.PentasMap;
+
+@Service
+public class VacationGwSvc {
+
+	@Autowired
+	CmmnDao cmmnDao;
+	
+	public void saveInfo(PentasMap params) {
+		
+	}
+
+	public PentasMap getUserVct(PentasMap params) {
+		
+		PentasMap vctInfo = new PentasMap();
+		
+		// 입사일 정보 
+		String joinDate = cmmnDao.selectOne("groupWare.vacation.joinDate", params);
+		int year = 	Integer.parseInt(joinDate.split("-")[0]);
+		int month = Integer.parseInt(joinDate.split("-")[1]);
+		int day = 	Integer.parseInt(joinDate.split("-")[2]);
+		
+		// 현재일 정보
+		Calendar cal = Calendar.getInstance();
+		int nowYear = 	cal.get(Calendar.YEAR);
+		int nowMonth = 	cal.get(Calendar.MONTH) + 1;
+		int nowDay =	cal.get(Calendar.DAY_OF_MONTH);
+		
+		// 근속년수
+		int workYear =  nowYear - year;
+		
+		// 근속년수에 따른 1년 전체 연차
+		int vctCount = cmmnDao.selectOne("groupWare.vacation.vctStd", workYear + 1);
+		
+		System.out.println("joinDate >>> " + joinDate);
+		System.out.println("join year >>> " + year + "  month >>> " + month  + "  day >>> " + day);
+		System.out.println("now  year >>> " + nowYear + "  month >>> " + nowMonth  + "  day >>> " + nowDay);
+
+		System.out.println("workYear >> " + workYear);
+		System.out.println("vctCount >> " + vctCount);
+		
+//		int USR_VCT;
+//		if(day >= 7) {	// 7일 이후 입사, 80%근속 X
+//		USR_VCT = 11 - month;
+//		// 수정 필요 12월 넘어가면 -1 나옴
+//	}else { 		// 7일 이전 입사, 80%근속 O
+//		USR_VCT = 12 - month;
+//	}
+//	System.out.println(ID);
+//	System.out.println(USR_VCT);
+		
+		return params;
+	}
+	
+}

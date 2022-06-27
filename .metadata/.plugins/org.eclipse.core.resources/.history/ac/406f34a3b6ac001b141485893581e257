@@ -1,0 +1,1241 @@
+include.common_header.logout=Would you like to log out?
+
+include.header.directory=Introduction
+include.header.industry=Industrial Chemicals Hall
+include.header.cosmetics=Cosmetics Hall
+include.header.conference=Conference
+include.header.manager=Manager Page
+include.header.admin=Admin Page
+include.header.logout=Logout
+include.header.mypage=My Page
+include.header.login=Login
+include.header.join=Signup
+include.footer.address=?
+
+main.index.notice=Popup
+main.index.site=This site is restricted from <span class="blue-tx">Internet Explorer</span>support. Please download the <span class="bl"> Chrome browser
+main.index.chrome=Chrome Browser download
+main.index.search=ALL
+main.index.searchBtn=Search
+main.index.corperationName=Corporation Name
+main.index.productName=Product Name
+main.index.hsCode=HS Code
+main.index.casNo=CAS NO
+
+main.index.searchPh=Enter the word
+
+main.search.title=Search
+main.search.all=All Exhibition Hall
+main.search.noInfo=There are no corresponding results.
+
+member.join.buyerJoin=Buyers/General Membership
+member.join.buyer=Buyers/General Membership  <span>Buyer/general members can use all functions <span style="display: block;">such as matchmakings, video consultation and so on.</span></span>
+member.join.corpJoin=Corporate Member Application
+member.join.corpration=Corporate Member Application <span> Corporate member application <span style="display: block;">will be subscribed after approval.</span></span>
+
+member.join_business.memberjoin=Member Registration
+member.join_business.businesscorp=Business Corporation
+member.join_business.required=Required
+member.join_business.id=ID
+member.join_business.duplchk=Duplication Check
+member.join_business.email=E\u2011mail
+member.join_business.pw=Password
+member.join_business.passwordNotice=Please enter the password in a combination of English, numeric, and special characters in at least 6 to 10 digits.
+member.join_business.pwChk=Re\u2011enter Password
+member.join_business.nameByr=Name
+member.join_business.name=Name (English)
+member.join_business.nation=Nation
+member.join_business.position=Position
+member.join_business.telephone=Telephone
+member.join_business.corporationName=Corporate Name(Korean)
+member.join_business.ceo=CEO(Korean)
+member.join_business.businesslicense=Corporate Registration Number
+member.join_business.representationMail=Representative E\u2011mail
+member.join_business.representationMailalert=Representative
+member.join_business.corporationTelephone=Corporation telephone
+member.join_business.faxNumber=Fax number
+member.join_business.address=Address(Korean)
+member.join_business.homepage=Homepage
+member.join_business.recommendationOrganization=Recommendation organization
+member.join_business.exhibitionField=Exhibition field
+member.join_business.policy=Terms of Use
+member.join_business.privatePolicy=Privacy Policy
+member.join_business.agree=I agree to the terms and conditions of use.
+member.join_business.policyWatch=View terms of use
+member.join_business.notice=\u203B After approval of membership registration, management functions are provided.
+member.join_business.privatePolicyWatch=View privacy policy
+member.join_business.privatePolicyAgree=I agree to the privacy policy.
+member.join_business.join=Sign up
+member.join_business.cancel=Cancel
+member.join_business.aprv=approve
+member.join_business.noAprv=not approved
+
+member.join_business.emailPh=E\u2011mail
+member.join_business.pwPh=Password
+member.join_business.pwChkPh=Password check
+member.join_business.positionPh=Enter the position
+member.join_business.namePhByr=Name
+member.join_business.namePh=Name (English)
+member.join_business.nationPh=Nation
+member.join_business.telephonePh=Telephone (Numeric)
+member.join_business.corporationNamePh=Corporate Name(Korean)
+member.join_business.ceoPh=CEO(Korean)
+member.join_business.businesslicensePh=Corporation Registration Number (Numeric)
+member.join_business.corporationTelephonePh=Corporation Telephone (Numeric)
+member.join_business.representationMailPh=Enter the e\u2011mail
+member.join_business.faxNumberPh=Fax number (Numeric)
+member.join_business.addressPh=Address(Korean)
+member.join_business.homepagePh=Homepage
+member.join_business.recommendationOrganizationPh=Recommendation Organization
+member.join_business.exhibitionFieldPh=Exhibition Field
+member.join_business.homepageUrlPh=Homepage url
+
+member.join_business.emailAlert=Please enter an e\u2011mail to use as your ID
+member.join_business.emailFormAlert=E\u2011mail format is not correct.
+member.join_business.emailDuplAlert=Please verify your username duplicate
+member.join_business.emailUsedAlert=This ID is already in use.
+member.join_business.emailAbleAlert=This ID is available.
+member.join_business.passwordAlert=Entering a password is required.
+member.join_business.passwordFormAlert=Please enter the password in a combination at least 6 to 10 digits.
+member.join_business.passwordBlankAlert=Please enter without spaces
+member.join_business.passwordMixAlert=Please enter the password in a combination of English, numeric, and special characters
+member.join_business.passwordIncorrectAlert=Passwords do not match.
+member.join_business.idChkAlert=Please check the entered ID
+member.join_business.idDuplChkAlert=Duplicate ID confirmation is mandatory.
+member.join_business.pwChkAlert=Please check the entered password.
+member.join_business.pwDuplChkAlert=Password confirmation is required.
+member.join_business.nameChkAlert=Member name is required.
+member.join_business.positionChkAlert=Position is required.
+member.join_business.nationChkAlert=Nation is required
+member.join_business.telephoneChkAlert=Contact is required.
+member.join_business.corporationNameChkAlert=Corporate name is required.
+member.join_business.ceoChkAlert=CEO is required.
+member.join_business.businesslicensePhChkAlert=Business license number is required.
+member.join_business.corporationTelephoneChkAlert=Representative telephone is required.
+member.join_business.addressChkAlert=Address is required.
+member.join_business.representationMailChkAlert=Representative E\u2011mail is required.
+member.join_business.policyChkAlert=Please agree to the terms of use.
+member.join_business.privatePolicyChkAlert=Please agree to the privacy policy.
+member.join_business.joinAlert=Would you like to become a member?
+member.join_business.joinSuccessAlert=Membership registration is complete. \\n You can log in after e\u2011mail verification.
+member.join_business.joinFailAlert=Membership registration failed.
+
+member.join_buyer.join=Buyers/General Membership Sign\u2011up
+member.join_buyer.address=Address
+member.join_buyer.belong=Organization
+member.join_buyer.position=Position
+member.join_buyer.interestedBusiness=Interested Business
+member.join_buyer.interestedProduct=Interested Product
+member.join_buyer.interestedProductA=Interested Product
+member.join_buyer.agree=I agree to the terms and conditions of use.
+member.join_buyer.policyWatch=View terms of use
+member.join_buyer.policyAgree=I agree to the privacy policy.
+member.join_buyer.privacyPolicyWatch=View privacy policy
+member.join_buyer.confirm=Confirm
+member.join_buyer.cancel=Cancel
+
+member.join_buyer.addressPh=Enter the Address
+member.join_buyer.belongPh=Enter the organization
+member.join_buyer.positionPh=Enter your position
+
+member.join_buyer.emailAlert=Please enter an e\u2011mail to use as your ID
+member.join_buyer.emailFormAlert=E\u2011mail format is not correct.
+member.join_buyer.emailOverlapAlert=Please verify your username duplicate.
+member.join_buyer.usedEmailAlert=This ID is already in use.
+member.join_buyer.ableEmailAlert=ID is available.
+member.join_buyer.passwordAlert=Entering a password is required.
+member.join_buyer.passwordFormAlert=Please enter the password in a combination at least 6 to 10 digits.
+member.join_buyer.passwordblankAlert=Please enter without spaces.
+member.join_buyer.passwordMixAlert=Please enter the password in a combination of English, numeric, and special characters
+member.join_buyer.passwordIncorrectAlert=Passwords do not match.
+member.join_buyer.idCheck=Please check the entered ID.
+member.join_buyer.idDuplCheck=Duplicate ID confirmation is mandatory.
+member.join_buyer.pwCheck=Please check the entered password.
+member.join_buyer.pwDuplCheck=Password confirmation is required.
+member.join_buyer.nameCheck=Member name is required.
+member.join_buyer.nationCheck=Nation is required.
+member.join_buyer.telephoneCheck=Contact is required.
+member.join_buyer.policyCheck=Please agree to the terms of use.
+member.join_buyer.privatePolicyCheck=Please agree to the privacy policy.
+member.join_buyer.interestedBusinessCheck=Please select at least one industry you are interested in.
+member.join_buyer.interestedProduct=Product of Interest
+member.join_buyer.joinAlert=Would you like to become a member?
+member.join_buyer.joinSuccessAlert=Membership registration is complete. \\n You can log in after e\u2011mail verification.
+member.join_buyer.joinFailAlert=Membership registration failed.
+member.join_buyer.policy=Terms of Use
+member.join_buyer.privatePolicy=Privacy Policy
+
+member.join_buyer.01=Specialty <br>Chemicals
+member.join_buyer.02=Plastics
+member.join_buyer.03=Petrochemicals
+member.join_buyer.04=Rubbers
+member.join_buyer.05=Cosmetics
+
+member.join_buyer.product_01=Construction
+member.join_buyer.product_02=Vehicle
+member.join_buyer.product_03=Shipbuilding
+member.join_buyer.product_04=Cosmetics
+member.join_buyer.product_05=Pharmaceuticals
+member.join_buyer.product_06=Textiles/<br>Clothing
+member.join_buyer.product_07=Consumer <br>Chemical
+member.join_buyer.product_08=Etc.
+
+member.login.login=Login
+member.login.id_search=Find ID
+member.login.pw_search=Find Password
+member.login.signUp=Sign up
+member.login.register=Not a member yet? Please proceed with membership registration.
+
+member.login.idPh=Enter your ID
+member.login.pwPh=Enter a password
+
+member.login.notexistIdAlert=ID information does not exist.
+member.login.notexistPwAlert=Passwords do not match.
+member.login.newEnvirenmentAlert=You are logged in with the same ID in the new environment.
+member.login.wrongAlert=You are not allowed to access this page.
+member.login.idAlert=Please enter your ID.
+member.login.pwAlert=Please enter the password.
+
+member.id_search.name=Name
+member.id_search.telephone=Contact
+member.id_search.btn=Find ID
+
+member.id_search.namePh=Enter Member name.
+member.id_search.telephonePh=Enter your contact.
+
+member.id_search.yourIdAlert=Your ID is 
+member.id_search.yourIdisAlert=  
+member.id_search.noIdAlert=ID information does not exist.
+member.id_search.nameAlert=Please enter your name.
+member.id_search.telephoneAlert=Please enter your contact number.
+
+member.pw_search.id=ID
+member.pw_search.name=Name
+member.pw_search.telephone=Contact
+
+member.pw_search.idPh=Enter ID
+member.pw_search.namePh=Enter member name.
+member.pw_search.telephonePh=Enter member contact number.
+member.pw_search.txt=After verifying the e\u2011mail address, a temporary password will be sent to your e\u2011mail.
+member.pw_search.btn=Find Password
+
+member.pw_search.sendEmailAlert=After verifying the e\u2011mail address, a temporary password will be sent to your e\u2011mail.
+member.pw_search.idAlert=Please enter your ID.
+member.pw_search.nameAlert=Please enter your name.
+member.pw_search.telephoneAlert=Please enter your contact number.
+
+member.email_auth_succ.emailAuth=E\u2011mail verification is complete.
+member.email_auth_succ.login=Please log in with your registered account information.
+member.email_auth_succ.move=Go to the login page
+
+member.email_auth_send.email=A temporary password has been sent to the e\u2011mail you signed up for.
+member.email_auth_send.auth=If you do not receive the e\u2011mail after about 10 minutes, please try again.
+member.email_auth_send.retry=E\u2011mail verification retry
+member.email_auth_send.zoom=If you are a member of a participating corporation, a Zoom registration e\u2011mail has been sent for video consultation.
+
+member.email_auth_resend.resend=If the e\u2011mail verification fails, you can receive the verification e\u2011mail again.
+member.email_auth_resend.id=ID
+member.email_auth_resend.authResend=Resend authentication mail
+
+member.email_auth_resend.idPh=Enter the e\u2011mail used as ID when signing up
+
+member.email_auth_resend.sendEmailAlert=A temporary password has been sent to the e\u2011mail you signed up for.\\n If you do not receive the e\u2011mail after about 10 minutes, please try again.
+member.email_auth_resend.emailFormAlert=E\u2011mail format is not correct.
+
+corp_hall.corp_list.searchResult=Search Results<span id="totalCnt"></span> EA
+corp_hall.corp_list.excelDownload=Excel Download
+corp_hall.corp_list.industry=Industrial Chemicals Hall
+corp_hall.corp_list.industryMo=Industrial Chemicals Hall
+corp_hall.corp_list.industrySub=\uC0B0\uC5C5\uC6A9\uC804\uC2DC\uAD00
+corp_hall.corp_list.cosmetics=Cosmetics Hall
+corp_hall.corp_list.cosmeticsMo=Cosmetics Hall
+corp_hall.corp_list.cosmeticsSub=\uD654\uC7A5\uD488\uC804\uC2DC\uAD00
+corp_hall.corp_list.enter=Enter the Exhibition Hall
+corp_hall.corp_list.noResult=There are no corresponding results.
+corp_hall.corp_list.searchPh=Please search for the corporation name.
+
+popup.intro_corp.introduce=Corporate Introduction
+popup.intro_corp.corpName=Coporate Name
+popup.intro_corp.ceo=CEO
+popup.intro_corp.establish=Established Year
+popup.intro_corp.contact=Representative Telephone
+popup.intro_corp.faxNumber=Fax Number
+popup.intro_corp.address=Address
+popup.intro_corp.email=E\u2011mail
+popup.intro_corp.homepage=Homepage
+popup.intro_corp.brochureName=Brochure Name
+popup.intro_corp.download=Download
+popup.intro_corp.corpInfo=Information
+popup.intro_corp.introInfo=Brochure
+popup.intro_corp.noBrochure=There is no registered E\u2011brochure.
+
+popup.product_total.noProduct=There is no registered product.
+
+popup.brochure.brochure=Brochure
+popup.brochure.brochureName=Brochure Name
+popup.brochure.download=Download
+popup.brochure.noBrochure=There is no registered E\u2011brochure.
+
+popup.pns_mtg_booking.videoConsultationBooking=Video Consultation Reservation Status
+popup.pns_mtg_booking.videoConsultationStatus=Video Consultation Reservation Status
+popup.pns_mtg_booking.timeZone=Timezone
+popup.pns_mtg_booking.date=Date
+popup.pns_mtg_booking.request=[Request]
+
+popup.pns_mtg_booking_confirm.videoMeetingBookingConfirm=Video Consultation Reservation Confirm
+popup.pns_mtg_booking_confirm.meetingCorporation=Corporation
+popup.pns_mtg_booking_confirm.meetingDate=Date
+popup.pns_mtg_booking_confirm.meetingTime=Time
+popup.pns_mtg_booking_confirm.meetingMessage=Message
+popup.pns_mtg_booking_confirm.save=Save
+popup.pns_mtg_booking_confirm.alert=Your request is saved.\\nYou can check your request details in My Page > Video Consultation.
+
+popup.pns_corp_inquiry.inquiry=Inquiry
+popup.pns_corp_inquiry.inquiryCorp=Corporation
+popup.pns_corp_inquiry.inquiryTitle=Title
+popup.pns_corp_inquiry.inquiryContents=Inquiry
+popup.pns_corp_inquiry.save=Save
+
+popup.pns_corp_inquiry.inquiryTitleAlert=Please enter the title of your inquiry.
+popup.pns_corp_inquiry.inquiryContentsAlert=Please enter your inquiry.
+popup.pns_corp_inquiry.inquirySaveAlert=You have saved your inquiry details.\\n You can check your inquiry details in My Page> Inquiry History.
+
+common.pns-module.first=This is the first booth in the exhibition hall.
+common.pns-module.last=This is the last booth in the exhibition hall.
+common.pns-module.login=You can use it after logging in.
+common.pns-module.Qualification=This feature is only available to buyers/general members.
+common.pns-module.add=The following corporation will be added as a Corporation of Interest : 
+common.pns-module.interested= has been added to Companies of Interest.\\n You can view at My Page > Companies of Interest Management.
+common.pns-module.exchange=The following corporation will exchange cards with you : 
+common.pns-module.exchangeComplete=Business card exchange has been completed.\\n You can view at My Page> Business Card Exchange.
+common.pns-module.checkedPopup=If the chat pop-up doesn't pop up,\\nPop-up Blocker After Unblocking\\nPlease try again.
+
+corp_hall.corp_list.searchPh=Enter the corporation name.
+
+common.pns-module.intrestCorp=Companies of Interest
+common.pns-module.businesscardExchange=Biz Card Exchange
+common.pns-module.question=Inquiry
+common.pns-module.videoConsultation=Video Consultation
+common.pns-module.chat=Chat
+
+chat.chat_buyer_pop.chatRoom=Chat Room
+chat.chat_buyer_pop.send=Send
+chat.chat_buyer_pop.Entrance=have entered.</span>
+chat.chat_buyer_pop.wentout=)left the chat room.</span>
+
+chat.chat_corp_pop.chatRoom=Chat Room
+chat.chat_corp_pop.send=Send
+chat.chat_corp_pop.Entrance=Enter </span>
+chat.chat_corp_pop.wentout=)left the chat room.</span>
+
+common.chattingCtl.Missed=The manager is currently absent.<br>Please contact us or use video consultation.
+
+include.my_business_nav.corpMemeberInfo=Corporation Registration Information
+include.my_business_nav.boothManagement=Booth Management
+include.my_business_nav.brochure=Brochure
+include.my_business_nav.video=Promotional Video
+include.my_business_nav.productInfo=Product Information
+include.my_business_nav.question=Inquiry Details
+include.my_business_nav.chat=Chat History
+include.my_business_nav.videoChatConfig=Video Consultation Setting
+include.my_business_nav.videoChatStatus=Video Consultation Status
+include.my_business_nav.videoChatBook=Video Consultation Reservation
+include.my_business_nav.businessCardExchange=Card Exchange
+include.my_business_nav.employeeManagement=Employee Management
+include.my_business_nav.myInfo=My Information Management
+include.my_business_nav.corpLog=Data Change Log
+
+include.my_buyer_nav.myInfo=My Information Management
+include.my_buyer_nav.chatRecord=Chat History
+include.my_buyer_nav.videoChat=Video Consultation
+include.my_buyer_nav.intrestedCorpManagement=Companies of Interest
+include.my_buyer_nav.businessCardExchange=Card Exchange
+include.my_buyer_nav.question=Inquiries
+
+include.my_buyer_nav_mobile.myInfo=Menu : My Information Management
+include.my_buyer_nav_mobile.chatRecord=Menu : Chat History
+include.my_buyer_nav_mobile.videoChat=Menu : Video Consultation
+include.my_buyer_nav_mobile.intrestedCorpManagement=Menu : Companies of Interest
+include.my_buyer_nav_mobile.businessCardExchange=Menu : Card Exchange
+include.my_buyer_nav_mobile.question=Menu : Inquiries
+
+popup.product.productIntroduce=Product Description
+popup.product.productList=Product List
+
+popup.promote_list.video=Promotional Video
+
+popup.promote_video.video=Promotional Video
+popup.promote_video.list=List
+
+mypage.my_business_info.info=My Information Management
+mypage.my_business_info.id=ID
+mypage.my_business_info.name=Member Name
+mypage.my_business_info.password=Password
+mypage.my_business_info.changePassword=Change Password
+mypage.my_business_info.newPassword=New Password
+mypage.my_business_info.newPasswordCheck=Re\u2011enter Password
+mypage.my_business_info.telephone=Contact
+mypage.my_business_info.position=Position
+mypage.my_business_info.authority=Chat Permission
+mypage.my_business_info.possible=Allow
+mypage.my_business_info.impossible=Disallow
+mypage.my_business_info.save=Save
+mypage.my_business_info.apprYn=Approval or not
+
+mypage.my_business_info.positionPh=Please enter a position.
+mypage.my_business_info.telephonePh=Please enter a phone number.
+mypage.my_business_info.passwordPh=Please enter the password.
+mypage.my_business_info.passwordNotice=Please enter the password in a combination of English, numeric, and special characters in at least 6 to 10 digits.
+
+mypage.my_business_info.passwordAlert=Entering a password is required.
+mypage.my_business_info.passwordFormAlert=Please enter the password in a combination at least 6 to 10 digits.
+mypage.my_business_info.blankAlert=Please enter without spaces.
+mypage.my_business_info.mixAlert=Please enter the password in a combination of English, numeric, and special characters.
+mypage.my_business_info.passwordIncorrectAlert=Passwords do not match.
+mypage.my_business_info.passwordInsertAlert=Please enter the password.
+mypage.my_business_info.passwordInsertCheckAlert=Please check the entered password.
+mypage.my_business_info.passwordCheckAlert=Password confirmation is required.
+mypage.my_business_info.saveAlert=Do you want to save it?
+mypage.my_business_info.modifyAlert=Edited My Information.
+mypage.my_business_info.modifyFailAlert=Failed to edit My Information.
+
+mypage.my_business.corpInfo=Corporation Registration Information
+mypage.my_business.required=Required Information
+mypage.my_business.id=ID
+mypage.my_business.nation=Country
+mypage.my_business.nationEnglish=Country
+mypage.my_business.corporationName=Corporation Name
+mypage.my_business.corporationNameEnglish=Corporation Name
+mypage.my_business.ceo=CEO
+mypage.my_business.ceoEnglish=CEO
+mypage.my_business.businesslicense=Corporate Registration Number
+mypage.my_business.email=Representative E\u2011mail
+mypage.my_business.corporationTelephone=Representative Telephone
+mypage.my_business.faxNumber=Fax Number
+mypage.my_business.address=Address
+mypage.my_business.addressEnglish=Address
+mypage.my_business.homepage=Homepage
+mypage.my_business.established=Established Year
+mypage.my_business.permission=Approval Status
+mypage.my_business.save=Save
+mypage.my_business.notice=*After approval, you can use the management function.
+mypage.my_business.notice-l=* The representative's name, e\u2011mail, and telephone number will be disclosed to buyers when exchanging cards.
+mypage.my_business.selectNation=Please select your nation.
+mypage.my_business.year= 
+
+mypage.my_business.saveAlert=Do you want to save it?
+mypage.my_business.modifyAlert=Edited information saved.
+mypage.my_business.modifyFailAlert=Failed to edit information.
+
+mypage.my_business.selectYear=Select
+mypage.my_business.NationAlert=Please select your nation.
+mypage.my_business.nationAlert=Nation is required.
+mypage.my_business.corporationNameAlert=Corporation Name is required.
+mypage.my_business.ceoAlert=CEO is required.
+mypage.my_business.businesslicenseAlert=Corporate Registration Number is required.
+mypage.my_business.emailAlert=Representative E\u2011mail is required.
+mypage.my_business.corporationTelephonAlert=Representative telephone is required.
+mypage.my_business.addressAlert=Address is required.
+
+mypage.my_business.corporationNamePh=Enter your corporation name.
+mypage.my_business.ceoPh=Enter the CEO name.
+mypage.my_business.businesslicensePh=Enter the corporate registration number.
+mypage.my_business.emailPh=Enter the e\u2011mail.
+mypage.my_business.corporationTelephonePh=Enter the phone number.
+mypage.my_business.faxNumberPh=Enter the FAX number.
+mypage.my_business.addressPh=Enter the address.
+mypage.my_business.homepagePh=Enter the homepage URL.
+
+mypage.my_business_booth.corpTyp01=Specialty Chemicals
+mypage.my_business_booth.corpTyp02=Petrochemicals
+mypage.my_business_booth.corpTyp03=Plastics
+mypage.my_business_booth.corpTyp04=Rubbers
+mypage.my_business_booth.corpTyp05=Cosmetics
+
+mypage.my_business_booth.boothManage=Booth Management
+mypage.my_business_booth.required=Required Information
+mypage.my_business_booth.exhibition=Exhibition Field
+mypage.my_business_booth.industryExhibit=Industrial <br> Chemicals Hall
+mypage.my_business_booth.beautyExhibit=Cosmetics Hall
+mypage.my_business_booth.mainWork=Main Business
+mypage.my_business_booth.save=Save
+mypage.my_business_booth.ci=Corporation Logo Image
+mypage.my_business_booth.companyImage=(Corporation Logo Image)
+mypage.my_business_booth.notice=* CI must be uploaded as a png file at a resolution of 200*100px.
+mypage.my_business_booth.corpIntroduce=Corporation introduction details
+mypage.my_business_booth.corpIntroduceEnglish=Corporation introduction details
+mypage.my_business_booth.boothType=Booth type
+mypage.my_business_booth.boothA=Booth A
+mypage.my_business_booth.boothB=Booth B
+mypage.my_business_booth.boothC=Booth C
+mypage.my_business_booth.boothOpen=Booth Open
+mypage.my_business_booth.boothOpenPrepare=Closed
+mypage.my_business_booth.boothOpening=Open
+mypage.my_business_booth.boothShortcut=Go to Exhibition Booth
+mypage.my_business_booth.preview=* Even in the case of opening preparations, you can check the exhibition booth by clicking the go to exhibition booth button.
+mypage.my_business_booth.fileSizeAlert=Cannot upload more than 10mb
+
+mypage.my_business_booth.mainWorkAlert=You need to pick at least one major industry.
+mypage.my_business_booth.exhibitionAlert=At least one exhibition area must be selected.
+mypage.my_business_booth.logoimgAlert=Logo image is required.
+mypage.my_business_booth.corpIntroduceAlert=Corporation introduction is required.
+mypage.my_business_booth.saveAlert=Do you want to save it?
+mypage.my_business_booth.saveSuccessAlert=Booth information has been saved.
+mypage.my_business_booth.saveFailAlert=Failed to save booth information.
+mypage.my_business_brochure.deleteSuccessAlert=Has been deleted.
+
+mypage.my_business_brochure.brochure=Brochure
+mypage.my_business_brochure.add=Add
+mypage.my_business_brochure.delete=Delete
+mypage.my_business_brochure.no=No
+mypage.my_business_brochure.brochureName=Brochure Name
+mypage.my_business_brochure.download=Download
+mypage.my_business_brochure.noInfo=There is no registered information.
+
+mypage.my_business_brochure.deleteAlert=Please select a brochure to be deleted.
+mypage.my_business_brochure.deleteAskAlert=Are you sure you want to delete?
+
+mypage.my_business_brochure_dtl.language=Language
+mypage.my_business_brochure_dtl.addEbrochure=Brochure Registration
+mypage.my_business_brochure_dtl.required=Required Information
+mypage.my_business_brochure_dtl.brochureName=Brochure Name
+mypage.my_business_brochure_dtl.mainProduct=Representative Product
+mypage.my_business_brochure_dtl.notice=* When setting \u201CRepresentative\u201D, it is searched first.
+mypage.my_business_brochure_dtl.fileEnroll=File Registration
+mypage.my_business_brochure_dtl.fileEnrollEnglish=File Registration
+mypage.my_business_brochure_dtl.pdf=* You must upload it as a PDF file.
+mypage.my_business_brochure_dtl.save=Save
+mypage.my_business_brochure_dtl.list=List
+mypage.my_business_brochure_dtl.delete=Delete
+
+mypage.my_business_brochure_dtl.titleAlert=Title is required.
+mypage.my_business_brochure_dtl.brochureAlert=Brochure is required.
+mypage.my_business_brochure_dtl.saveAlert=Do you want to save it?
+mypage.my_business_brochure_dtl.saveSuccessAlert=Brochure is saved.
+mypage.my_business_brochure_dtl.saveFailAlert=Failed to save.
+
+mypage.my_business_brochure_dtl.brochureNamePh=enter the brochure name
+
+mypage.my_business_video.video=Promotional Video
+mypage.my_business_video.tab1=Video
+mypage.my_business_video.tab2=3D Contents
+mypage.my_business_video.add=Add
+mypage.my_business_video.delete=[Delete]
+mypage.my_business_video.noInfo=There is no registered information.
+
+mypage.my_business_video.saveAlert=Do you want to save it?
+mypage.my_business_video.saveSuccessAlert=Video is saved.
+
+mypage.my_business_video_dtl.language=Language
+mypage.my_business_video_dtl.korean=Korean
+mypage.my_business_video_dtl.english=English
+mypage.my_business_video_dtl.add=Registration of Promotional Video
+mypage.my_business_video_dtl.required=Required Information
+mypage.my_business_video_dtl.division=Video Type
+mypage.my_business_video_dtl.videoTitle=Video Title
+mypage.my_business_video_dtl.mainProduct=Representative Product
+mypage.my_business_video_dtl.notice=* When setting \u201CRepresentative\u201D, it is searched first.
+mypage.my_business_video_dtl.youtube=YouTube
+mypage.my_business_video_dtl.addMp4=File Registration (MP4)
+mypage.my_business_video_dtl.addFile=File Registration
+mypage.my_business_video_dtl.Video=VIDEO
+mypage.my_business_video_dtl.selectVideo=(When VIDEO is selected)
+mypage.my_business_video_dtl.3DContents=3D Contents
+mypage.my_business_video_dtl.select3DContents=(When 3D is selected)
+mypage.my_business_video_dtl.link=(https://youtu.be/<span>51r6tdV2yfg</span> Please fill in red only.)
+mypage.my_business_video_dtl.url=Url
+mypage.my_business_video_dtl.addGlb=File Registration (glb)
+mypage.my_business_video_dtl.save=Save
+mypage.my_business_video_dtl.list=List
+mypage.my_business_video_dtl.linkedProduct=Related Products
+mypage.my_business_video_dtl.selectProduct=Please select a related product.
+mypage.my_business_video_dtl.fileSizeAlert=Cannot upload more than 150mb
+
+mypage.my_business_video_dtl.titleAlert=Video title is required.
+mypage.my_business_video_dtl.typeAlert=Video type is required.
+mypage.my_business_video_dtl.type_linkAlert=Check the video type and link.
+mypage.my_business_video_dtl.type_FileAlert=Check the video type and file.
+mypage.my_business_video_dtl.saveAlert=Do you want to save it?
+mypage.my_business_video_dtl.saveSuccessAlert=Video is saved.
+mypage.my_business_video_dtl.saveFailAlert=Failed to save.
+
+mypage.my_business_video_dtl.videoTitlePh=Enter the video title.
+
+mypage.my_business_product.productInfo=Product Information
+mypage.my_business_product.addProduct=Add
+mypage.my_business_product.productNoInfo=There is no registered information.
+mypage.my_business_product.delete=[Delete]
+
+mypage.my_business_product.deleteAlert=Are you sure you want to delete?
+mypage.my_business_product.deleteSuccessAlert=Product has been deleted.
+
+mypage.my_business_product_dtl.add=Add
+mypage.my_business_product_dtl.delete=Delete
+mypage.my_business_product_dtl.addProduct=Product Enrollment
+mypage.my_business_product_dtl.required=Required Information
+mypage.my_business_product_dtl.productName=Product Name
+mypage.my_business_product_dtl.productNameEnglish=Product Name
+mypage.my_business_product_dtl.mainProduct=Representative Product
+mypage.my_business_product_dtl.catalogProduct=E\u2011catalog
+mypage.my_business_product_dtl.notice=* When setting \u201CRepresentative\u201D, it is searched first.
+mypage.my_business_product_dtl.hs_code=HS Code
+mypage.my_business_product_dtl.cas_no=CAS NO.
+mypage.my_business_product_dtl.usage=Product Use
+mypage.my_business_product_dtl.select=(1 or more required)
+mypage.my_business_product_dtl.fileSizeAlert=Cannot upload more than 10mb
+
+mypage.my_business_product_dtl.prod_purp_01=Construction
+mypage.my_business_product_dtl.prod_purp_02=Vehicle
+mypage.my_business_product_dtl.prod_purp_03=Shipbuilding
+mypage.my_business_product_dtl.prod_purp_04=Cosmetics
+mypage.my_business_product_dtl.prod_purp_05=Pharmaceuticals
+mypage.my_business_product_dtl.prod_purp_06=Textiles/Clothing
+mypage.my_business_product_dtl.prod_purp_07=Consumer Chemical Products
+mypage.my_business_product_dtl.prod_purp_08=Etc.
+
+mypage.my_business_product_dtl.productIntroduce=Product Description
+mypage.my_business_product_dtl.productIntroduceEnglish=Product Description
+mypage.my_business_product_dtl.mainProductImg=Representative Image
+mypage.my_business_product_dtl.condition=* Product images must be uploaded as a PNG file at a resolution of 800*400px.
+mypage.my_business_product_dtl.productImg=Additional Images
+mypage.my_business_product_dtl.save=Save
+mypage.my_business_product_dtl.list=List
+
+mypage.my_business_product_dtl.maxAlert=You have entered the maximum number.
+mypage.my_business_product_dtl.titleAlert=Title is required.
+mypage.my_business_product_dtl.useAlert=Select at least one product.
+mypage.my_business_product_dtl.productIntrduceAlert=Product introduction is required.
+mypage.my_business_product_dtl.imgAlert=Representative image is required.
+mypage.my_business_product_dtl.saveAlert=Do you want to save it?
+mypage.my_business_product_dtl.saveSuccessAlert=Save is complete.
+mypage.my_business_product_dtl.overAlert=The number of booth main exposures has been exceeded.
+
+mypage.my_business_inquiry.ask=Inquiry Details
+mypage.my_business_inquiry.No=No
+mypage.my_business_inquiry.answer=Status
+mypage.my_business_inquiry.askTitle=Subject
+mypage.my_business_inquiry.askPerson=Inquirer
+mypage.my_business_inquiry.askDate=Registration Date
+mypage.my_business_inquiry.noInfo=There is no registered information.
+mypage.my_business_inquiry.answer=Waiting
+mypage.my_business_inquiry.answerConfirm=Answered
+
+mypage.my_business_inquiry.notexistAlert=The description does not exist.
+
+mypage.my_business_inquiry_log.corpInfo=Corporate Information
+mypage.my_business_inquiry_log.booth=Booth Management
+mypage.my_business_inquiry_log.gallery=PR Gallery
+mypage.my_business_inquiry_log.video=Promotional Video
+mypage.my_business_inquiry_log.product=Product
+mypage.my_business_inquiry_log.brochure=Brochure
+mypage.my_business_inquiry_log.inquriy=Inquiry Details
+mypage.my_business_inquiry_log.businessCard=Business Card Exchange
+mypage.my_business_inquiry_log.modifyDate=Modification Date
+mypage.my_business_inquiry_log.modifier=Modifier
+mypage.my_business_inquiry_log.corpName=Corporation Name
+mypage.my_business_inquiry_log.ceo=CEO
+mypage.my_business_inquiry_log.status=Status
+mypage.my_business_inquiry_log.list=List
+mypage.my_business_inquiry_log.board=Board
+mypage.my_business_inquiry_log.modifydate=Modification Date
+mypage.my_business_inquiry_log.modifier=Modifier
+mypage.my_business_inquiry_log.title=Inquiry Title
+mypage.my_business_inquiry_log.id=ID
+mypage.my_business_inquiry_log.name=Name
+mypage.my_business_inquiry_log.answer=Answer Status
+mypage.my_business_inquiry_log.backList=List
+
+mypage.my_business_inquiry_log.notexistAlert=The description does not exist.
+
+mypage.my_business_inquiry_log_dtl.corpInfo=Corporate Information
+mypage.my_business_inquiry_log_dtl.booth=Booth Management
+mypage.my_business_inquiry_log_dtl.gallery=PR Gallery
+mypage.my_business_inquiry_log_dtl.video=Promotional Video
+mypage.my_business_inquiry_log_dtl.product=Product
+mypage.my_business_inquiry_log_dtl.brochure=Brochure
+mypage.my_business_inquiry_log_dtl.inquriy=Inquiry Details
+mypage.my_business_inquiry_log_dtl.board=Board
+mypage.my_business_inquiry_log_dtl.businessCard=Business Card Exchange
+mypage.my_business_inquiry_log_dtl.belong=Organization
+mypage.my_business_inquiry_log_dtl.name=Position
+mypage.my_business_inquiry_log_dtl.telephone=Contact
+mypage.my_business_inquiry_log_dtl.email=E\u2011mail
+mypage.my_business_inquiry_log_dtl.answer=Answer
+mypage.my_business_inquiry_log_dtl.answerstatus=Answer Status
+mypage.my_business_inquiry_log_dtl.answerwait=Waiting for Reply
+mypage.my_business_inquiry_log_dtl.list=List
+
+mypage.my_business_inquiry_log_dtl.wrongAlert=Access denied.
+
+mypage.my_business_chat.chatRecord=Chat History
+mypage.my_business_chat.No=No
+mypage.my_business_chat.chatStatus=Confirmation Status
+mypage.my_business_chat.chatpartner=Target Corporation
+mypage.my_business_chat.chatRequestDate=Chat Request Date
+mypage.my_business_chat.chatView=View Chat
+mypage.my_business_chat.noInfo=There is no registered information.
+mypage.my_business_chat.chatIn=[Participate in Chat]
+mypage.my_business_chat.chatCheck=Confirm
+mypage.my_business_chat.chatNoneCheck=Unidentified
+
+mypage.my_business_chat.confirmAlert=Confirmed
+mypage.my_business_chat.openAlert=The chat room is open.
+mypage.my_business_chat.exitAlert=The buyer has already left the chat room.
+
+mypage.my_business_mtg_config.meetingSetting=Video Consultation Setting
+mypage.my_business_mtg_config.easySetting=Simple Setting
+mypage.my_business_mtg_config.detailSetting=Detail Setting
+mypage.my_business_mtg_config.meetingDateSetting=Meeting Available Days
+mypage.my_business_mtg_config.monday=Mon
+mypage.my_business_mtg_config.tuesday=Tue
+mypage.my_business_mtg_config.wednesday=Wed
+mypage.my_business_mtg_config.thursday=Thu
+mypage.my_business_mtg_config.friday=Fri
+mypage.my_business_mtg_config.saturday=Sat
+mypage.my_business_mtg_config.sunday=Sun
+mypage.my_business_mtg_config.HolidayMeeting=Legal Holidays Availability
+mypage.my_business_mtg_config.possible=Available
+mypage.my_business_mtg_config.impossible=Not Available
+mypage.my_business_mtg_config.meetingTime=Available time
+mypage.my_business_mtg_config.save=Save
+
+mypage.my_business_mtg_config.timeGen00=00:00 ~ 01:00
+mypage.my_business_mtg_config.timeGen01=01:00 ~ 02:00
+mypage.my_business_mtg_config.timeGen02=02:00 ~ 03:00
+mypage.my_business_mtg_config.timeGen03=03:00 ~ 04:00
+mypage.my_business_mtg_config.timeGen04=04:00 ~ 05:00
+mypage.my_business_mtg_config.timeGen05=05:00 ~ 06:00
+mypage.my_business_mtg_config.timeGen06=06:00 ~ 07:00
+mypage.my_business_mtg_config.timeGen07=07:00 ~ 08:00
+mypage.my_business_mtg_config.timeGen08=08:00 ~ 09:00
+mypage.my_business_mtg_config.timeGen09=09:00 ~ 10:00
+mypage.my_business_mtg_config.timeGen10=10:00 ~ 11:00
+mypage.my_business_mtg_config.timeGen11=11:00 ~ 12:00
+mypage.my_business_mtg_config.timeGen12=12:00 ~ 13:00
+mypage.my_business_mtg_config.timeGen13=13:00 ~ 14:00
+mypage.my_business_mtg_config.timeGen14=14:00 ~ 15:00
+mypage.my_business_mtg_config.timeGen15=15:00 ~ 16:00
+mypage.my_business_mtg_config.timeGen16=16:00 ~ 17:00
+mypage.my_business_mtg_config.timeGen17=17:00 ~ 18:00
+mypage.my_business_mtg_config.timeGen18=18:00 ~ 19:00
+mypage.my_business_mtg_config.timeGen19=19:00 ~ 20:00
+mypage.my_business_mtg_config.timeGen20=20:00 ~ 21:00
+mypage.my_business_mtg_config.timeGen21=21:00 ~ 22:00
+mypage.my_business_mtg_config.timeGen22=22:00 ~ 23:00
+mypage.my_business_mtg_config.timeGen23=23:00 ~ 24:00
+
+mypage.my_business_mtg_config.holidayAlert=Select whether or not meetings are available on public holidays.
+mypage.my_business_mtg_config.meetingDateAlert=Please select a day of the week.
+mypage.my_business_mtg_config.timeAlert=Please select a meeting time.
+mypage.my_business_mtg_config.SimpleSettingAlert=Do you want to save the easy settings for video consultation?
+mypage.my_business_mtg_config.SimpleSettingSuccessAlert=The easy setting has been saved.
+mypage.my_business_mtg_config.DetailSettingAlert=Do you want to save the detailed settings for video consultation?
+mypage.my_business_mtg_config.DetailSettingSuccessAlert=The detailed settings have been saved.
+
+mypage.my_business_mtg_status.meetingResrveStatus=Video Consultation Reservation Status
+mypage.my_business_mtg_status.confirmMeeting=Confirmed Meetings
+mypage.my_business_mtg_status.waitingMeeting=Pending Meetings
+mypage.my_business_mtg_status.cancelMeeting=Reason for Decline
+mypage.my_business_mtg_status.date=Date
+mypage.my_business_mtg_status.time=Time
+mypage.my_business_mtg_status.companyName=Corporation name
+mypage.my_business_mtg_status.requester=Requester's name
+mypage.my_business_mtg_status.requesterEmail=Requester E\u2011mail
+mypage.my_business_mtg_status.manager=Manager
+mypage.my_business_mtg_status.meetingResult=Meeting result
+mypage.my_business_mtg_status.save=Save
+mypage.my_business_mtg_status.requesterMessage=Requester Message
+mypage.my_business_mtg_status.meetingMessage=Meeting Message
+mypage.my_business_mtg_status.cancelManager=Cancel Manager
+mypage.my_business_mtg_status.reason=Reason
+mypage.my_business_mtg_status.doingMeeting=Whether to Consult with Video
+mypage.my_business_mtg_status.MeetingFinish=Consultation Completed
+mypage.my_business_mtg_status.MeetingNotFinish=Consultation Not Completed
+mypage.my_business_mtg_status.resultRecord=Result Enrollment
+mypage.my_business_mtg_status.requestInfomation=Information on the Reason Why the Buyer Requested the Video Meeting
+mypage.my_business_mtg_status.meetingAccpet=Acceptance of the Meeting
+mypage.my_business_mtg_status.accpet=Accept
+mypage.my_business_mtg_status.denied=Denial
+mypage.my_business_mtg_status.deniedReason=Reason for Rejection
+mypage.my_business_mtg_status.deniedMessage=Rejection Message
+mypage.my_business_mtg_status.ImpossibleDate=Meeting Schedule Not Available
+mypage.my_business_mtg_status.changeDate=Request to change the meeting schedule
+mypage.my_business_mtg_status.etc=Etc.
+mypage.my_business_mtg_status.enroll=Enrollment
+mypage.my_business_mtg_status.save=Save
+mypage.my_business_mtg_status.buyerCancel=Buyer Cancellation
+mypage.my_business_mtg_status.enrollment=Enrollment
+mypage.my_business_mtg_status.watch=View
+
+mypage.my_business_mtg_status.saveAlert=Meeting status has been saved.
+mypage.my_business_mtg_status.reasonAlert=Please enter the reason for rejection and rejection message.
+
+mypage.my_business_mtg_status.companyIntroducePh=Enter your corporation introduction.
+mypage.my_business_mtg_status.requestInfomationPh=Information on the reason why the buyer requested the video meeting
+mypage.my_business_mtg_status.resultPh=Please enter the meeting result.
+mypage.my_business_mtg_status.reasonPh=Enter the meeting rejection details.
+
+mypage.my_business_mtg_booking.booking=Video Consultation Reservation Status
+mypage.my_business_mtg_booking.onApprovedClick='Approved' Click to open the corresponding Zoom meeting room.
+mypage.my_business_mtg_booking.WhetherMeeting=Whether to consult with video
+mypage.my_business_mtg_booking.meetingFinish=Consultation completed
+mypage.my_business_mtg_booking.meetingUnFinish=Consultation not completed
+mypage.my_business_mtg_booking.resultEnroll=Result Enrollment
+mypage.my_business_mtg_booking.save=Save
+mypage.my_business_mtg_booking.meetingMessage=Meeting Message
+mypage.my_business_mtg_booking.meetingReason=Information on the reason why the buyer requested the video meeting
+mypage.my_business_mtg_booking.whetherAccpet=Acceptance of the meeting
+mypage.my_business_mtg_booking.Accept=Accept
+mypage.my_business_mtg_booking.dinied=Denial
+mypage.my_business_mtg_booking.diniedReason=Reason for rejection
+mypage.my_business_mtg_booking.calendarImpossible=meeting schedule not available
+mypage.my_business_mtg_booking.dateChange=Request to change the meeting schedule
+mypage.my_business_mtg_booking.etc=Etc.
+mypage.my_business_mtg_booking.diniedMessage=Rejection message
+mypage.my_business_mtg_booking.enroll=Enrollment
+mypage.my_business_mtg_booking.save=Save
+
+mypage.my_business_mtg_booking.corpIntroducePh=Enter your Corporate Introduction
+
+mypage.my_business_card.cardExchange=Business card exchange
+mypage.my_business_card.No=No
+mypage.my_business_card.name=Name
+mypage.my_business_card.belong=Organization
+mypage.my_business_card.position=Position
+mypage.my_business_card.telephone=Contact
+mypage.my_business_card.email=E\u2011mail
+mypage.my_business_card.nation=Country
+mypage.my_business_card.regiDate=Registration date
+
+mypage.my_business_member.employeeManagement=Employee Management
+mypage.my_business_member.add=Add
+mypage.my_business_member.delete=Delete
+mypage.my_business_member.no=No
+mypage.my_business_member.id=ID
+mypage.my_business_member.name=Name
+mypage.my_business_member.telephone=Contact
+mypage.my_business_member.chatAuth=Chat Permission
+mypage.my_business_member.regiDate=Registration Date
+mypage.my_business_member.addEmployee=Enroll Employee
+
+mypage.my_business_member.memberId=Member ID
+mypage.my_business_member.dupliCheck=Check Duplication
+mypage.my_business_member.firstPw=First Password
+mypage.my_business_member.firstPwCheck=Re\u2011enter First Password
+mypage.my_business_member.condition=Please enter the password in a combination of English, numeric, and special characters in at least 6 to 10 digits.
+mypage.my_business_member.employeeName=Name
+mypage.my_business_memberEn.employeeName=Name (English)
+mypage.my_business_member.employeeTelephone=Telephone
+mypage.my_business_member.employeeChatAuth=Chat Permission
+mypage.my_business_member.possible=Allowed
+mypage.my_business_member.impossible=Not Allowed
+mypage.my_business_member.notice=* Members are recommended to use after changing the password.
+mypage.my_business_member.Enrollment=Enrollment
+
+mypage.my_business_member.emailPh=Enter the E\u2011mail.
+mypage.my_business_member.firstPwPh=Enter Password.
+mypage.my_business_member.firstPwCheckPh=Enter the password you entered.
+mypage.my_business_member.employeeNamePh=Enter the name.
+mypage.my_business_memberEn.employeeNamePh=Enter the name. (English)
+mypage.my_business_member.employeeTelephonePh=Enter your Corporation Name.
+
+mypage.my_business_member.emailAlert=Your E\u2011mail address will be used as sign\u2011in ID.
+mypage.my_business_member.emailformAlert=E\u2011mail format is not correct.
+mypage.my_business_member.emailDuplAlert=Please execute ID duplication check.
+mypage.my_business_member.usedEmailAlert=This ID is already in use.
+mypage.my_business_member.availableEmailAlert=This ID is available.
+mypage.my_business_member.necessaryPasswordAlert=Enter your password.
+mypage.my_business_member.PasswordFormAlert=Please enter the password in a combination at least 6 to 10 digits.
+mypage.my_business_member.PasswordBlankAlert=Please enter without spaces.
+mypage.my_business_member.PasswordMixAlert=Please enter the password in a combination of English, numeric, and special characters.
+mypage.my_business_member.PasswordMissAlert=Passwords do not match.
+mypage.my_business_member.checkIdAlert=Please check the entered ID.
+mypage.my_business_member.checkIdDuplAlert=ID duplication check is mandatory.
+mypage.my_business_member.checkPasswordAlert=Please check the entered password.
+mypage.my_business_member.checkPasswordDuplAlert=Password confirmation is required.
+mypage.my_business_member.checkNameAlert=Member Name is required.
+mypage.my_business_member.checkTelephoneAlert=Contact is required.
+mypage.my_business_member.checkNextAlert=Please check the following items.
+mypage.my_business_member.signupAlert=Would you like to become a member?
+mypage.my_business_member.signupSuccessAlert=Membership registration is complete.
+mypage.my_business_member.signupFailAlert=Membership registration failed.
+mypage.my_business_member.deleteAlert=Please select the target to be deleted.
+mypage.my_business_member.alreadyAlert=The ID currently logged in is included.
+mypage.my_business_member.deleteAskAlert=Are you sure you want to delete?
+mypage.my_business_member.deleteFinishAlert=Deletion is complete.
+
+mypage.my_buyer_info.info=My Information Management
+mypage.my_buyer_info.id=ID
+mypage.my_buyer_info.name=Member Name
+mypage.my_buyer_info.password=Password
+mypage.my_buyer_info.passwordChange=Change Password
+mypage.my_buyer_info.newPassword=New Password
+mypage.my_buyer_info.pwFormatNotice=Please enter the password in a combination of English, numeric, and special characters in at least 6 to 10 digits.
+mypage.my_buyer_info.newPasswordCheck=Re\u2011enter Password
+mypage.my_buyer_info.nation=Country
+mypage.my_buyer_info.selectNation=Please select your country.
+mypage.my_buyer_info.telephone=Telephone
+mypage.my_buyer_info.belong=Organization
+mypage.my_buyer_info.grade=Position
+mypage.my_buyer_info.address=Address
+mypage.my_buyer_info.interestedBusiness=Industry of Interest
+mypage.my_buyer_info.interestedProduct=Product of Interest
+mypage.my_buyer_info.save=Save
+
+mypage.my_buyer_info.passwordPh=Please enter the password.
+mypage.my_buyer_info.telephonePh=please enter your contact.
+
+mypage.my_buyer_info.passwordMatchAlert=Passwords do not match.
+mypage.my_buyer_info.passwordInsertAlert=Entering a password is required.
+mypage.my_buyer_info.passwordFormAlert=Please enter the password in a combination at least 6 to 10 digits.
+mypage.my_buyer_info.blankAlert=Please enter without spaces.
+mypage.my_buyer_info.mixAlert=Please enter the password in a combination of English, numeric, and special characters.
+mypage.my_buyer_info.passwordAlert=Please enter the password.
+mypage.my_buyer_info.passwordInsertCheckAlert=Please check the entered password.
+mypage.my_buyer_info.passwordCheckAlert=Password confirmation is required.
+mypage.my_buyer_info.nationAlert=nation is required.
+mypage.my_buyer_info.telephoneAlert=Contact is required.
+mypage.my_buyer_info.passwordChangeAlert=When changing the password, it is mandatory to enter the password.
+mypage.my_buyer_info.newPasswordChangeAlert=When changing the password, it is mandatory to enter the new password.
+mypage.my_buyer_info.newPasswordChangeCheckAlert=When changing your password, you must check the new password.
+mypage.my_buyer_info.newPasswordChangeCheckIncorrectAlert=Password and Re\u2011enter Password do not match.
+mypage.my_buyer_info.saveAlert=Do you want to save it?
+mypage.my_buyer_info.modifyAlert=Saved my information.
+mypage.my_buyer_info.modifyFailAlert=Failed to edit my information.
+
+mypage.my_buyer_info.business01=Specialty <br> Chemicals
+mypage.my_buyer_info.business02=Plastics
+mypage.my_buyer_info.business03=Petrochemicals
+mypage.my_buyer_info.business04=Rubbers
+mypage.my_buyer_info.business05=Cosmetics
+
+mypage.my_buyer_info.product01=Construction
+mypage.my_buyer_info.product02=Vehicle
+mypage.my_buyer_info.product03=Shipbuilding
+mypage.my_buyer_info.product04=Cosmetics
+mypage.my_buyer_info.product05=Pharmaceuticals
+mypage.my_buyer_info.product06=Textiles/ <br> Clothing
+mypage.my_buyer_info.product07=Consumer <br> Chemical
+mypage.my_buyer_info.product08=Etc.
+
+mypage.my_buyer_chat.chat=View Chat
+
+mypage.my_buyer_chat_video_call.videoCallManagement=Video Consultation Status
+mypage.my_buyer_chat_video_call.confirm=Confirmed Meetings
+mypage.my_buyer_chat_video_call.waitConfirm=Pending Meetings
+mypage.my_buyer_chat_video_call.cancel=Declined Meetings
+mypage.my_buyer_chat_video_call.date=Date
+mypage.my_buyer_chat_video_call.time=Time
+mypage.my_buyer_chat_video_call.corpName=Corporate Name
+mypage.my_buyer_chat_video_call.requestName=Requester Name
+mypage.my_buyer_chat_video_call.requestEmail=Requester E\u2011mail
+mypage.my_buyer_chat_video_call.requestMessage=Requester message
+mypage.my_buyer_chat_video_call.manager=Manager
+mypage.my_buyer_chat_video_call.cancelManager=Cancel Manager
+mypage.my_buyer_chat_video_call.reason=Reason
+mypage.my_buyer_chat_video_call.result=Meeting Result
+mypage.my_buyer_chat_video_call.save=Save
+mypage.my_buyer_chat_video_call.whetherVideoCall=Whether to Consult with Video
+mypage.my_buyer_chat_video_call.impossible=Meeting Schedule Not Available
+mypage.my_buyer_chat_video_call.dateChange=Request to Change the Meeting Schedule
+mypage.my_buyer_chat_video_call.etc=Etc.
+mypage.my_buyer_chat_video_call.finish=Consultation Completed
+mypage.my_buyer_chat_video_call.notFinish=Consultation Not Completed
+mypage.my_buyer_chat_video_call.resultEnroll=Result Enrollment
+mypage.my_buyer_chat_video_call.meetingMessage=Meeting Message
+mypage.my_buyer_chat_video_call.diniedMessage=Rejection Message
+mypage.my_buyer_chat_video_call.requestInfo=Information on the Reason Why the Buyer Requested the Video Meeting
+mypage.my_buyer_chat_video_call.meetingAccpet=Acceptance of the Meeting
+mypage.my_buyer_chat_video_call.accpet=Accept
+mypage.my_buyer_chat_video_call.dinied=Denial
+mypage.my_buyer_chat_video_call.diniedReason=Reason for Rejection
+mypage.my_buyer_chat_video_call.enroll=Enrollment
+
+mypage.my_buyer_chat_video_call.corpIntroducePh=Enter your Corporate Introduction.
+
+mypage.my_buyer_favor_corp.interestedCorp=Interested Corporate
+mypage.my_buyer_favor_corp.delete=Delete Corporation of Interest
+mypage.my_buyer_favor_corp.no=No
+mypage.my_buyer_favor_corp.corperationName=Coporate Name
+mypage.my_buyer_favor_corp.ceo=CEO
+mypage.my_buyer_favor_corp.email=Representative E\u2011mail
+mypage.my_buyer_favor_corp.booth=Exhibition Booth
+mypage.my_buyer_favor_corp.go=Shortcuts
+
+mypage.my_buyer_favor_corp.deleteObjectAlert=Please select targets to delete.
+mypage.my_buyer_favor_corp.deleteAlert=Are you sure you want to delete the selected target?
+
+mypage.my_buyer_card.businesscard=Business Card Exchange
+mypage.my_buyer_card.no=No
+mypage.my_buyer_card.corperationName=Coporate Name
+mypage.my_buyer_card.telephone=Corporate Contacts
+mypage.my_buyer_card.homepage=Homepage
+mypage.my_buyer_card.regiDate=Registration Date
+mypage.my_buyer_card.noInfo=There is no registered information.
+
+mypage.my_buyer_inquiry.inquiry=Inquiry Details
+mypage.my_buyer_inquiry.no=No
+mypage.my_buyer_inquiry.answer=Answer Status
+mypage.my_buyer_inquiry.title=Inquiry Subject
+mypage.my_buyer_inquiry.questionCorp=Inquiry Corporate Name
+mypage.my_buyer_inquiry.answerDate=Answer Registration Date
+
+mypage.my_buyer_inquiry_dtl.inquriy=Inquiries
+mypage.my_buyer_inquiry_dtl.inquriyTitle=Title
+mypage.my_buyer_inquiry_dtl.corporateName=Corporate Name
+mypage.my_buyer_inquiry_dtl.regiDate=Registration Date
+mypage.my_buyer_inquiry_dtl.answer=Answer Contents
+mypage.my_buyer_inquiry_dtl.file=Attachments
+mypage.my_buyer_inquiry_dtl.list=List
+
+mypage.my_buyer_meeting.videoConsultation=Video Consultation
+mypage.my_buyer_meeting.timeZone=Time Zone
+mypage.my_buyer_meeting.date=Date
+mypage.my_buyer_meeting.time=Time
+mypage.my_buyer_meeting.corporation=Target Corporate
+mypage.my_buyer_meeting.status=Status
+mypage.my_buyer_meeting.manager=Manager
+mypage.my_buyer_meeting.managerEmail=Manager E\u2011mail
+mypage.my_buyer_meeting.cancelRequest=Cancel Request
+mypage.my_buyer_meeting.dinialReason=Reason for Rejection
+mypage.my_buyer_meeting.reason=Reason
+mypage.my_buyer_meeting.message=Message
+mypage.my_buyer_meeting.noInfo=Information does not exist.
+mypage.my_buyer_meeting.cancelAsk=Do you want to cancel the video meeting?
+mypage.my_buyer_meeting.cancel=The video meeting has been cancelled.
+mypage.my_buyer_meeting.goZoom=Click the button \\n You will be directed to Zoom
+
+mypage.my_business_log.corpLog=Data Change Log
+mypage.my_business_log.All=All
+mypage.my_business_log.corpInfo=Corporation Registration Information
+mypage.my_business_log.corpbooth=Booth Management
+mypage.my_business_log.corpProduct=Product Information
+mypage.my_business_log.corpEmployee=Employee Management
+mypage.my_business_log.menu=Menu Name
+mypage.my_business_log.division=Division
+mypage.my_business_log.change=Main Content
+mypage.my_business_log.employeeId=Employee ID
+mypage.my_business_log.date=Date
+
+include.admin_nav.admission=Participating Corporate Approval
+include.admin_nav.idManagement=Participating Corporate ID Management
+include.admin_nav.conferenceManagement=Conference Management
+include.admin_nav.policyManagement=Terms and Conditions Management
+include.admin_nav.bannerManagement=Banner Management
+include.admin_nav.signupstatistics=Subscription Statistics
+include.admin_nav.videostatistics=Video Consultation Statistics
+include.admin_nav.chatstatistics=Real\u2011time Chat Statistics
+include.admin_nav.loginstatistics=Login Status Statistics
+include.admin_nav.codemasterManagement=Common Code Master Management
+include.admin_nav.codedtlManagement=Common Code Detailed Management
+include.admin_nav.systemManagement=System Setting Value Management
+include.admin_nav.managerManagement=Manager Management
+include.admin_nav.myInfoManagement=My Information Management
+include.admin_nav.daySignupstatistics=Daily Subscription Statistics
+include.admin_nav.monthSignupstatistics=Monthly Subscription Statistics
+include.admin_nav.corpLoginstatistics=Login Status Statistics (Corp)
+include.admin_nav.buyerLoginstatistics=Login Status Statistics (Buyer)
+include.admin_nav.corpVideostatistics=Video Consultation Statistics (Corp)
+include.admin_nav.buyerVideostatistics=Video Consultation Statistics (Buyer)
+include.admin_nav.corpChatstatistics=Real\u2011time Chat Statistics (Corp)
+include.admin_nav.buyerChatstatistics=Real\u2011time Chat Statistics (Buyer)
+
+include.common_js.logout=Would you like to log out?
+include.common_js.fileName=The Excel file name 'fileName' is not defined.
+include.common_js.sheetName=The Excel sheet name 'sheetName' is not defined.
+include.common_js.columsInfo=Excel column information 'columnsInfo' is not defined.
+include.common_js.notExist=The file does not exist.
+include.common_js.error=An error occurred during processing. \\nPlease contact the administrator.
+include.common_js.server=Please check the network status or server operation status.
+include.common_js.page=An error occurred during paging processing.
+
+corp_hall.CorpBoothPnsSvc.alreadyAdd=This is a Corporate that has already been registered as a Corporate of interest.\nPlease check at My Page> Manage Companies of Interest.
+corp_hall.CorpBoothPnsSvc.alreadyExchange=This is a Corporate that has already exchanged business cards.\nPlease check at My Page> Business Card Exchange.
+
+corp_hall.CorpBoothPnsCtl.login=You can use it after logging in.
+corp_hall.CorpBoothPnsCtl.wrong=Access denined.
+common.ChattingCtl.absence=The manager is currently absent.<br>Please contact us or use video consultation.
+common.ChattingCtl.login=Please log in.
+
+mobile.index.home=Home
+mobile.index.menu=Menu
+mobile.index.search=Search
+mobile.member.email_auth.Title=VERIFY EMAIL
+
+corp_hall.corp_booth_A.product=Product
+corp_hall.corp_booth_A.CompanyInformation=Corporation Information
+corp_hall.corp_booth_A.video=Promotional Video
+corp_hall.corp_booth_A.brochure=Brochure
+
+member_mng.adm_corp_appr_list.Approval=Approval
+member_mng.adm_corp_appr_list.selectAlert=Please select an approval target.
+member_mng.adm_corp_appr_list.selectAskAlert=Would you like to approve selected companies?
+member_mng.adm_corp_appr_list.selectFinishAlert=Approval is complete.
+
+member_mng.adm_corp_mng.approvalId=Approved Member ID
+member_mng.adm_corp_mng.status=Booth Status
+member_mng.adm_corp_mng.idModify=Account Modification
+member_mng.adm_corp_mng.Modify=Modify
+member_mng.adm_corp_mng.ProductCnt=Product Count
+
+member_mng.adm_corp_mng_dtl.idManagement=Representative ID Management of Participating Companies
+member_mng.adm_corp_mng_dtl.mainId=Representative Account
+member_mng.adm_corp_mng_dtl.mainIdChanged=Change Representative Account
+member_mng.adm_corp_mng_dtl.Change=Change
+member_mng.adm_corp_mng_dtl.managerInfoChange=Would you like to edit the corporation contact information?
+member_mng.adm_corp_mng_dtl.ChangeFinish=Edit is complete.
+
+contents.adm_conference_dtl.language=Language Type
+contents.adm_conference_dtl.Disclosure=Disclosure
+contents.adm_conference_dtl.Organizer=Organizer
+contents.adm_conference_dtl.Order=Sort Order
+contents.adm_conference_dtl.detail=Detail
+contents.adm_conference_dtl.video=Video
+contents.adm_conference_dtl.checkNext=Please check the following items.
+
+contents.adm_conference_dtl.subjectAlert=Please enter a title for the conference.
+contents.adm_conference_dtl.organizerAlert=Please enter the conference organizer.
+contents.adm_conference_dtl.sortOderAlert=Please enter the sorting order.
+contents.adm_conference_dtl.languageAlert=Please enter the language for the conference.
+contents.adm_conference_dtl.videoAlert= Please enter the video type.
+contents.adm_conference_dtl.linkAlert=Please enter the video link.
+contents.adm_conference_dtl.fileAlert=Please enter the video file.
+contents.adm_conference_dtl.conferenceAlert=Would you like to register for the conference?
+
+contents.adm_tos_list.type=Document Type
+contents.adm_tos_list.organizerName=Registrant Name
+contents.adm_tos_list.RegistrationDate=Registration Date
+contents.adm_tos_list.contents=Contents
+contents.adm_tos_list.korean=Korean
+contents.adm_tos_list.English=English
+contents.adm_tos_list.privatePolicy=Personal Information Agreement
+contents.adm_tos_list.contentsInput=Please enter your details.
+
+contents.adm_tos_list.bannerManagement=Main Banner Management
+contents.adm_tos_list.ciName=CI Name
+contents.adm_tos_list.link=Link
+contents.adm_tos_list.ciImage=CI Image
+
+contents.adm_tos_list.ciNameAlert=CI name is required.
+contents.adm_tos_list.orderAlert=The sort order is mandatory.
+contents.adm_tos_list.imageAlert=CI image is required.
+
+popup.product_total_mobile.total=View all products
+popup.promote_list_mobile.noContents=The content is not registered.
+popup.promote_list_mobile.noVideo=There is no registered promotional video.
+
+common.statistics.login_buyer.title=\uB85C\uADF8\uC778\uD604\uD669\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+common.statistics.login_buyer.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.login_buyer.search=\uC870\uD68C
+common.statistics.login_buyer.number=No.
+common.statistics.login_buyer.id=\uD68C\uC6D0ID
+common.statistics.login_buyer.belong=\uC18C\uC18D
+common.statistics.login_buyer.belongNation=\uC18C\uC18D\uAD6D\uAC00
+common.statistics.login_buyer.loginCnt=\uB85C\uADF8\uC778 \uAC74\uC218
+common.statistics.login_buyer.lastLoginDate=\uCD5C\uC885\uB85C\uADF8\uC778\uC77C\uC2DC
+common.statistics.login_buyer.alert1=\uB85C\uADF8\uC778\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.login_buyer.alert2=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_buyer.alert3=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_buyer.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.login_buyer.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.login_corp.title=\uB85C\uADF8\uC778\uD604\uD669\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+common.statistics.login_corp.search=\uC870\uD68C
+common.statistics.login_corp.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.login_corp.number=No.
+common.statistics.login_corp.coprNm=\uAE30\uC5C5\uBA85
+common.statistics.login_corp.id=\uD68C\uC6D0ID
+common.statistics.login_corp.loginCnt=\uB85C\uADF8\uC778 \uAC74\uC218
+common.statistics.login_corp.lastLoginDate=\uCD5C\uC885\uB85C\uADF8\uC778\uC77C\uC2DC
+common.statistics.login_corp.alert1=\uB85C\uADF8\uC778\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.login_corp.alert2=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_corp.alert3=\uB85C\uADF8\uC778\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.login_corp.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.login_corp.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.meeting_buyer.title=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4(\uBC14\uC774\uC5B4)
+common.statistics.meeting_buyer.search=\uC870\uD68C
+common.statistics.meeting_buyer.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.meeting_buyer.number=No.
+common.statistics.meeting_buyer.id=\uD68C\uC6D0ID
+common.statistics.meeting_buyer.belong=\uC18C\uC18D
+common.statistics.meeting_buyer.belongNation=\uC18C\uC18D\uAD6D\uAC00
+common.statistics.meeting_buyer.request=\uC694\uCCAD
+common.statistics.meeting_buyer.cancel=\uCDE8\uC18C
+common.statistics.meeting_buyer.undecided=\uBBF8\uD655\uC815
+common.statistics.meeting_buyer.decided=\uD655\uC815
+common.statistics.meeting_buyer.enrollment=\uACB0\uACFC\uB4F1\uB85D
+common.statistics.meeting_buyer.unregistered=\uACB0\uACFC\uBBF8\uB4F1\uB85D
+common.statistics.meeting_buyer.alert1=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.meeting_buyer.alert2=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_buyer.alert3=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_buyer.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.meeting_buyer.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.meeting_corp.title=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4(\uCC38\uAC00\uAE30\uC5C5)
+common.statistics.meeting_corp.search=\uC870\uD68C
+common.statistics.meeting_corp.excelDown=\uC5D1\uC140\uB2E4\uC6B4\uB85C\uB4DC
+common.statistics.meeting_corp.number=No.
+common.statistics.meeting_corp.corpNm=\uAE30\uC5C5\uBA85
+common.statistics.meeting_corp.request=\uC694\uCCAD
+common.statistics.meeting_corp.cancel=\uCDE8\uC18C
+common.statistics.meeting_corp.undecided=\uBBF8\uD655\uC815
+common.statistics.meeting_corp.decided=\uD655\uC815
+common.statistics.meeting_corp.enrollment=\uACB0\uACFC\uB4F1\uB85D
+common.statistics.meeting_corp.unregistered=\uACB0\uACFC\uBBF8\uB4F1\uB85D
+common.statistics.meeting_corp.alert1=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4 \uC870\uD68C\uAE30\uAC04\uC744 \uD655\uC778\uD574\uC8FC\uC138\uC694.
+common.statistics.meeting_corp.alert2=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_corp.alert3=\uD654\uC0C1\uC0C1\uB2F4\uD1B5\uACC4\uC870\uD68C\uB294 \uCD5C\uB300 \uD55C\uB2EC\uAE4C\uC9C0\uB9CC \uAC00\uB2A5\uD569\uB2C8\uB2E4.
+common.statistics.meeting_corp.noContents=\uB4F1\uB85D\uB41C \uC815\uBCF4\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.
+common.statistics.meeting_corp.placeholder=\uAE30\uC5C5\uBA85\uC744 \uC785\uB825\uD558\uC138\uC694.
+
+common.statistics.chat_buyer.head=Real-time chat statistics buyer
+common.statistics.chat_buyer.search=search
+common.statistics.chat_buyer.excelDownload=excelDownload
+common.statistics.chat_buyer.no=No
+common.statistics.chat_buyer.id=Member ID
+common.statistics.chat_buyer.party=Party
+common.statistics.chat_buyer.nation=Nation
+common.statistics.chat_buyer.request=Request
+common.statistics.chat_buyer.response=Response
+common.statistics.chat_buyer.alert1=Please check the real-time chat statistics inquiry period.
+common.statistics.chat_buyer.alert2=Real-time chat statistics check is only available for up to a month.
+common.statistics.chat_buyer.no_contents=No Contents
+
+common.statistics.chat_corp.head=Real-time chat statistics corporation
+common.statistics.chat_corp.copr=Please enter the company name.
+common.statistics.chat_corp.search=search
+common.statistics.chat_corp.excelDownload=excelDownload
+common.statistics.chat_corp.no=No
+common.statistics.chat_corp.company_name=Company name
+common.statistics.chat_corp.request=Request
+common.statistics.chat_corp.response=Response
+common.statistics.chat_corp.alert1=Please check the real-time chat statistics inquiry period.
+common.statistics.chat_corp.alert2=Real-time chat statistics check is only available for up to a month.
+common.statistics.chat_corp.no_contents=No Contents
+
+common.statistics.join_day.head=Daily join statistics
+common.statistics.join_day.search=search
+common.statistics.join_day.excelDownload=excelDownload
+common.statistics.join_day.date=DATE
+common.statistics.join_day.buyer=Buyer/Member
+common.statistics.join_day.corp=Participating corporation
+common.statistics.join_day.alert1=Please check the daily registration statistics inquiry period.
+common.statistics.join_day.alert2=Daily subscription statistics check is only available for up to a month.
+common.statistics.join_day.no_contents=No Contents
+
+common.statistics.join_month.head=Month join statistics
+common.statistics.join_month.search=search
+common.statistics.join_month.excelDownload=excelDownload
+common.statistics.join_month.date=DATE
+common.statistics.join_month.buyer=Buyer/Member
+common.statistics.join_month.corp=Participating corporation
+common.statistics.join_month.aler1=Please check the monthly subscription statistics inquiry period.
+common.statistics.join_monthaler2=Monthly subscription statistics check is only available for up to one year.
+common.statistics.join_month.no_contents=No Contents
+
+common.footer.address=#501, KICOX Venture Center, 29, Digital-ro 32-gil, Guro-gu, Seoul, Republic of Korea
+common.footer.policyWatch=Terms of use
+common.footer.policyAgree=Privacy policy
+common.checkByteAlrty1=You can enter up to
+common.checkByteAlrty2=bytes.

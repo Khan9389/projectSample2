@@ -1,0 +1,272 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+	<script src="/static_resources/lib/CryptoJS/3.1.2/rollups/sha256.js"></script>
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<br><br>
+		<h2>직원관리 상세</h2>
+		<br><br>
+		<div class="mbBox">
+			<div class="mbTitle">아이디</div>
+			<div>
+				<input class="bdB" type="text" id="ID">
+			</div>
+			<div id="idChk"></div>
+		</div>
+		
+		<div class="mbBox">
+			<div class="mbTitle">비밀번호</div>
+			<div>
+				<input class="bdB" type="text" id="PW">
+			</div>
+		</div>		
+		<div class="mbBox">
+			<div class="mbTitle">비밀번호 재확인</div>
+			<div>
+				<input class="bdB" type="text" id="PWChk">
+			</div>
+			<div id="pwChk"></div>
+		</div>
+		<div class="mbBox">
+			<div class="mbTitle">이름</div>
+			<div>
+				<input class="bdB" type="text" id="USR_NAME">
+			</div>
+			<div class="mbTitle">직급</div>
+			<div>
+				<select class="mbSelect" id="USR_LV">
+					<option value="">직급 선택</option>
+					<option value="B">부장</option>
+	    			<option value="D">대리</option>
+	    			<option value="S">사원</option>
+	    		</select>
+			</div>
+		</div>
+		<div class="mbBox">
+			<div class="mbTitle">이메일</div>
+			<div>
+				<input class="bdB" type="text" id="USR_EMAIL">
+			</div>
+			<div class="mbTitle">전화번호</div>
+			<div>
+				<input class="bdB" type="text" onkeyup="telePhoneCheck(this);" id="USR_TEL">
+			</div>
+		</div>
+		<div class="mbBox">
+			<div class="mbTitle">주소</div>
+			<div>
+				<input class="bdB" type="text" style="width: 741px;" id="USR_ADDR">
+			</div>
+		</div>
+		<div class="mbBox" style="border-bottom: 1px solid #d3cece;">
+			<div class="mbTitle">입사일</div>
+			<div>
+				<input type="text" id="USR_JOIN" class="joinDate">
+			</div>
+		</div>
+		<br><br>
+		<div class="buttonWrap">
+			<button class="gwButton" id="save" onclick="goSave()">저장</button>
+			<button class="gwButton" onclick="location.href='/groupware/member'">목록</button>
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+<script>
+var ID = "<%=ID%>";
+
+var idFlag = false;
+var pwFlag = false;
+
+
+$(function(){
+	$('#USR_JOIN').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		//,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		//,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		//,buttonText: "선택" //버튼 호버 텍스트              
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		,showAnim : 'slideDown'
+	});
+	//getInfo(ID);
+})
+
+$('#ID').blur(function(){
+	duplID($('#ID').val().trim());
+});
+$('#PWChk, #PW').blur(function(){
+	pWChk($('#PW').val().trim(), $('#PWChk').val().trim());
+});
+
+function duplID(id){
+	
+	if(id.trim() == ""){
+		$("#idChk").text("아이디를 입력해주세요!").css('color','red');
+		return
+	}
+	
+	params = {
+		ID : id
+	}
+	cf_call("/groupware/member/duplId", params, dupleIdCB);
+}
+
+function dupleIdCB(data){
+	
+	
+	if(data.IDCHK == 0){
+		idFlag = true;
+		$("#idChk").text("멋진 아이디네요!").css('color','#1000ff');
+	}else{
+		idFlag = false;
+		$("#idChk").text("이미 사용중인 아이디입니다!").css('color','red');
+	}
+}
+
+ function pWChk(pw1, pw2){
+	 if(pw1 == "" && pw2 == ""){
+		 pwFlag = false;
+		 $("#pwChk").text("비밀번호를 입력해주세요!").css('color','red');
+		 return
+	 }
+		 
+	 if(pw1 == pw2){
+		 pwFlag = true;
+		 $("#pwChk").text("비밀번호가 일치합니다!").css('color','#1000ff');
+	 }else{
+		 pwFlag = false;
+		 $("#pwChk").text("비밀번호가 일치하지 않습니다!").css('color','red');
+	 }
+ }
+ 
+ 
+ function validate(){
+	if(!idFlag){
+		alert("아이디를 확인해주세요")
+		return false;
+	}
+	if(!pwFlag){
+		alert("비밀번호를 확인해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_NAME").val().trim())){
+		alert("이름을 입력해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_LV").val().trim())){
+		alert("직급을 입력해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_EMAIL").val().trim())){
+		alert("이메일을 입력해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_TEL").val().trim())){
+		alert("전화번호를 입력해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_ADDR").val().trim())){
+		alert("주소를 입력해주세요")
+		return false;
+	}
+	if(cf_isEmpty($("#USR_JOIN").val().trim())){
+		alert("입사일를 입력해주세요")
+		return false;
+	}
+	return true;
+ }
+ 
+ function goSave(){
+	 
+	if(!validate()) return;
+	 console.log(CryptoJS.SHA256( $("#PW").val() ).toString());
+	    return;
+	params = {
+		ID : ID,
+		USR_ID : $("#ID").val(),
+		USR_PW : CryptoJS.SHA256($("#PW").val()).toString(),
+		USR_NAME : $("#USR_NAME").val(),
+		USR_LV : $("#USR_LV").val(),
+		USR_EMAIL : $("#USR_EMAIL").val(),
+		USR_TEL : $("#USR_TEL").val(),
+		USR_ADDR : $("#USR_ADDR").val(),
+		USR_JOIN : $("#USR_JOIN").val(),
+		
+	};
+	console.log(params);
+	//return;
+	cf_call("/groupware/member/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		//location.href="/groupware/member";
+	}else{
+		alert("저장 실패");
+	}
+}
+	
+/* 
+
+function getInfo(ID){
+	params = {
+		ID : ID,
+		
+	}
+	cf_call("/groupware/inquiry/getInfo", params, getInfoCB);
+}
+
+function getInfoCB(data){
+	$("#NAME").text(data.NAME);
+	$("#TEL_NO").text(data.TEL_NO);
+	$("#CORP_NM").text(data.CORP_NM);
+	$("#CORP_DEP").text(data.CORP_DEP);
+	$("#CORP_POS").text(data.CORP_POS);
+	$("#E_MAIL").text(data.E_MAIL);
+	$("#CONTENT").val(data.CONTENT);
+	if(data.ANS_YN == "Y"){
+		$("input:checkbox[name=inquiry]").prop("checked", true);
+	}
+}
+
+function goSave(){
+	
+	params = {
+			ID : ID,
+			ANSWER : $("input:checkbox[name=inquiry]").is(":checked") == true ? "Y" : "N"
+	};
+	console.log(params);
+	cf_call("/groupware/inquiry/updateInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/inquiry";
+	}else{
+		alert("저장 실패");
+	}
+} */
+</script>
+</html>

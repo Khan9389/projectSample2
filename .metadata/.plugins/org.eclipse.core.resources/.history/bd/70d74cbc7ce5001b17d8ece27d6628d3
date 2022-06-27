@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<%
+	String loginStat = StringUtil.defaultString((String) request.getAttribute("loginStat"), "");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	<script src="/static_resources/lib/CryptoJS/3.1.2/rollups/sha256.js"></script>
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<div class="loginWrap">
+	 	<h2 class="logintitle">PENTAS</h2>
+			<input class="loginInput" id="userId" type="text" name="userId" placeholder="아이디" onkeyup="if( event.keyCode==13 ){ $('#userPw').focus();}">
+			<input class="loginInput" id="userPw" type="password" name="userPw" placeholder="비밀번호" onkeyup="if( event.keyCode==13 ){ goLogin();}">
+			<button class="loginBtn" onclick="goLogin()">로그인</button>
+			<!-- <button><a href="/">homepage<a></a></button> -->
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+<script>
+$(function(){
+	var loginStat = "<%=loginStat%>";
+	
+	if(loginStat === "FAIL"){
+		alert("로그인 정보를 확인하세요.")
+	}else if(loginStat === "FAIL_PW_ERR"){
+		alert("비밀번호를 확인하세요.")
+	}
+})
+
+function validate(){
+	
+	if(cf_isEmpty($("#userId").val().trim())){
+		alert("아이디를 입력하세요.");
+		$("#userId").focus();  return false;
+	}
+	if(cf_isEmpty($("#userPw").val().trim())){
+		alert("비밀번호를 입력하세요.");
+		$("#userPw").focus();  return false;
+	}
+	return true;
+}
+
+function goLogin(){
+	
+	if(!validate()) return;
+	
+	var userId = $("#userId").val();
+	var userPw = $("#userPw").val();
+    var hashedPw = CryptoJS.SHA256(userPw).toString();
+    console.log(hashedPw)
+    //return;
+    //$("#userPw").val(hashedPw);
+	var params = {
+			userId : userId,
+			userPw : hashedPw,
+		}
+	cf_gotoUrl("/loginProc", params);
+}
+
+</script>
+</html>

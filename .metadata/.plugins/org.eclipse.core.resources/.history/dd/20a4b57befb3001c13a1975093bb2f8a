@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/home_static_resource.jsp" %>
+	
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a22fbd5bb5de496ac2c3a34375d44348"></script>
+</head>
+<body class="sub">
+	<div id="wrap">
+        <%@include file="/WEB-INF/jsp/common/include/home_header.jsp"%>
+        
+        <div id="container">  
+             <div id="depthNav" class="subVisual subv1 subv2-3">
+            	<div class="contTitle">
+            		<div class="subTitle">
+            			<strong>오시는길</strong>
+            		</div>
+            	</div>
+            </div>
+
+            <!-- contents -->
+            <div class="company-about" style="padding-bottom: 0px;">
+
+                <div id="section1" class="aboutTop ani on">
+  					<div class="chart__content_top01">
+		                <p class="lotation_img">
+		               		<div id="map" style="width:100%; height:400px;"></div>
+		                </p>
+
+		                <div class="chart02">
+							<div class="dire-list">
+								<div class="top_he">
+					        		<div class="col col_10"><span>주 소</span></div> 
+					        		<div class="col col_11">서울특별시 강서구 공항대로 247 B동 1229호 (마곡동, 퀸즈파크나인)</div> 
+					        	</div>
+					        	<div class="top_he">
+					        		<div class="col col_10"><span>주 차</span></div> 
+					        		<div class="col col_11">경복궁 주차장 이용 : 유료 <br>* 주차문의 : 070-7119-3123</div> 
+					        	</div>
+					        	<div class="top_he">
+					        		<div class="col col_10"><span>지하철</span></div> 
+					        		<div class="col col_11">
+					        			<b>3호선 경복궁역 5번 출구</b>에서
+										경복궁 주차장 방향으로 600m 정도 걸어가시면 청와대 관람 안내소가 있습니다.
+										<br> 단, 매주 화요일은 경복궁 휴관일로 4번 출구를 이용하시기 바라며, 안국역 방향으로 약 700m 오신 후
+										경복궁 사거리(동십자각) 좌측에 경복궁 주차장이 있고, 경복궁 주차장으로 들어오시면 관람안내소가 있습니다.
+									</div> 
+					        	</div>
+					        	<div class="top_he">
+					        		<div class="col col_10"><span>버 스</span></div> 
+					        		<div class="col col_11">
+										경복궁 정류장 하차
+										<b>G171,272,109, 601,606B1020,7025</b>
+										법련사 정류장 하차
+										마을버스 종로11
+									</div> 
+					        	</div>
+							</div>
+		                </div>
+		            </div>
+                </div>
+            </div>
+            <!-- //contents -->
+        </div>
+        
+        <%@include file="/WEB-INF/jsp/common/include/home_footer.jsp"%>
+    </div>
+</body>
+
+<script>
+
+var container = document.getElementById('map');
+var options = {
+	center: new kakao.maps.LatLng(37.55940995140012, 126.83489617639066),
+	level: 3
+};
+
+var map = new kakao.maps.Map(container, options);
+//마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(37.55940995140012, 126.83489617639066); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
+</script>
+</html>

@@ -1,0 +1,323 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<%
+	String ID = StringUtil.defaultString((String)request.getAttribute("ID"), "");
+%>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+</head>
+<body>
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<br><br>
+		<div style="display: flex; justify-content: space-between;">
+			<h2>휴가관리 상세</h2>
+			<div class="vctInfo">
+				휴가 사용 가능일
+				<span id="nowCount" class="blue"></span><span class="grey">&nbsp;/&nbsp;</span><span id="fullCount" class="blue"></span>
+			</div>
+		</div>
+			<h2 style="    color: red; background: yellow;" id="vctStatus"></h2>
+		<br><br>
+		<table class="tg">
+			<tbody>
+				<tr>
+					<th class="tbMenu">기안일</th>
+					<td class="tbCont"><input class="vctInput w200" type="text" id="draftDay"></td>
+					<th class="tbMenu w85" rowspan="2">결 제</th>
+					<th class="tbMenu">기안자</th>
+					<th class="tbMenu">대무자<br>(검토자)</th>
+					<th class="tbMenu">승인자</th>
+				</tr>
+				<tr>
+					<td class="tbMenu">기안자<br></td>
+					<td class="tbCont"><input class="vctInput w200" type="text" id="userNmA"></td>
+					<td class="tbCont"><input class="vctInput w132" type="text" id="userNmB"></td>
+					<td class="tbCont"><input class="vctInput w132" type="text" id="partnerNm"></td>
+					<td class="tbCont"><input class="vctInput w132" type="text" id="apprNm" readonly></td>
+				</tr>
+			</tbody>
+		</table>		
+		<br>
+		<br>
+		<table class="tg">
+			<tbody>
+				<tr>
+					<th class="tbMenu">소속</th>
+					<td class="tbCont"><input class="vctInput w300" type="text" id="corpNm"></td>
+					<th class="tbMenu">직급</th>
+					<td class="tbCont" style="text-align: center;">
+						<select class="vcSelect" id="USR_LV">
+							<option value="">직급 선택</option>
+							<option value="M">대표이사</option>
+							<option value="B">부장</option>
+			    			<option value="D">대리</option>
+			    			<option value="S">사원</option>
+			    		</select>
+						<!-- <input class="vctInput w300" type="text" id="corpPos"> -->
+					</td>
+				</tr>
+	  			<tr>
+				    <td class="tbMenu">성명</td>
+				    <td class="tbCont"><input class="vctInput w300" type="text" id="userNmC"></td>
+				    <td class="tbMenu">비상 연락처</td>
+				    <td class="tbCont"><input class="vctInput w300" type="text" id="subTel" onkeyup="telePhoneCheck(this);"></td>
+	  			</tr>
+	  			<tr>
+	    			<td class="tbMenu">휴가종류</td>
+				    <td class="tbCont selectWrap" colspan="3">
+				    	<input name="vacation" id="all" type="radio" value="all" checked onchange=vctTypeChange()><label for="all">년/월차휴가</label>
+						<input name="vacation" id="half" type="radio" value="half" onchange=vctTypeChange()><label for="half">반차휴가</label>
+						<input name="vacation" id="etc" type="radio" value="etc" onchange=vctTypeChange()><label for="etc">기타</label>
+						&#40;<input class="vctInput w300" type="text" placeholder="기타 사유 작성" style="text-align: left;" id="vctEtc">&#41;
+				    </td>
+	  			</tr>
+	  			<tr>
+				    <td class="tbMenu">휴가기간</td>
+				    <td class="tbCont selectWrap" colspan="3">
+				    	<input type="text" id="sDate">
+				  		<span>~</span>
+						<input type="text" id="eDate">
+				    </td>
+	  			</tr>
+	 			<tr>
+				    <td class="tbMenu">휴가사유</td>
+				    <td class="tbCont" colspan="3">
+				    	<textarea class="vctCont" id="reson"></textarea>
+				    </td>
+	  			</tr>
+	  			<tr>
+				    <td class="tbMenu">업무인계사항</td>
+				    <td class="tbCont" colspan="3">
+				    	<textarea class="vctCont" id="handOver"></textarea>
+				    </td>
+	  			</tr>
+	 			<tr>
+				    <td class="tbMenu">승인자<br>의견</td>
+				    <td class="tbCont" colspan="3">
+				    	<textarea class="vctCont" id="apprCmt"></textarea>
+				    </td>
+	  			</tr>
+			</tbody>
+		</table>
+		<br><br>
+		<div class="buttonWrap">
+			<button class="gwButton" id="save" onclick="goSave()">저장</button>
+			<button class="gwButton" onclick="location.href='/groupware/vacation'">목록</button>
+			<!-- <button class="gwButton" id="delete" onclick="goDelete()">삭제</button> -->
+		</div>
+		<br><br>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+<script>
+var ID = "<%=ID%>";
+var USR_ID = "<%=USR_ID%>";
+var USR_NAME = "<%=USR_NAME%>";
+var USR_LV = "<%=USR_LV%>";
+var USR_PK_ID = "<%=USR_PK_ID%>";
+var addDays = 0;
+
+$(function(){
+	$('#sDate, #eDate').datepicker({
+		dateFormat: 'yy-mm-dd' //달력 날짜 형태
+		,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+		,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+		,changeYear: true //option값 년 선택 가능
+		,changeMonth: true //option값  월 선택 가능                
+		//,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+		//,buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+		//,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+		//,buttonText: "선택" //버튼 호버 텍스트              
+		,monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 텍스트
+		,monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] //달력의 월 부분 Tooltip
+		,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+		,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+		,showAnim : 'slideDown'
+		,minDate: 0
+	});
+	
+	initSet()
+	getUserVctCount()
+	if(ID !== ""){
+		//getInfo(ID);
+	}
+})
+function initSet(){
+	var st_date = new Date().toISOString().substr(0, 10).replace('T', ' ');
+	
+	$("#draftDay").val(st_date).attr("readonly", true);
+	$("#userNmA, #userNmB, #userNmC").val(USR_NAME);
+	$("#corpNm").val("펜타에스").attr("readonly", true);
+	$("#USR_LV").val(USR_LV);
+	$("#USR_LV option").not(":selected").attr("disabled", "disabled");
+}
+function getUserVctCount(){
+	params = {
+		USR_PK_ID : "<%=USR_PK_ID%>"
+	}
+	cf_call("/groupware/vacation/getUserVctCount", params, getUserVctCountCB);
+}
+
+function getUserVctCountCB(data){
+	$("#fullCount").text(data.VACATION_FULL_COUNT)
+	$("#nowCount").text(data.VACATION_NOW_COUNT)
+}
+
+function vctTypeChange(){
+	var vctType = $("input[name=vacation]:checked").val();
+	if(vctType == "half"){
+		$("#eDate").val($("#sDate").val());
+	}
+}
+
+function validate(){
+	
+	if(cf_isEmpty($("#userNmA").val().trim())){
+		alert("기안자를 입력하세요."); $("#userNmA").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#userNmB").val().trim())){
+		alert("기안자를 입력하세요."); $("#userNmB").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#partnerNm").val().trim())){
+		alert("대무자을 입력하세요."); $("#partnerNm").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#userNmC").val().trim())){
+		alert("이름을 입력하세요."); $("#userNmC").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#subTel").val().trim())){
+		alert("비상 연락처를 입력하세요."); $("#subTel").focus()
+		return false;
+	}
+	if($("input[name=vacation]:checked").val() == "etc" && cf_isEmpty($("#vctEtc").val().trim())){
+			alert("기타 사유를 입력하세요."); $("#vctEtc").focus()
+			return false;
+	}
+	    
+	if(cf_isEmpty($("#eDate").val().trim())){
+		alert("휴가 기간을 입력하세요."); $("#eDate").focus()
+		return false;
+	}
+	
+	if(cf_isEmpty($("#reson").val().trim())){
+		alert("휴가 사유를 입력하세요."); $("#reson").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#handOver").val().trim())){
+		alert("업무 인계사항을 입력하세요."); $("#handOver").focus()
+		return false;
+	}
+	return true;
+}
+
+function validateDate(){
+	if(cf_isEmpty($("#sDate").val().trim())){
+		alert("휴가 기간을 입력하세요."); $("#sDate").focus()
+		return false;
+	}
+	
+	if(cf_isEmpty($("#eDate").val().trim())){
+		alert("휴가 기간을 입력하세요."); $("#eDate").focus()
+		return false;
+	}
+	
+	var start = $('#sDate').datepicker('getDate');
+    var end   = $('#eDate').datepicker('getDate');
+    addDays = (end - start)/1000/60/60/24 + +1;
+    var fullCnt = $("#fullCount").text();
+    var nowCnt = $("#nowCount").text();
+	
+    if($("input[name=vacation]:checked").val() == "half"){
+    	addDays = 0.5;
+    }else if($("input[name=vacation]:checked").val() == "etc"){
+    	addDays = 0;
+    }
+    
+    if(addDays > fullCnt - nowCnt || addDays < 0){
+    	alert("휴가 기간, 휴가 사용 가능일을 확인하세요");
+    	$(".vctInfo").focus()
+    	return false;
+    }
+    
+    return true;
+}
+function goSave(){
+	
+	if(!validateDate())return;
+	
+	if(!validate()) return;
+	
+	params = {
+			ID : ID,
+			DRAFT_DATE : $("#draftDay").val(),
+			USR_PK_ID : USR_PK_ID,
+			USR_NAME : USR_NAME,
+			PRT_NAME : $("#partnerNm").val(),
+			APPR_NAME : $("#apprNm").val(),
+			USR_LV : $("#USR_LV").val(),
+			SUB_TEL : $("#subTel").val(),
+			VCT_TYPE : $("input[name=vacation]:checked").val(),
+			VCT_ETC : $("#vctEtc").val(),
+			VCT_SDATE : $("#sDate").val(),
+			VCT_EDATE : $("#eDate").val(),
+			VCT_RESON : $("#reson").val(),
+			VCT_HANDOVER : $("#handOver").val(),
+			VCT_APPRCMT : $("#apprCmt").val(),
+			VCT_ADD_DAYS : addDays
+	};
+	console.log(params)
+	return;
+	cf_call("/groupware/vacation/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		console.log(data.rsltStatus);
+		//location.href="/groupware/vacation";
+	}else{
+		alert("저장 실패");
+	}
+}
+
+
+/* function getInfo(ID){
+	params = {
+		ID : ID,
+	}
+	cf_call("/groupware/notice/getInfo", params, getInfoCB);
+} */
+
+/* function getInfoCB(data){
+	console.log(data);
+	$("#title").val(data.TITLE);
+	$('#summernote').summernote('code', data.CONTENT);
+} */
+
+/* function goDelete(){
+	params = {
+		ID : ID
+	}
+	
+	cf_call("/groupware/vacation/goDelete", params, goDeleteCB);
+}
+function goDeleteCB(data){
+	if(data.rsltStatus == "SUCC"){
+		location.href="/groupware/vacation";
+	}else{
+		alert("삭제 실패");
+	}
+} */
+</script>
+</html>

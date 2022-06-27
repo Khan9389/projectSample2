@@ -1,0 +1,5 @@
+package common.utils.json;
+
+public class JsonUtil {
+
+}

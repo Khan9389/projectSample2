@@ -1,0 +1,397 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	
+	<link href="/static_resources/lib/summernote/0.8.18/summernote-lite.min.css" rel="stylesheet">
+	<script src="/static_resources/lib/summernote/0.8.18/summernote-lite.min.js"></script>
+	<script src="/static_resources/lib/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
+	<style type="text/css">
+		.form .row-con{
+			font-size:initial !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<div class="container">
+			<div id="sideBar">
+				<%@include file="/WEB-INF/jsp/common/include/lnb.jsp"%>
+			</div>
+			<div class="visual_item">
+				<div class="reportCont">
+				 	<!-- 테이블형식 -->
+					<div class="formWrap formWrapProfile">
+					    <h2 class="header">
+					    	<div class="shbox">
+							    <div class="innerContView">
+									<h4 class="subTit tblMb">공지사항</h4>
+								</div>
+				            </div>
+				            
+				            <div class="row-con-l" style="justify-content: space-between;">
+								<div class="list-contn flex">
+					            	<div class="title-l">제목조회</div>
+									<div class="list-contsz flex" style="/* width: 50%; */">
+							            <div class="input input-type">
+							            	<input type="text" id="word" onkeyup="if( event.keyCode==13 ){ goSearch();}" placeholder="검색어를 입력해주세요." maxlength="50">
+						                </div>
+									</div>
+								</div>
+								<div class="btn_wrap">
+								
+					                <button type="button" class="btn btn-com" onclick="goSearch()"><span>조회</span></button>
+					            </div>
+							
+							</div>
+							
+				            <div class="btn_wrap disbetr mrt-20">
+				                <button type="button" class="btn btn-com wi-10 mr10"  onclick="clearPopupOpen()"><span>등록</span></button>
+				                <button type="button" class="btn btn-del wi-10" onclick="goDelete()"><span>삭제</span></button>
+				            </div>
+						</h2> 
+												
+					    <div class="form formProfile pd-0 wi-100">
+					        <div class="row-con-t">
+				               <table>
+									<colgroup>
+										<col style="width:5%">
+										<col style="width:10%">
+										<col style="width:60%">
+										<col style="width:10%">
+										<col style="width:15%">
+									</colgroup>
+									<thead>
+									<tr class="notice_table_tr_top02">
+										<th><input type="checkbox" id="selectAll"></th>
+										<th>번호</th>
+										<th>제목</th>
+										<th>작성자</th>
+										<th>작성일</th>
+									</tr>
+									</thead>
+									<tbody id="listDiv">
+	
+									</tbody>
+								</table>
+								<%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+				            </div>
+				        </div>
+					 </div>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+	</div>
+</body>
+
+<div id="popupDialog" class="popup-wrap type-basic">
+	<section class="popup demo1">
+	<div class="popup-head">
+		<h3 class="popup-tit">공지사항</h3>
+	</div>
+	<div class="popup-body">
+		<div class="popup-content">
+			<!-- 여기에 추가해주시면 됩니다. -->	
+			<div class="formWrap formWrapProfile">
+				<h2 class="header">
+					<div class="innerContView">
+						<h4 class="subTit tblMb popTit">공지사항</h4>
+					</div>
+					<div class="description">
+						<span class="star">*</span> 필수 입력 정보입니다.
+					</div>
+				</h2>
+				<div class="form formProfile">
+		           	<div class="row-con">
+		                <div class="input is-label input-profile-birth is-value">
+		                	<input type="name" placeholder="제목을 입력해주세요." id="notiTitle" maxlength="50">
+		                    <div class="label">제목<span class="star">*</span></div>
+		                </div>
+		            </div>
+		            <div class="row-con">
+		            	<div class="textarea is-label is-value" style="padding-top:40px !important">
+		                    <label for="Edu_Edu_Cntnt_c15">내용<span class="star">*</span></label>
+		                    <!-- <textarea name="Edu[c15].Edu_Cntnt" cols="30" rows="10" id="notiContent" placeholder="내용을 적어주세요." maxlength="300"></textarea> -->
+		                    <div id="notiContent" name="editordata"></div>
+		                </div>
+		            </div>
+					<div class="row">
+		            	<div class="input input-full is-label dropdown-profile-sex is-value ">
+							<div class="input-file flex">
+								<input type="text" id="name_notiImgFile" class="file-name" placeholder="파일업로드" readonly="readonly" /> 
+								<a class="downBtn" id="a_notiImgFile" style="display: none;">다운로드</a> 
+								<a class="delBtn mrl-10" id="del_notiImgFile" style="display: none;" onclick="delFile('notiImgFile')">삭제</a>
+								<input type="file" accept="image/*" id="file_notiImgFile" class="file-upload" onchange="delFile('notiImgFile')" />
+							</div>
+							<div class="label">이미지등록</span></div>
+						</div>
+						<div class="btn_wrap-ll">
+							<label for="file_notiImgFile" class="file-label">업로드</label>
+						</div>
+		            </div>
+	            </div>
+            </div>
+            <div class="btn_wrap">
+		 		<!-- 버튼 기본 컬러  -->
+                <button type="button" class="btn btn-com" onclick="goSave()"><span class="changeBtn">등록</span></button>
+		 		<!-- 버튼 기본 컬러  -->
+            </div>
+		</div>
+	</div>
+	<div class="popup-close">
+		<button type="button" class="btn btn-close" onclick="popupClose('popupDialog')"><span><img src="../../../static_resources/groupware/image/ico_close01.png"></span></button>
+	</div>
+	</section>
+</div>
+<script>
+var ID = "";
+
+$(function(){
+	goSearch();
+	
+	$('#notiContent').summernote({
+		lang: 'ko-KR',
+		tabsize: 2,
+		height: 200,
+		toolbar: [
+		    // [groupName, [list of button]]
+		    ['fontname', ['fontname']],
+		    ['fontsize', ['fontsize']],
+		    ['style', ['bold', 'underline','strikethrough', 'clear']],
+		    ['color', ['forecolor','color']],
+		    ['table', ['table']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['height', ['height']],
+		    ['insert',['picture','link','video']],
+		    ['view', ['help']]
+		  ],
+		fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','맑은 고딕','궁서','굴림체','굴림','돋움체','바탕체'],
+		fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72']
+	});
+})
+
+function goSearch(){
+	cv_pageInfo.func = goSearch;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "NOTI_NO", isAsc : false},
+			],
+			limit : 10
+	}
+	params = {
+		word : $("#word").val().trim()
+	}
+	cf_callPage("/groupware/notice/getList", params, pageInfo, goSearchCB);
+}
+function goSearchCB(data){
+	g_dataList = data.list;
+	
+	$("#listDiv").html("");
+	var listDivHtml = "";
+	
+	if(g_dataList.length == 0){
+		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+		listDivHtml += '	<td class="wi-100" colspan="6">검색결과가 없습니다.</td>';
+		listDivHtml += '</tr>';
+	}else{
+	 	for(var i=0; i<g_dataList.length; i++){
+			listDivHtml += '<tr class="notice_table_tr_top2_2">';
+			listDivHtml += '	<td><input type="checkbox" name="ID" value="' + g_dataList[i].ID + '"></td>';
+			listDivHtml += '	<td onclick="getInfo(\'' + g_dataList[i].ID + '\')" style="cursor: pointer;">' + g_dataList[i].NOTI_NO + '</td>';
+			listDivHtml += '	<td onclick="getInfo(\'' + g_dataList[i].ID + '\')" style="cursor: pointer; text-align:left">';
+			listDivHtml += '		<div style="white-space: nowrap; text-overflow: ellipsis; overflow:hidden;">' + g_dataList[i].NOTI_TITLE + '</div>';
+			listDivHtml += '	</td>';
+			listDivHtml += '	<td onclick="getInfo(\'' + g_dataList[i].ID + '\')" style="cursor: pointer;">' + g_dataList[i].USR_NAME + '</td>';
+			listDivHtml += '	<td onclick="getInfo(\'' + g_dataList[i].ID + '\')" style="cursor: pointer;">' + g_dataList[i].REG_DT + '</td>';
+			listDivHtml += '</tr>';
+		}
+	}
+ 	
+	$("#listDiv").html(listDivHtml);
+	$(".notice_table_tr_top2_2").last().addClass("notice_table_tr_last_2")
+	checkBoxSet();
+}
+
+function clearPopupOpen(){
+	this.ID = "";
+	$("#notiTitle").val("");
+	//$("#notiContent").val("");
+	$("#notiContent").summernote("code",''),
+	$(".changeBtn").text("등록");
+	$(".popTit").text("공지사항 등록");
+	
+	/* 파일 업로드 [s] */
+	setAttachFile("notiImgFile", "");
+	/* 파일 업로드 [e] */
+	
+	popupOpen('popupDialog');
+}
+
+function validate(){
+	if(cf_isEmpty($("#notiTitle").val().trim())){
+		alert("제목을 입력하세요.");
+		$("#notiTitle").focus();
+		return false;
+	}
+	
+	if(cf_isEmpty($("#notiContent").val().trim())){
+		alert("내용을 입력하세요.");
+		$("#notiContent").focus();
+		return false;
+	}
+    
+	return true;
+}
+
+function goSave(){
+	if(!validate()) return;
+	
+	/* 파일 업로드 [s] */
+	var fileList = [];
+	var upfileIds = [];
+	setFileList(fileList, upfileIds, "notiImgFile");
+	/* 파일 업로드 [e] */
+	
+	params = {
+			ID : this.ID,
+			notiTitle : $("#notiTitle").val(),
+			//notiContent : $("#notiContent").val(),
+			notiContent : $("#MEMO").summernote("code"),
+			USR_ID : "<%=USR_ID%>",
+			/* 파일 업로드 [s] */
+			upfileIds : upfileIds,
+			fileUseTable : "WARE_NOTICE",
+			notiImgFile : $("#a_notiImgFile").val(),
+			/* 파일 업로드 [e] */
+	};
+	
+	cf_callWithFiles("/groupware/notice/saveInfo", fileList, params, goSaveCB);
+}
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		if(this.ID == ""){
+			alert("등록이 완료되었습니다.");
+		}else{
+			alert("수정이 완료되었습니다.");
+		}
+		location.reload();
+	}else{
+		if(this.ID == ""){
+			alert("등록에 실패하였습니다.");
+		}else{
+			alert("수정이 실패하였습니다.");
+		}
+	}
+}
+
+function getInfo(ID){
+	this.ID = ID;
+	params = {
+		ID : ID
+	}
+	cf_call("/groupware/notice/getInfo", params, getInfoCB);
+}
+function getInfoCB(data){
+	$("#notiTitle").val(data.NOTI_TITLE),
+	/* $("#notiContent").val(data.NOTI_CONTENT), */
+	$("#notiContent").summernote("code", data.NOTI_CONTENT);
+	$(".changeBtn").text("수정");
+	$(".popTit").text("공지사항 상세");
+	
+	/* 파일 업로드 [s] */
+	setAttachFile("notiImgFile", data.NOTI_IMG_FILE);
+	/* 파일 업로드 [e] */
+	
+	popupOpen('popupDialog');
+}
+
+function goDelete(){
+	
+	if(!confirm("삭제하시겠습니까?")){
+		return;
+	}
+	
+	idList = [];
+	
+	$("input[name='ID']:checked").each(function(e){
+        idList.push($(this).val())
+    })
+    
+    params = {
+		idList : idList
+	}
+	cf_call("/groupware/notice/goDelete", params, goDeleteCB);
+}
+
+function goDeleteCB(data){
+	if(data.rsltStatus == "SUCC"){
+		alert("삭제가 완료되었습니다.");
+		location.reload();
+	}else{
+		alert("삭제에 실패하였습니다.");
+	}
+}
+
+function checkBoxSet(){
+	$("#selectAll").click(function() {
+		$("input[type=checkbox]").prop("checked", $(this).prop("checked"));
+	});
+
+	$("input[type=checkbox]").click(function() {
+		if (!$(this).prop("checked")) {
+			$("#selectAll").prop("checked", false);
+		}
+	});
+}
+
+
+/* 파일 업로드 [s] */
+// 파일 업로드 시 값 세팅
+function setFileList(fileList, upfileIds, target) {
+	if (!cf_isFileEmpty("file_" + target)) {
+		upfileIds.push(target);
+		fileList.push($("#file_" + target)[0].files[0]);
+	}
+}
+
+// 파일 다운로드 시 값 세팅
+function setAttachFile(target, data) {
+	$("#a_" + target).val(data);
+	$("#a_" + target).prop("href", "/fileDn?p=" + data);
+
+	if (data === "" || data == null) {
+		$("#a_" + target).hide();
+		$("#name_" + target).val("");
+		$("#del_" + target).hide();
+	} else {
+		cf_orgFileNm2Text("name_" + target, data);
+		$("#a_" + target).show();
+		$("#del_" + target).show();
+	}
+}
+
+// 파일 삭제 시 값 세팅
+function delFile(target) {
+	$("#del_" + target).hide();
+	$("#a_" + target).val("");
+	$("#a_" + target).hide();
+	$("#name_" + target).val($("#file_" + target).val().substr("12"));
+}
+
+
+/* 파일 업로드 [e] */
+</script>
+</html>

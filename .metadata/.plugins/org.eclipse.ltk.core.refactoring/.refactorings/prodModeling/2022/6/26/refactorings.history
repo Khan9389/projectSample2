@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;common.config&apos; to &apos;exemple/src/main/java/common&apos;&#x0D;&#x0A;- Original project: &apos;prodModeling&apos;&#x0D;&#x0A;- Destination element: &apos;exemple/src/main/java/common&apos;&#x0D;&#x0A;- Original element: &apos;prodModeling/src/common.config&apos;" description="Copy package" destination="=exemple/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;common" element1="/src&lt;common.config" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1655890055373" version="1.0"/>
+</session>

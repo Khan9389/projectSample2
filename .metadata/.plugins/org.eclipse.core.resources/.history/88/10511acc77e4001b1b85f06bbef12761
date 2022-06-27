@@ -1,0 +1,246 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+<body>
+	<div class="wrapper">
+
+		<%@include file="/WEB-INF/jsp/common/include/header.jsp"%>
+		
+		<!-- container -->
+		<div id="container">
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		    <div class="subVisual3">
+		
+		        <div class="fixedWidth">
+		            <h2 class="tts">펜타에스</h2>
+		
+		            <div>
+		                <h2 class="sub_topbaner_title02">사업실적</h2>
+		                <p class="sub_topbaner_content02">미래를 중시하는 펜타에스</p>
+		
+		            </div>
+		        </div>
+		    </div>
+		    <!-- 서브-비주얼영역 배너 나오는 부분 -->
+		
+		    <!-- tap메뉴 -->
+		      <p class="sub_menubar02"></p>		    
+		    <div class="main">
+		        <input id="tab1" type="radio" name="tabs" checked>
+		        <!--디폴트 메뉴-->
+		        <label for="tab1" id="top" class="menu-align03">수행실적</label>
+		        <input id="tab2" type="radio" name="tabs">
+		        <label for="tab2" id="middle">제휴/협약</label>
+		        <section id="content1">
+		            <h3 class="chart_title01">수행실적</h3>
+			 <p class="vision01">
+			<!--<span class="search_result">검색결과&nbsp;&nbsp;<b class="search_result_number">4</b>개</span>-->		
+			<div>
+				<p>
+					<div class="search01">
+					<!--
+						<div class="sear">
+							<form id="frm"  name="frm"  method="post" action="#">
+								<input type="text" id="search_keyword" name="search_keyword" maxlength="20" value="" placeholder="검색해주세요" onkeyup="Javascript:if(event.keycode == 13) { search(); }">
+								
+							</form>
+							<p class="img" style=""><a href="#"><img src="../images/cmmn/searchimg01.png" alt="돋보기 아이콘" class="search_img02" ></a></p>
+						</div>
+					 -->
+					</div>	
+
+				</p>
+             </div>
+              <div class="history2_left00" >	
+                        <select name="year" id="searchYear" onchange="getPerformanceInfo()">
+                          <option value="2021">2021</option>
+                          <option value="2020">2020</option>
+                          <option value="2019">2019</option>
+                          <option value="2018">2018</option>
+						  <option value="2017">2017</option>
+                        </select>
+                      <br>
+				</div>
+                <div class="total_history_box00" id="performanceBox">
+					<dl class="total_history_box01">				
+						   <dt class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 04월 ~ 21년 06월</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;우리카드 마이데이터 구축 사업</dd>
+					</dl>
+					<dl class="total_history_box01">
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 04월 ~ 21년 06월</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;우리카드 위비멤버스 리뉴얼 사업</dd>
+					</dl>
+					<dl class="total_history_box01">
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 02월 ~ 진행중</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;우리카드 마이데이터 구축 사업</dd>
+					</dl>
+					<dl class="total_history_box01">
+						  <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 02월 ~ 21년 05뤌</dt>
+						  <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서민금융진흥원 디지털혁시(차세대2차) 사업</dd>
+					</dl>
+					<dl class="total_history_box01"> 
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 12월 ~ 진행중</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyData 플랫폼 구축 앱 백엔드 서버개발</dd>
+					</dl>
+					<dl class="total_history_box01">
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 12월 ~ 21년 03월</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;화학분야 온라인 전시관 구축</dd>
+					</dl>
+					<dl class="total_history_box01">
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 09월 ~ 진행중</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NH멤버스 정보계 및 마케팅시스템 포털 구축</dd>
+					</dl>
+					<dl>
+						   <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 08월 ~ 21년 02월</dt>
+						   <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;우리페이 은행계좌 간편서비스 구축 & 통합플랫폼 사업</dd>
+					</dl>
+				</div>
+				
+		        </section>
+		        <section id="content2">
+		            <h3 class="chart_title01">제휴/협약</h3>
+				<!--<span class="search_result">검색결과&nbsp;&nbsp;<b class="search_result_number">4</b>개</span>-->		
+			<div>
+				<p>
+					<div class="search01">
+					<!--
+						<div class="sear">
+							<form id="frm"  name="frm"  method="post" action="#">
+								<input type="text" id="search_keyword" name="search_keyword" maxlength="20" value="" placeholder="검색해주세요" onkeyup="Javascript:if(event.keycode == 13) { search(); }">
+								
+							</form>
+							<p class="img" style=""><a href="#"><img src="../images/cmmn/searchimg01.png" alt="돋보기 아이콘" class="search_img02" ></a></p>
+						</div>
+					 -->
+					</div>	
+
+				</p>
+             </div>
+              <div class="history2_left00" >	
+                    <form>
+                        <select name="year" >
+
+                          <option value="a">신세계백화점1</option>
+                          <option value="b">신세계백화점2</option>
+                          <option value="c">신세계백화점3</option>
+                          <option value="d">신세계백화점4</option>
+						  <option value="e">신세계백화점5</option>
+						  <option value="e">신세계백화점6</option>						  
+                        </select>
+                      </form>
+                      <br>
+				</div>
+                    <div class="total_history_box00 a">
+                        <dl class="total_history_box01">
+                            <dt class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 04월 ~ 21년 06월</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점1</dd>
+                        </dl>
+                        <dl class="total_history_box01">
+                            <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 04월 ~ 21년 06월</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점2</dd>
+                        </dl>
+                        <dl class="total_history_box01">
+                            <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 02월 ~ 진행중</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점3</dd>
+                        </dl>
+                        <dl class="total_history_box01">
+                            <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21년 02월 ~ 21년 05뤌</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점4</dd>
+                        </dl>
+                        <dl class="total_history_box01"> 
+                            <dt  class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 12월 ~ 진행중</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점5</dd>
+                        </dl>
+                        <dl>
+                            <dt  class="contents_year00" data-v-f302f7de=""><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20년 12월 ~ 21년 03월</dt>
+                            <dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;신세계 백화점6</dd>
+                        </dl>
+
+                       
+                    </div>
+		        </section>
+		    </div>
+		    <!-- tap메뉴 -->
+		</div>
+		<!--container-->
+
+		<%@include file="/WEB-INF/jsp/common/include/footer.jsp"%>
+
+	</div>
+</body>
+<script>
+$(function(){
+	var tab = window.location.search;
+	tab = "tab"+ tab.substr(5);
+	changeTab(tab);
+	
+	performanceYear();
+	
+	//getPerformanceInfo();
+	//getPartnerInfo();
+})
+function changeTab(val){
+	$('#' + val + '').prop("checked", true)
+}
+
+function performanceYear(){
+	params = {
+	}
+	cf_call("/performance/selectYear", params, selectYearCB);
+}
+function selectYearCB(data){
+	console.log(data);
+	$("#searchYear").html("");
+	var listDivHtml = "";
+	for(var i=0; i<data.length; i++){
+		listDivHtml += '<option value="' + data[i].YEAR + '">' + data[i].YEAR + '</option>';
+	}
+	$("#searchYear").html(listDivHtml);
+	getPerformanceInfo();
+}
+
+function getPerformanceInfo(){
+	cv_pageInfo.func = getPerformanceInfo;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "START_DATE", isAsc : false},
+				{target : "END_DATE", isAsc : false},
+				{target : "CONTENT", isAsc : false},
+			],
+			limit : 10
+	}
+	
+	params = {
+		searchYear : $("#searchYear").val().trim()
+	}
+	cf_callPage("/performance/getList", params, pageInfo, goSearchCB);
+}
+function goSearchCB(data){
+	console.log(data);
+	g_dataList = data.list;
+	$("#performanceBox").html("");
+	var listDivHtml = "";
+	
+ 	for(var i=0; i<g_dataList.length; i++){
+		listDivHtml += '<dl class="total_history_box01">';
+		if(g_dataList[i].STATUS == "ing"){
+			listDivHtml += '	<dt class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' 
+								+ g_dataList[i].START_DATE.substring(2,4) + '년 ' + g_dataList[i].START_DATE.substring(5,7) + '월' + ' ~ 진행중</dt>';
+		}else{
+			listDivHtml += '	<dt class="contents_year00"><span class="recruitment01_first01_content01">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' 
+								+ g_dataList[i].START_DATE.substring(2,4) + '년 ' + g_dataList[i].START_DATE.substring(5,7) + '월' + ' ~ ' 
+								+ g_dataList[i].END_DATE.substring(2,4) + '년 ' + g_dataList[i].END_DATE.substring(5,7) + '월' + '</dt>';
+		}
+		listDivHtml += '	<dd class="contents_history00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + g_dataList[i].CONTENT + '</dd>';
+		listDivHtml += '</dl>';
+	}
+	$("#performanceBox").html(listDivHtml);
+}
+</script>
+</html>

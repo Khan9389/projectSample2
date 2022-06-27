@@ -1,0 +1,510 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<%
+	List<PentasMap> vctTypeList = (List<PentasMap>) request.getAttribute("vctTypeList");
+	List<PentasMap> apprStatusList = (List<PentasMap>) request.getAttribute("apprStatusList");
+	List<PentasMap> proxyIDList = (List<PentasMap>) request.getAttribute("proxyIDList");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/static_resource.jsp" %>
+	<%@include file="/WEB-INF/jsp/common/include/gw_static_resource.jsp" %>
+	
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css" />
+<body>
+
+	<%@include file="/WEB-INF/jsp/common/include/header_gw.jsp"%>
+	<div class="mainCont">
+		<div class="container">
+			<div id="sideBar">
+				<%@include file="/WEB-INF/jsp/common/include/lnb.jsp"%>
+			</div>
+			<div class="visual_item">
+				<div class="reportCont">
+				
+					<!-- 테이블형식 -->
+					<div class="formWrap formWrapProfile">
+					    <h2 class="header">
+					    	<div class="shbox">
+							    <div class="innerContView">
+									<h4 class="subTit tblMb">휴가관리</h4>
+								</div>
+								<div class="vctInfo" style="display:flex; align-items:center">
+									휴가 사용 가능일
+									<span id="VCT_REMAIN_CNT" class="blue"></span><span class="grey">&nbsp;/&nbsp;</span><span id="VCT_TOTAL_CNT" class="blue"></span>
+								</div>
+				            </div>
+				            <div class="row-con-l" style="justify-content: space-between;">
+								<div class="list-contn flex">
+									<div class="list-contsz flex" style="/* width: 50%; */">
+										<div class="title-l">조회</div>
+						                <div class="list-contsz flex" style="/* width: 50%; */">
+							            	<div class="input input-type">
+							            		<input type="text" id="word" onkeyup="if( event.keyCode==13 ){ getList();}" placeholder="검색어를 입력해주세요.">
+						                	</div>
+									</div>
+									</div>
+								</div>
+								<div class="btn_wrap">
+					                <button type="button" class="btn btn-com" onclick="getList()"><span>조회</span></button>
+					            </div>
+							</div>
+				            <div class="btn_wrap disbetr mrt-20">
+				                <button type="button" class="btn btn-com wi-10 mr10"  onclick="clearPopupOpen()"><span>등록</span></button>
+				                <button type="button" class="btn btn-del wi-10" onclick="goDelete()"><span>삭제</span></button>
+				            </div>
+						</h2> 
+					    <div class="form formProfile pd-0 wi-100">
+					        <div class="row-con-t">
+				               <table>
+									<colgroup>
+										<col style="width:30%">
+										<col style="width:10%">
+										<col style="width:40%">
+										<col style="width:10%">
+										<col style="width:10%">
+									</colgroup>
+									<thead>
+									<tr class="notice_table_tr_top02">
+										<th>기안자</th>
+										<th>휴가종류</th>
+										<th>휴가기간</th>
+										<th>승인상태</th>
+										<th>작성일</th>
+									</tr>
+									</thead>
+									<tbody id="listDiv">
+									</tbody>
+								</table>
+								<%@include file="/WEB-INF/jsp/common/include/pagination.jsp" %>
+				            </div>
+				        </div>
+					 </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/footer_gw.jsp"%>
+</body>
+
+<div id="popupDialog" class="popup-wrap type-basic">
+	<section class="popup demo1">
+	<div class="popup-head">
+		<h3 class="popup-tit">휴가관리</h3>
+	</div>
+	<div class="popup-body">
+		<div class="popup-content">
+			<!-- 여기에 추가해주시면 됩니다. -->
+			<div class="formWrap formWrapProfile">
+				<h2 class="header">
+					<div class="innerContView">
+						<h4 class="subTit tblMb popTit">휴가관리</h4>
+					</div>
+					<div class="description">
+						<span class="star">*</span> 필수 입력 정보입니다.
+					</div>
+				</h2>
+				
+				<div class="form formProfile">
+				
+					<div class="row-con">
+						<div class="input is-label is-value mr10">
+		                    <div class="label">기안자<span class="star">*</span></div>
+		                	<input type="text" id="authorId">
+		                </div>	
+						<div class="input is-label input-profile-birth is-value mr10">
+							<div class="label">기안일<span class="star">*</span></div>
+							<input type="text" id="draftDt">
+						</div>
+						<div class="input is-label is-value mr10">
+		                    <div class="label">승인자</div>
+		                    <input type="text" id="apprId">
+	                    </div>
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">승인일</div>
+							<input type="text" id="apprDt">
+						</div>
+					</div>
+					
+					<div class="row-con">
+						<div class="input is-label is-value mr10">
+				            <div class="label">휴가종류<span class="star">*</span></div>
+				            <div class="radio-area">
+<%		for(PentasMap map : vctTypeList) { %>
+				                <div class="radio-tx-area">
+				                    <span class="radio tx">
+				                        <input type="radio" name="vctType" id="<%=map.get("MINOR_CD")%>" value="<%=map.get("MINOR_CD")%>" onchange="vctTypeChn('<%=map.get("MINOR_CD")%>')">
+				                        <label for="usrPrmsA">
+				                            <div><%=map.get("MINOR_NM")%></div>
+				                        </label>
+				                    </span>
+				                </div>
+<%		} %>			                	
+				            </div>
+				        </div>
+				        <div class="input is-label is-value mr10">
+				            <input type="text" placeholder="기타사유를 입력해주세요." id="vctEtc">
+				            <div class="label">기타사유<span class="star">*</span></div>
+				        </div>
+						<div class="input is-label input-profile-birth is-value mr10">
+							<div class="label">
+								휴가시작일<span class="star">*</span>
+							</div>
+							<input type="text" id="vctStartDt">
+						</div>
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">
+								휴가종료일<span class="star">*</span>
+							</div>
+							<input type="text" id="vctEndDt">
+						</div>
+					</div>
+					
+					<div class="row-con">
+						<div class="input is-label is-value mr10">
+		                    <div class="label">대무자<span class="star">*</span>
+		                    </div>
+		                    <select class="button buttonChoose"  id="proxyId">
+		                    	<option class="button" value="none"><span>선택해주세요</span></option>
+<%		for(PentasMap map : proxyIDList) { %>
+		                		<option class="button" value="<%=map.get("ID")%>"><span><%=map.get("USR_NAME")%></span></option>
+<%		} %>			
+							</select>
+		                </div>	
+						<div class="input is-label input-profile-birth is-value">
+							<div class="label">
+								비상연락처<span class="star">*</span>
+							</div>
+							<input type="text" id="vctEmgTel" onkeyup="telePhoneCheck(this);">
+						</div>
+					</div>
+					
+					
+					
+					<div class="row-con">
+					 	<div class="textarea is-label is-value mr10">
+		                    <label for="Edu_Edu_Cntnt_c15">
+		                    	휴가사유
+		                    	<span class="star">*</span>
+		                    </label>
+		                    <textarea name="Edu[c15].Edu_Cntnt" cols="30" rows="10" id="vctReason" placeholder="휴가사유에 대해 적어주세요."></textarea>
+		                </div>
+		                <div class="textarea is-label is-value">
+		                    <label for="Edu_Edu_Cntnt_c15">
+		                    	업무인계사항
+		                    	<span class="star">*</span>
+		                    </label>
+		                    <textarea name="Edu[c15].Edu_Cntnt" cols="30" rows="10" id="vctHandOver" placeholder="업무인계사항에 대해 적어주세요."></textarea>
+		                </div>
+		            </div>
+		            <div class="row-con vctApprCmnt">
+		                <div class="textarea is-label is-value">
+		                    <label for="Edu_Edu_Cntnt_c15">승인자의견</label>
+		                    <textarea name="Edu[c15].Edu_Cntnt" cols="30" rows="10" id="vctApprCmnt" placeholder="승인자의견에 대해 적어주세요."></textarea>
+		                </div>
+	                </div>
+	                
+				</div>
+			</div>
+			<div class="btn_wrap">
+		 		<!-- 버튼 기본 컬러  -->
+                <button type="button" class="btn btn-com" onclick="goSave()"><span class="changeBtn">등록</span></button>
+		 		<!-- 버튼 기본 컬러  -->
+		 		<button type="button" class="btn btn-com wi-10 mr10" onclick="clearPopupOpen()"><span>등록</span></button>
+                <button type="button" class="btn btn-list mr10" onclick="openChangePwPopup()"><span>비밀번호 초기화</span></button>
+                <button type="button" class="btn btn-del" onclick="goDelete()"><span>삭제</span></button>
+            </div>
+			<!-- 여기에 추가해주시면 됩니다. -->
+		</div>
+	</div>
+	<div class="popup-close">
+		<button type="button" class="btn btn-close" onclick="popupClose('popupDialog')"><span><img src="../../../static_resources/groupware/image/ico_close01.png"></span></button>
+	</div>
+	</section>
+</div>
+<script>
+var vctTypeList = "<%=vctTypeList%>";
+var apprStatusList = "<%=apprStatusList%>";
+
+var USR_ID = "<%=USR_ID%>";
+var USR_PRMS = "<%=USR_PRMS%>";
+var USR_NAME = "<%=USR_NAME%>";
+
+var ID = "";
+var VCT_TYPE = "";
+var vctDays = 0;
+
+$(function(){
+	console.log(vctTypeList);
+	console.log(apprStatusList);
+	
+	gw_datepickerInit("#vctStartDt, #vctEndDt");
+	$('#vctStartDt, #vctEndDt').datepicker('setDate', 'today');
+	
+	//initSet();
+	
+	getVctCntInfo();
+	getList();
+})
+
+function getVctCntInfo(){
+	params = {
+		USR_ID : USR_ID
+	}
+	cf_call("/groupware/vacation/getVctCntInfo", params, getVctCntInfoCB);
+}
+function getVctCntInfoCB(data){
+	console.log(data);
+ 	$("#VCT_TOTAL_CNT").text(data.VCT_TOTAL_CNT)
+	$("#VCT_REMAIN_CNT").text(data.VCT_REMAIN_CNT)
+}
+
+function getList(){
+	cv_pageInfo.func = getList;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "REG_DT", isAsc : false},
+			],
+			limit : 10
+	}
+
+	params = {
+		ID : USR_ID,
+		word : $("#word").val().trim(),
+		USR_PRMS : USR_PRMS,
+	}
+	
+	console.log(params)
+	cf_callPage("/groupware/vacation/getList", params, pageInfo, getListCB);
+}
+function getListCB(data){
+	console.log(data)
+	g_dataList = data.list;
+	
+	$("#listDiv").html("");
+	var listDivHtml = "";
+	
+	if(g_dataList.length == 0){
+		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+		listDivHtml += '	<td class="wi-100" colspan="6">검색결과가 없습니다.</td>';
+		listDivHtml += '</tr>';
+	}else{
+	 	for(var i=0; i<g_dataList.length; i++){
+	 		listDivHtml += '<tr class="notice_table_tr_top2_2">';
+			listDivHtml += '	<td><a onclick="getInfo(\'' + g_dataList[i].ID + '\')">' + g_dataList[i].USR_NAME + '</a></td>';
+			listDivHtml += '	<td>' + g_dataList[i].VCT_TYPE_TEXT + '</td>';
+			listDivHtml += '	<td>' + g_dataList[i].VCT_START_DT + " - " + g_dataList[i].VCT_END_DT  +'</td>';
+			listDivHtml += '	<td>' + g_dataList[i].VCT_APPR_STATUS_TEXT + '</td>';
+			listDivHtml += '	<td>' + g_dataList[i].REG_DT_FORMAT + '</td>';
+	 		listDivHtml += '</tr>';
+		}
+	}
+ 	
+	$("#listDiv").html(listDivHtml);
+}
+
+function getInfo(ID){
+	this.ID = ID;
+	params = {
+		ID : ID
+	}
+	cf_call("/groupware/vacation/getInfo", params, getInfoCB);
+}
+function getInfoCB(data){
+	console.log(data);
+	$("#authorId").val(data.AUTHOR_NAME).attr("readonly", true);
+	$("#draftDt").val(data.DRAFT_DT).attr("readonly", true);
+	
+	$("[name=vctType][value=" + data.VCT_TYPE + "]").prop("checked", true);
+	$("#vctEtc").val(data.VCT_ETC);
+	if(data.VCT_TYPE == "OTH"){
+		$("#vctEtc").attr("readonly", false);
+	}else{
+		$("#vctEtc").attr("readonly", true);
+	}
+	
+	$("#vctStartDt").val(data.VCT_START_DT);
+	$("#vctEndDt").val(data.VCT_END_DT);
+	
+	$("#proxyId").val(data.PROXY_ID);
+	$("#vctEmgTel").val(data.VCT_EMG_TEL);
+	$("#vctReason").val(data.VCT_REASON);
+	$("#vctHandOver").val(data.VCT_HANDOVER);
+	$(".vctApprCmnt").hide();
+	
+	if(data.VCT_APPR_STATUS != "NOTAU"){ // 미승인
+		$(".vctApprCmnt").show();
+		$("#apprId").val(data.APPR_NAME);
+		$("#apprDt").val(data.APPR_DT);
+	}
+	
+	if(USR_PRMS == "ADMIN"){
+		
+	}
+	popupOpen('popupDialog');
+}
+
+
+
+
+
+
+
+function vctTypeChn(val){
+	VCT_TYPE = val;
+	console.log(val)
+	if(val == "OTH"){
+		$("#vctEtc").attr("readonly", false);
+	}else{
+		$("#vctEtc").attr("readonly", true);
+		$("#vctEtc").val("");
+	}
+}
+
+/* function initSet(){
+	
+} */
+
+function clearPopupOpen(){
+	this.ID = "";
+		
+	$("#authorId").val(USR_NAME).attr("readonly", true);
+	var toDay = new Date().toISOString().substr(0, 10).replace('T', ' ');
+	$("#draftDt").val(toDay).attr("readonly", true);
+	$('input:radio[name=vctType]').eq(0).attr("checked", true);
+	$("#vctEtc").attr("readonly", true);
+	$('#vctStartDt, #vctEndDt').datepicker('setDate', 'today');
+	$("#proxyId").val('none');
+	
+	
+	$("#apprId").attr("readonly", true);
+	$("#apprDt").attr("readonly", true);
+	$(".vctApprCmnt").hide();
+	
+	$(".changeBtn").text("등록");
+	$(".popTit").text("휴가관리 등록");
+
+	popupOpen('popupDialog');
+}
+
+
+
+function validate(){
+	
+	if(cf_isEmpty($("#vctEtc").val().trim()) && VCT_TYPE == "OTH"){
+		alert("기타사유 입력하세요."); $("#vctEtc").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#vctStartDt").val().trim())){
+		alert("휴가시작일을 입력하세요."); $("#sDate").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#vctEndDt").val().trim())){
+		alert("휴가종료일을 입력하세요."); $("#eDate").focus()
+		return false;
+	}
+	if($("#proxyId").val() == "none"){
+		alert("대무자을 입력하세요."); $("#proxyId").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#vctEmgTel").val().trim())){
+		alert("비상연락처를 입력하세요."); $("#vctEmgTel").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#vctReason").val().trim())){
+		alert("휴가사유를 입력하세요."); $("#vctReason").focus()
+		return false;
+	}
+	if(cf_isEmpty($("#vctHandOver").val().trim())){
+		alert("업무인계사항을 입력하세요."); $("#vctHandOver").focus()
+		return false;
+	}
+	return true;
+}
+function validateDate(){
+	var start = $('#vctStartDt').datepicker('getDate');
+    var end   = $('#vctEndDt').datepicker('getDate');
+    vctDays = (end - start)/1000/60/60/24 + +1;
+    
+    var VCT_TOTAL_CNT = $("#VCT_TOTAL_CNT").text();
+    var VCT_REMAIN_CNT = $("#VCT_REMAIN_CNT").text();
+	
+    if($("input[name=vctType]:checked").val() == "DAY"){
+	    if(vctDays > VCT_TOTAL_CNT - VCT_REMAIN_CNT || vctDays < 0){
+	    	alert("휴가 기간, 휴가 사용 가능일을 확인하세요");
+	    	$("#vctStartDt").focus()
+	    	return false;
+	    }
+    }else if($("input[name=vctType]:checked").val() == "HLF"){
+    	if( $("#vctStartDt").val() != $("#vctEndDt").val() ){
+    		alert("휴가 기간, 휴가 사용 가능일을 확인하세요");
+	    	$("#vctStartDt").focus()
+	    	return false;
+    	}
+    	vctDays = 0.5;
+    }else if($("input[name=vctType]:checked").val() == "OTH"){
+    	vctDays = 0;
+    }
+    
+    this.vctDays = vctDays;
+	return true;
+}
+
+function goSave(){
+	if(!validate()) return;
+	
+	if(!validateDate())return;
+	
+	var vctRemainCnt = $("#VCT_REMAIN_CNT").text();
+	vctRemainCnt = Number(vctRemainCnt) + vctDays;
+	
+	params = {
+			ID : ID,
+			draftDt			: $("#draftDt").val(),
+			apprDt			: $("#apprDt").val(),
+			authorId		: USR_ID,
+			proxyId 		: $("#proxyId").val(),
+			apprId			: $("#apprId").val(),
+			vctEmgTel		: $("#vctEmgTel").val(),
+			vctType			: $("input[name=vctType]:checked").val(),
+			vctEtc			: $("#vctEtc").val(),
+			vctStartDt		: $("#vctStartDt").val(),
+			vctEndDt		: $("#vctEndDt").val(),
+			vctDays			: vctDays,
+			vctReason		: $("#vctReason").val(),
+			vctHandOver		: $("#vctHandOver").val(),
+			vctApprCmnt		: $("#vctApprCmnt").val(),
+			vctApprStatus	: 'NOTAU',
+			vctRemainCnt	: vctRemainCnt
+	};
+	console.log(params)
+	//return;
+	cf_call("/groupware/vacation/saveInfo", params, goSaveCB);
+}
+
+function goSaveCB(data){
+	if(data.rsltStatus == "SUCC"){
+		if(this.ID == ""){
+			alert("등록이 완료되었습니다.");
+		}else{
+			alert("수정이 완료되었습니다.");
+		}
+		location.reload();
+	}else{
+		if(this.ID == ""){
+			alert("등록에 실패하였습니다.");
+		}else{
+			alert("수정이 실패하였습니다.");
+		}
+	}
+}
+
+</script>
+</html>

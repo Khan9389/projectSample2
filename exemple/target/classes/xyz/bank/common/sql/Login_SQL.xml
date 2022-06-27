@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='login'>
+
+	<select id="setMbrInfo" parameterType="pentasMap" resultType="memberVO">
+		/* login.selectMbrInfo */
+		SELECT
+            MBR_ID
+			,MBR_PW
+			,MBR_TYP
+        FROM TBL_MBR
+        WHERE MBR_ID = #{mbrId}
+	</select>
+</mapper>

@@ -1,0 +1,121 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.board {
+	border: 1px solid black;
+}
+</style>
+<body>
+	<!-- 1안 Start -->
+	<div>1안</div>
+	<div id="listDiv"></div>
+	<!-- 1안 End -->
+	<br><br><br><br><br><br><br><br>
+	
+	<!-- 2안 Start -->
+	<div>2안</div>
+	<div id="clickEvent1" onclick="gogoAlert()">
+		<span id="videoId1"></span>
+		<span id="channelTitle1"></span>
+	</div>
+	<div id="clickEvent2" onclick="gogoAlert()">
+		<span id="videoId2"></span>
+		<span id="channelTitle2"></span>
+	</div>
+	<div id="clickEvent3" onclick="gogoAlert()">
+		<span id="videoId3"></span>
+		<span id="channelTitle3"></span>
+	</div>
+	<div id="clickEvent4" onclick="gogoAlert()">
+		<span id="videoId4"></span>
+		<span id="channelTitle4"></span>
+	</div>
+	<div id="clickEvent5" >
+		<span id="videoId5"></span>
+		<span id="channelTitle5"></span>
+	</div>
+	<!-- 2안 End -->
+
+	<button onclick="test()">test</button>
+
+
+</body>
+<script>
+var totalData;
+var id = {};
+function test() {
+	$.ajax({
+		url : "/playlist",
+		dataType : "text",
+		contentType : "apllication/json",
+		success : function(data) {
+			totalData = JSON.parse(data);
+			console.log(totalData);
+			dataMapping(totalData);
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+			alert("Status: " + textStatus);
+			alert("Error" + errorThrown);
+		}
+	})
+}
+
+function dataMapping(totalData) {
+	// 1안 Start
+
+	var items = totalData.items
+
+	$("#listDiv").html("");
+	var listDivHtml = "";
+
+	for (var i = 0; i < items.length; i++) {
+		listDivHtml += '<div class="" onclick="goAlert(\''+ items[i].snippet.resourceId.videoId + '\')">';
+		listDivHtml += '	<span class="board">'+ items[i].snippet.resourceId.videoId + '</span>';
+		listDivHtml += '	<span class="board">'+ items[i].snippet.channelTitle + '</span>';
+		listDivHtml += '</div>';
+	}
+
+	$("#listDiv").html(listDivHtml);
+	// 1안 End
+	
+	//2안 Start
+	for (var i = 0; i < items.length; i++) {
+		$("#videoId" + i).text(items[i].snippet.resourceId.videoId);
+		$("#channelTitle" + i).text(items[i].snippet.channelTitle);
+		$("#clickEvent" + i).attr('value',items[i].snippet.resourceId.videoId);
+	}
+	//2안 End
+}
+
+function goAlert(videoId) {
+	alert(videoId);
+}
+
+function gogoAlert(){
+	var getId = $(this).attr("id").toString();
+	
+
+	alert(getId);
+}
+
+$("#clickEvent5").click(function(){
+    // class name 가져오기
+    var select = $(this).attr('value');
+
+    // 'testclass' 라고 alert에 표출.
+    alert(select);
+    
+});
+</script>
+
+</html>

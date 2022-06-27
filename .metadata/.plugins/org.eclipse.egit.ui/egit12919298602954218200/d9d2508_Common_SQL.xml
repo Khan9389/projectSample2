@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='common'>
+
+	<select id="getComCodeMajor" resultType="String">
+		/* common.getComCodeMajor */
+		SELECT
+			ID
+		FROM CMMN_CD_MAJOR
+			WHERE 1=1
+			AND USE_YN = 'Y'
+			AND MAJOR_CD = #{MAJOR_CD_ID}
+	</select>
+	<select id="getComCodeList" resultType="pentasMap">
+		/* common.getComCodeList */
+		SELECT
+			B.MAJOR_CD
+			,B.MAJOR_NM
+			,A.MINOR_CD
+			,A.MINOR_NM
+			,A.MINOR_CD_ORD
+			,A.DEL_YN
+		FROM CMMN_CD_MINOR A, CMMN_CD_MAJOR B
+		WHERE 1=1
+			AND DEL_YN = 'N'
+			AND A.MAJOR_CD_ID = B.ID
+	</select>
+	
+</mapper>

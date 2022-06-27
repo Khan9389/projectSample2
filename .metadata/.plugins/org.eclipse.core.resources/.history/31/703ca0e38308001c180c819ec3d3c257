@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='homePage.community'>
+
+
+	<select id="getNoticeList" parameterType="pentasMap" resultType="pentasMap">
+		/* homepage.community.getNoticeList */
+		SELECT
+			ID
+			,TITLE
+			,WRITER
+			,DATE_FORMAT(REG_DT,'%Y-%m-%d') AS REG_DT
+		FROM NOTICE
+		WHERE 1=1
+			AND DEL_YN = 'N'
+			AND TITLE LIKE CONCAT('%',#{word},'%')
+	</select>
+	
+	<insert id="saveInq" parameterType="pentasMap">
+		/* homepagecommunity.saveInq */
+		INSERT INTO BESINESS_INQUIRY (
+			NAME
+			,TEL_NO
+			,CORP_NM
+			,CORP_DEP
+			,CORP_POS
+			,E_MAIL
+			,CONTENT
+			,REG_DT
+		) VALUES (
+			#{NAME}
+			,#{TEL_NO}
+			,#{CORP_NM}
+			,#{CORP_DEP}
+			,#{CORP_POS}
+			,#{E_MAIL}
+			,#{CONTENT}
+			,SYSDATE()
+		)
+	</insert>
+	
+</mapper>

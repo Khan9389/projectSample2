@@ -1,0 +1,333 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/jsp/common/include/common_header.jsp" %>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>펜타에스</title>
+	<%@include file="/WEB-INF/jsp/common/include/home_static_resource.jsp" %>
+	
+	<script src="/static_resources/lib/axios/0.21.0/axios.min.js"></script>
+	<script src="/static_resources/js/common.js?rscVer=<%=rscVer%>"></script>
+	<script src="/static_resources/js/prototype_polyfill.js?rscVer=<%=rscVer%>"></script>
+	<%@include file="/WEB-INF/jsp/common/include/common_js.jsp"  %>
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="fp-responsive fix fp-viewing-1">
+	<div id="wrap">
+	
+		<%@include file="/WEB-INF/jsp/common/include/home_header.jsp"%>
+		
+		<!-- content -->
+		<div id="visual" class="section">
+			<div class="conarea ">
+				<div class="txtbox">
+					<div class="txt txt_1">
+						<div>
+							<span><h3>오픈소스 DBMS기반의 <br>통합 데이터 플랫폼</h3></span>
+						</div>
+					</div>
+					<div class="txt txt_2">
+						<div>
+							<span class="sub-txt">펜타에스는 전 세계 기업들의 중대한 과제를 <br>성공적으로 해결하도록 돕고 있습니다.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="swiper mySwiper">
+		      <div class="swiper-wrapper">
+		        <div class="swiper-slide">Slide 1</div>
+		        <div class="swiper-slide">Slide 2</div>
+		        <div class="swiper-slide">Slide 3</div>
+		        <div class="swiper-slide">Slide 4</div>
+		        <div class="swiper-slide">Slide 5</div>
+		        <div class="swiper-slide">Slide 6</div>
+		        <div class="swiper-slide">Slide 7</div>
+		        <div class="swiper-slide">Slide 8</div>
+		        <div class="swiper-slide">Slide 9</div>
+		      </div>
+		    </div>
+			
+			<img src="/static_resources/home/image/main/main_banner.jpg" alt="메인비쥬얼 배너1">
+		</div>
+		
+		<div class="main-about ">
+			<div id="container">
+				<div id="contents">
+					<div class="section section1 mainTop ani on">
+						<div class="innerwrap">
+							<div class="titlearea tit">
+								<h3 class="title1">Promotion</h3>
+								<p>pentas의 가능성을 발견해보세요.</p>
+							</div>
+
+							<div class="conwrap ani">
+								<ul>
+									<li>
+										<a href="/company" target="_self">
+											<div class="thumbwrap">
+												<div class="thumb">
+													<img src="static_resources/home/image/main/img01.jpg" alt="메인비쥬얼 배너1">
+												</div>
+												<span>
+												<div class="txts">회사소개</div>
+												<div class="arr"></div>
+												</span>
+											</div>
+											<div class="infowrap">
+												<div class="cate meetup">
+													<div class="txt">Introduction</div>
+												</div>
+												<h4>회사소개</h4>
+												<p>언제나 최상의 IT 서비스를 제공하는 주식회사 펜타에스</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="/directions" target="_self">
+											<div class="thumbwrap">
+												<div class="thumb">
+													<img src="static_resources/home/image/main/img02.jpg" alt="메인비쥬얼 배너1">
+												</div>
+												<span>
+												<div class="txts">오시는길</div>
+												<div class="arr"></div>
+												</span>
+											</div>
+											<div class="infowrap">
+												<div class="cate conference">
+													<div class="txt">Directions</div>
+													<div class="img">
+													</div>
+												</div>
+												<h4>오시는길</h4>
+												<p>
+													서울특별시 강서구 공항대로 247, 
+													퀸즈파크나인 B동 1229호
+												</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="/recruit" target="_self">
+											<div class="thumbwrap">
+												<div class="thumb">
+													<img src="static_resources/home/image/main/img03.jpg" alt="메인비쥬얼 배너1">
+												</div>
+												<span>
+												<div class="txts">인재채용</div>
+												<div class="arr"></div>
+												</span>
+											</div>
+											<div class="infowrap">
+												<div class="cate evt">
+													<div class="txt">Recruitment</div>
+													<div class="img"></div>
+												</div>
+												<h4>인재채용</h4>
+												<p>즐겁게 일하고 미래지향적인 가족을 찾습니다.</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="/project" target="_self">
+											<div class="thumbwrap">
+												<div class="thumb">
+													<img src="static_resources/home/image/main/img04.jpg" alt="메인비쥬얼 배너1">
+												</div>
+												<span>
+												<div class="txts">프로젝트 일정</div>
+												<div class="arr"></div>
+												</span>
+											</div>
+											<div class="infowrap">
+												<div class="cate webinar">
+													<div class="txt">Project</div>
+													<div class="img"></div>
+												</div>
+												<h4>프로젝트 일정 안내</h4>
+												<p>프로젝트를 함께할 인재를 찾고 있습니다.</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="section section2 mainTop ani on">
+						<div class="title-txt">
+							<div class="cont" >
+								<div class="tit">
+									<h2>주요사업실적</h2>
+									<div class="sub-tit">언제나 성공과 신뢰가 생각될 수 있도록 최선의 노력을 다하여<br>
+										최상의 IT 서비스와 솔루션을 제공하도록 하겠습니다.
+									</div>
+									<div class="sub-tit" style="padding-top: 10px"><a href="/career">자세히보기</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="section5">
+						<div class="innerwrap">
+							<div class="titlearea">
+								<h3 class="title1">Community</h3>
+								<p>풍부한 노하우를 바탕으로 솔루션 정보를 나눌 수 있는 커뮤니티입니다.</p>
+							</div>
+							 <div class="tabmenu">
+							    <input id="tab1" class="tab-menu" type="radio" name="tabs" value="tab1" checked> <!--디폴트 메뉴-->
+							    <label for="tab1" class="tab-menu-la">공지사항</label>
+							
+							    <input id="tab2" class="tab-menu" type="radio" name="tabs" value="tab2">
+							    <label for="tab2" class="tab-menu-la">프로젝트구인</label>
+							
+							    <section id="content1" class="tab-cont">
+							        <div class="tabCon" >
+										<div class="flexCont" id="board-list">
+											
+										</div>
+									</div>
+							    </section>
+							
+							    <section id="content2" class="tab-cont">
+							        <div class="tabCon" >
+										<div class="flexCont" id="pro-list">
+											
+										</div>
+									</div>
+							    </section>					
+							</div>   
+						</div>
+					</div>
+				</div>
+				<!--/contents-->
+			</div>
+			<!--//container-->
+		</div>
+		<!-- //content -->
+	</div>
+	<%@include file="/WEB-INF/jsp/common/include/home_footer.jsp"%>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+var ID = "";
+$(function(){
+	
+	var swiper = new Swiper(".mySwiper", {
+		
+	});
+	
+	getList(); // 공지사항
+	getInfo(); // 프로젝트 
+	getCareer();
+})
+
+function getList(){
+	cv_pageInfo.func = getList;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "NOTI_NO", isAsc : false},
+			],
+			limit : 3
+	}
+	params = {
+	}
+	cf_callPage("/getList", params, pageInfo, getListCB);
+}
+
+function getListCB(data){
+	n_dataList = data.list;
+	
+	// 디폴트
+	$('input[id="tab1"]:checked');
+	
+	
+	$("#board-list").html("");
+	
+   	var listDivHtml = "";
+ 	if(n_dataList.length == 0){
+		listDivHtml += '<div class="comuty"> 게시글이 없습니다. </div>';
+	}else{
+	   	for(var i=0; i<n_dataList.length; i++){
+				listDivHtml += '<div class="comuty">';
+				listDivHtml += '	<div class="title">' + n_dataList[i].NOTI_TITLE + '</div>';
+				listDivHtml += '		<div class="cont sol">' + n_dataList[i].NOTI_CONTENT + '</div>';
+				listDivHtml += '			<div class="bottom" style="align-items: center;">';
+				listDivHtml += '				<p class="date">' + n_dataList[i].REG_DT + '</p>';
+				listDivHtml += '				<div class=""><a href="#" onclick="event.preventDefault(); goDetail(\'' + n_dataList[i].ID + '\')">바로가기 ></a></div>';
+				listDivHtml += '			</div>';
+				listDivHtml += '		</div>';
+				listDivHtml += '	</div>';
+				listDivHtml += '</div>';
+		}
+	}
+   	$("#board-list").html(listDivHtml);
+}
+function goDetail(ID){
+	location.href="/notice/goDetail?ID=" + ID;
+}
+
+
+
+function getInfo(){
+	cv_pageInfo.func = getList;
+	var pageInfo = {
+			pageNo : cv_pageInfo.pageNo,
+			orders : [
+				{target : "ID", isAsc : false},
+			],
+			limit : 3
+	}
+	params = {
+	}
+	cf_callPage("getInfo", params, pageInfo, getInfoCB);
+}
+	
+function getInfoCB(data){
+	p_dataList = data.list;
+	$("#pro-list").html("");
+   	var listDivHtml = "";
+ 	if(p_dataList.length == 0){
+		listDivHtml += '<div class="comuty"> 게시글이 없습니다. </div>';
+	}else{
+	   	for(var i=0; i<p_dataList.length; i++){
+			listDivHtml += '<div class="comuty">';
+			listDivHtml += '	<div class="title">' + p_dataList[i].PRJ_NAME + '</div>';
+			listDivHtml += '	<div class="cont sol">';
+			listDivHtml += '		<div class="practi"><span>수행사: </span>' + p_dataList[i].PRJ_CLIENT + '</div>';
+			listDivHtml += '			<div class="place"><span>장소: </span>' + p_dataList[i].PRJ_LOCATION + '</div>';
+			listDivHtml += '			<div class="skill"><span>주요기술: </span>' + p_dataList[i].PRJ_TECH + '</div>';
+			listDivHtml += '		</div>';
+			listDivHtml += '		<div class="bottom" style="align-items: center;">';
+			listDivHtml += '			<p class="date">' + p_dataList[i].PRJ_START_DT + '~' + p_dataList[i].PRJ_END_DT + '</p>';
+			listDivHtml += '			<div class=""><a href="#" onclick="event.preventDefault(); goProject(\'' + p_dataList[i].ID + '\')">바로가기 ></a></div>';
+			listDivHtml += '		</div>';
+			listDivHtml += '	</div>';
+			listDivHtml += '</div>';
+		}
+	}
+   	$("#pro-list").html(listDivHtml);
+}
+
+function goProject(ID){
+	location.href="/project?ID=" + ID;
+}
+
+function getCareer(){
+	var params = {
+			
+	}
+	cf_call("/getCareer", params, getCareerCB);
+}
+function getCareerCB(data){
+	console.log("getCareerCB")
+	console.log(data)
+}
+</script>
+</html>

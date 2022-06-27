@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.board {
+	border:1px solid black;
+}
+</style>
+<body>
+
+	<div>
+		<span>kind</span>
+		<span class="board" id="kind"></span>
+	</div>
+	<div>
+		<span>etag</span>
+		<span class="board" id="etag"></span>
+	</div>
+	<div>
+		<span>items[0].id</span>
+		<span class="board" id="id-0"></span>
+	</div>
+	<div>
+		<span>items[1].id</span>
+		<span class="board" id="id-1"></span>
+	</div>
+	
+	<div>
+		<span>pageInfo.resultsPerPage</span>
+		<span class="board" id="pageInfoResultsPerPage"></span>
+	</div>
+	
+	<button onclick="test()">test</button>
+
+
+</body>
+<script>
+var totalData;
+var formatData = {};
+function test() {
+	$.ajax({
+		url : "/playlist",
+		dataType : "text",
+		contentType : "apllication/json",
+		success : function(data) {
+			totalData = JSON.parse(data);
+			console.log(totalData);
+			dataMapping(totalData);
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+			alert("Status: " + textStatus);
+			alert("Error" + errorThrown);
+		}
+	})
+}
+
+function dataMapping(totalData){
+	$("#kind").text(totalData.kind);
+	$("#etag").text(totalData.etag);
+	$("#id-0").text(totalData.items[0].id)
+	$("#id-1").text(totalData.items[1].snippet.resourceId.videoId)
+  	
+	for(var i = 0; i<totalData.items.length; i++){
+		//formatData[i].videoId = totalData.items[i].snippet.resourceId.videoId;
+		console.log(totalData.items[i].snippet.resourceId.videoId;)
+	}
+	//console.log(formatData[i].videoId);
+}
+</script>
+
+</html>

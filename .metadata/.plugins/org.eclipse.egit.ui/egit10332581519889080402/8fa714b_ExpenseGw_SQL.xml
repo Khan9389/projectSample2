@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace='groupWare.expense'>
+
+	<select id="getList" parameterType="pentasMap" resultType="pentasMap">
+		/* groupWare.expense.getList */
+		SELECT 
+			A.ID
+			,A.EXPN_NO
+			,A.AUTHOR_ID
+			,A.APPR_ID
+			,(SELECT B.PRJ_NAME FROM WARE_PROJECT B WHERE B.ID = A.PRJ_ID) AS PRJ_NAME
+			,A.EXPN_DT
+			,(SELECT 
+					C.MINOR_NM 
+				FROM CMMN_CD_MINOR C, CMMN_CD_MAJOR D 
+				WHERE D.MAJOR_NM = 'EXPN_PYMNT' 
+					AND C.MAJOR_CD_ID = D.ID
+					AND C.MINOR_CD = A.EXPN_PYMNT) AS EXPN_PYMNT
+			,A.EXPN_AMNT
+			,(SELECT 
+					C.MINOR_NM 
+				FROM CMMN_CD_MINOR C, CMMN_CD_MAJOR D 
+				WHERE D.MAJOR_NM = 'APPR_STATUS' 
+					AND C.MAJOR_CD_ID = D.ID
+					AND C.MINOR_CD = A.EXPN_APPR_STATUS) AS EXPN_APPR_STATUS
+			,A.PYMNT_DT
+		FROM WARE_EXPENSE A
+		WHERE 1=1
+			AND A.DEL_YN = 'N'
+			AND A.AUTHOR_ID = #{usrId}
+			<if test="startDt != null and endDt != null and startDt != '' and endDt != ''">
+			AND A.EXPN_DT BETWEEN #{startDt} AND #{endDt}
+			</if>
+			<if test="pymntType != null and pymntType != ''">
+			AND A.EXPN_PYMNT IN (#{pymntType})
+			</if>
+	</select>
+	
+	<select id="getAdmnList" parameterType="pentasMap" resultType="pentasMap">
+		/* groupWare.expense.getAdmnList */
+		SELECT 
+			A.ID
+			,A.EXPN_NO
+			,(SELECT B.USR_NAME FROM WARE_USER B) AS AUTHOR_NAME
+			,(SELECT C.PRJ_NAME FROM WARE_PROJECT C WHERE C.ID = A.PRJ_ID) AS PRJ_NAME
+			,A.EXPN_DT
+			,(SELECT 
+					D.MINOR_NM 
+				FROM CMMN_CD_MINOR D, CMMN_CD_MAJOR E 
+				WHERE E.MAJOR_NM = 'EXPN_PYMNT' 
+					AND D.MAJOR_CD_ID = E.ID
+					AND D.MINOR_CD = A.EXPN_PYMNT) AS EXPN_PYMNT
+			,A.EXPN_BILL_FILE
+			,A.EXPN_AMNT
+			,(SELECT 
+					D.MINOR_NM 
+				FROM CMMN_CD_MINOR D, CMMN_CD_MAJOR E 
+				WHERE E.MAJOR_NM = 'APPR_STATUS' 
+					AND D.MAJOR_CD_ID = E.ID
+					AND D.MINOR_CD = A.EXPN_APPR_STATUS) AS EXPN_APPR_STATUS
+		FROM WARE_EXPENSE A, WARE_USER B
+		WHERE 1=1
+			AND A.DEL_YN = 'N'
+			AND A.APPR_ID = #{usrId}
+			<if test="startDt != null and endDt != null and startDt != '' and endDt != ''">
+			AND A.EXPN_DT BETWEEN #{startDt} AND #{endDt}
+			</if>
+			<if test="apprStatus != null and apprStatus != ''">
+			AND A.EXPN_APPR_STATUS = #{apprStatus}
+			</if>
+			<if test="empName != null and empName != ''">
+			AND B.USR_NAME LIKE CONCAT('%',#{empName},'%')
+			AND B.ID = A.AUTHOR_ID
+			</if>
+	</select>
+	
+	<update id="goDelete" parameterType="pentasMap">
+		/* groupWare.expense.goDelete */
+		UPDATE WARE_EXPENSE SET 
+			DEL_YN = 'Y'
+			,MOD_DT = SYSDATE()
+		WHERE 1=1 
+			AND ID = #{ID}
+	</update>
+	
+</mapper>
